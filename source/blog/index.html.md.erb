@@ -10,5 +10,5 @@ We send out a update on our work each week. You can sign up or read the archives
 
 
 <% blog.articles.each do |article| %>
-* [<%= article.title %>](<%= article.url %>) — <%= article.date.strftime('%A %e %b %Y') %>
+* [<%= article.title %>](<%= article.url %>) — <%= article.date.strftime('%A')%> <%= article.date.day.ordinalize %> <%= article.date.strftime('%b %Y')%>
 <% end %>
