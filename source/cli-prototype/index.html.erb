@@ -1,0 +1,122 @@
+---
+layout: cli-prototype
+---
+
+<div class="notes">
+  <h1>Prototyping a CLI for Fluidkeys</h1>
+  <p>
+    We're working on the interface for the command line for
+    <a href="https://www.fluidkeys.com">Fluidkeys</a>.
+  </p>
+  <h2>First run</h2>
+</div>
+
+<pre>
+<span class="prompt">➜</span>  <span class="directory">~</span> fk
+
+<span class="notice">Could not find a configuration file for Fluidkeys, would you like
+to set it up now?</span> [Y/n] <span class="cursor">_</span>
+</pre>
+
+<pre>
+<span class="information">Found GnuPGP, would you like to import an existing key from there
+into Fluidkeys? </span> [Y/n] <span class="cursor">_</span>
+</pre>
+
+<div class="notes">
+  <p>Assume for now that we only look for secret/public pairings.</p>
+</div>
+
+<pre>
+Two secret keys found in GnuPG:
+
+1.  Ian Drysdale &lt;idrysdale@example.com&gt; [expires: 2019-07-05]
+    93AE 4365 5BB8 FF24 B021  1685 FD06 24C5 C179 7053
+
+2.  &lt;idrysdale@Fluidkeys.com&gt; [expires: 2019-07-05]
+    BBA5 A835 6280 E0C5 9BDA  6C96 CC3C FF4A 2698 0C2A
+
+Which key would you like to import: [1/2] <span class="cursor">_</span>
+</pre>
+
+<pre>
+First you'll need to create a key.
+
+Enter your email address, this will help other people find your key.
+
+[email] : <span class="cursor">_</span>
+</pre>
+
+<pre>
+This is your password:
+
+<span class="information">cube.suitcase.walmart.compactor.backpack.barbell</span>
+
+* If you use a password manager, save it there now
+* Otherwise write it on a piece of paper and keep it with you
+
+Press enter when you've written it down. <span class="cursor">_</span>
+</pre>
+
+<pre>
+Enter the 3rd word from your password
+
+[3rd word] : <span class="cursor">_</span>
+</pre>
+
+<pre>
+Generating key for idrysdale@example.com
+
+Successfully saved backup of key to '/Users/idrysdale/.config/fluidkeys'
+Successfully imported key into GnuPG, inspect it with:
+ > gpg --list-keys 'idrysdale@example.com'
+</pre>
+
+<div class="notes">
+  <h2>Key management</h2>
+</div>
+
+<pre>
+<span class="prompt">➜</span>  <span class="directory">~</span> fk keys
+NAME:
+ fk keys - Manage your keys
+
+USAGE:
+ fk keys &lt;command&gt;
+
+COMMANDS:
+ remove	Remove a key
+ list		List keys
+ create	Create a new key
+ help, h	Shows a list of commands or help for one command
+
+<span class="prompt">➜</span>  <span class="directory">~</span> fk keys list
+Email address           Created                Status
+==========              ==========             ==========
+idrysdale@example.com   2018 Aug 16 10:27:10   <span class="positive">Good</span>
+
+<span class="prompt">➜</span>  <span class="directory">~</span> fk key idrysdale@example.com inspect
+Email address : idrysdale@example.com
+Fingerprint   : BF73 8C31 C237 1948 FD0A  0FDC 926A 8DE8 9CCF DD9B
+Last rotated  : 2018 Aug 16 10:27:10
+
+<span class="prompt">➜</span>  <span class="directory">~</span> fk key idrysdale@example.com clip-public
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQINBFs99GcBEADUaZ5oYVLO05yGfWtdTzLWRdkeiw0GxQlvh4kNvNBfxlUzed3e
+rbbsXErwEYwLeZOusTdEhP9Sob1zZD9xGT1Lj0fAM20MtrjXhKru5x9nzYuWHccR
+6Nb1agCGdaW1ve9OqzLQzMpxOB0GSZzrsLHstM2X8xwobOj3TnZZ0sDvhRCBGEA+
+H1bYxjawYGQg+f... <span class="positive">Copied to clipboard 📋</span>
+
+<span class="prompt">➜</span>  <span class="directory">~ _</span>
+</pre>
+
+<div class="notes">
+  <h2>Errors</h2>
+  <p>Before exiting `fk` we should strive to provide users with a clear and consise message as to why.</p>
+</div>
+
+<pre>
+<span class="error">[!] Expected to find 'db.json' in './config/fastlane'</span>
+<span class="prompt">➜</span>  <span class="directory">~ _</span>
+</pre>
