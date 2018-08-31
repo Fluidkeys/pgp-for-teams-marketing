@@ -1,0 +1,44 @@
+$terminal-background: #202020;
+$terminal-foreground: #EAEAEA;
+$terminal-light-green: #8BC34B;
+$terminal-light-blue: #65B5F6;
+$terminal-light-yellow: #F9A825;
+$terminal-red: #C72828;
+$terminal-light-red: #F05350;
+
+pre.terminal {
+  font-family: 'Inconsolata', monospace;
+  white-space: pre-wrap;
+  text-align: justify;
+  display: block;
+  word-break: break-word;
+  background: $terminal-background;
+  color: $terminal-foreground;
+  .prompt {
+    color: $terminal-light-green;
+  }
+  .cursor {
+    color: $terminal-light-blue;
+  }
+  .directory {
+    color: $terminal-light-blue;
+  }
+  .return {
+    padding-left: 5rem;
+  }
+  .positive {
+    color: $terminal-light-green;
+  }
+  .notice {
+    color: $terminal-light-yellow;
+  }
+  .error {
+    color: $terminal-light-red;
+  }
+  .information {
+    color: $terminal-light-blue;
+  }
+  .bold {
+    font-weight: bold;
+  }
+}

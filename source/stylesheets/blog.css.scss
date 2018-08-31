@@ -41,7 +41,7 @@ header.typeset {
 
 .blog {
   margin: 1rem;
-  
+
   @include breakpoint(break-2) {
     margin: 1rem auto;
     max-width: 60%;
@@ -111,5 +111,10 @@ header.typeset {
       }
     }
     margin-bottom: 1rem;
+  }
+
+  pre.terminal {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
   }
 }
