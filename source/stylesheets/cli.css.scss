@@ -81,15 +81,13 @@ body {
 }
 
 pre {
+  font-family: 'Inconsolata', monospace;
   margin:     $line-height-base 0 ;
   padding:     $line-height-base ;
   background: $background;
   color: $foreground;
-  p {
-    font-family: 'Inconsolata', monospace;
-    &.command {
-      margin-bottom: $line-height-base;
-    }
+  .command {
+    margin-bottom: $line-height-base;
   }
   .prompt {
     color: $light-green;
@@ -114,6 +112,9 @@ pre {
   }
   .information {
     color: $light-blue;
+  }
+  .bold {
+    font-weight: bold;
   }
 }
 
