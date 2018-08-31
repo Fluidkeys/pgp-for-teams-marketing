@@ -1,14 +1,5 @@
 @import 'reset';
 
-$background: #202020;
-$foreground: #EAEAEA;
-$light-green: #8BC34B;
-$light-blue: #65B5F6;
-$light-yellow: #F9A825;
-$red: #C72828;
-$light-red: #F05350;
-
-
 $font-size:    16px;
 $line-height-ratio: 1.5;
 $line-height-base:  1rem * $line-height-ratio;
@@ -80,47 +71,7 @@ body {
   }
 }
 
-pre {
-  font-family: 'Inconsolata', monospace;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  text-align: justify;
+pre.terminal {
   margin:     $line-height-base 0 ;
   padding:     $line-height-base ;
-  background: $background;
-  color: $foreground;
-  .command {
-    margin-bottom: $line-height-base;
-  }
-  .prompt {
-    color: $light-green;
-  }
-  .cursor {
-    color: $light-blue;
-  }
-  .directory {
-    color: $light-blue;
-  }
-  .return {
-    padding-left: 5rem;
-  }
-  .positive {
-    color: $light-green;
-  }
-  .notice {
-    color: $light-yellow;
-  }
-  .error {
-    color: $light-red;
-  }
-  .information {
-    color: $light-blue;
-  }
-  .bold {
-    font-weight: bold;
-  }
-}
-
-pre {
-  font-family: 'Inconsolata', monospace;
 }
