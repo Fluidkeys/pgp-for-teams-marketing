@@ -7,9 +7,20 @@
     <title><%= current_page.data.title %></title>
     <meta name="description" content="Fluidkeys makes it easy to implement the best security practices and demonstrate your team's expertise with PGP. Sign up now!" />
     <link rel="alternate" type="application/atom+xml" title="Fluidkeys Blog" href="/blog/feed.xml" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat:500,700" rel="stylesheet">
     <%= stylesheet_link_tag 'stylesheets/site' %>
   </head>
   <body>
+    <header>
+      <h1><%= link_to "Fluidkeys", "/" %></h1>
+      <nav>
+        <ul>
+          <li><%= link_to "Weeknotes", "/blog" %></li>
+          <li><%= link_to "About&nbsp;us", "/about" %></li>
+          <li><%= link_to "Download", "/download" %></li>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
     <%= partial "analytics" %>
   </body>

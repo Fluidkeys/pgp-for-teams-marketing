@@ -1,16 +1,9 @@
----
-title: PGP Software for Teams | Fluidkeys
----
-
-<header class="typeset">
-  <h1>Fluidkeys</h1>
-</header>
-
-<section class="typeset hero">
+<section class="hero">
   <div class="container">
     <div class="content">
-      <h1>Master PGP for your team</h1>
-      <p>Implement best security practices and demonstrate your team’s expertise with PGP.</p>
+      <h1>Protect your team with strong encryption</h1>
+      <p>Fluidkeys builds on OpenPGP and makes it easy to implement great security across your organisation</p>
+      <p>We’re building a better way to do PGP, you can <%= link_to 'test the current release', '#current_release' %> or sign up for release announcements:</p>
       <%= partial "signup_form", locals: { form_id: "header-sign-up" } %>
     </div>
     <div class="illustration">
@@ -19,10 +12,10 @@ title: PGP Software for Teams | Fluidkeys
   </div>
 </section>
 
-<section class="typeset challenge">
+<section class="pain">
   <div class="container">
-    <h2>Supporting PGP in a team is time consuming and error&#8209;prone</h2>
     <div class="content">
+      <h2>Supporting PGP in a team is time consuming and error&#8209;prone</h2>
       <p>The steep learning curve means supporting new team members is time consuming and costly.
       <p>Keys get out of sync, leading to confusing errors. Verifying, retrieving and refreshing keys is a repetitive, manual process.
       <p>A lack of agreed best practice means lots of keys use old, insecure algorithms. Auditing a team’s keys often gets forgotten.</p>
@@ -30,25 +23,18 @@ title: PGP Software for Teams | Fluidkeys
     <div class="illustration">
       <%= image_tag 'pain.png', alt: "An illustration of the world of pain and confusion managing PGP." %>
     </div>
-
   </div>
 </section>
 
-<section class="typeset solution">
+<section class="solution">
   <div class="container">
-    <div class="content">
-      <h2 style="padding-bottom: 1rem;">Automate PGP for stronger, simpler&nbsp;security</h2>
-      <%= image_tag "fluidkeys-command-line.gif", class: "screencast", alt: 'An animation of the command line interface for Fluidkeys' %>
-    </div>
+    <h2>Automate PGP for stronger, simpler&nbsp;security</h2>
   </div>
-</section>
-
-<section class="typeset features">
   <div class="container">
     <div class="feature">
       <%= image_tag 'new-team-member.svg', alt: 'Icon for a new key and backup' %>
       <h3>Onboard new team members</h3>
-      <p>Guide new starters through generating a key, creating encrypted backups and revocation certificates.</p>
+      <p>Automatically create a key for new starters, along with an encrypted backup and revocation certificate.</p>
     </div>
     <div class="feature">
       <%= image_tag 'sync.svg', alt: 'Icon for syncronising keys' %>
@@ -75,85 +61,95 @@ title: PGP Software for Teams | Fluidkeys
       <h3>Rotate keys periodically</h3>
       <p>Automatically generate new encryption keys every quarter for forward secrecy.</p>
     </div>
-  </div>
-
 </section>
 
-<section class="typeset final-cta">
+<section class="release" id="current_release">
   <div class="container">
-    <h2>Sign up for early access and get a free report about your team’s PGP&nbsp;practices</h2>
-    <%= partial "signup_form", locals: { form_id: "footer-sign-up" } %>
+    <div class="content">
+      <h2>Current release: 0.1</h2>
+      <p>Make a best-practice PGP key, automatically creating a backup and revocation certificate.</p>
+      <p class="button"><%= link_to "Download now", "https://download.fluidkeys.com" %></p>
+    </div>
   </div>
 </section>
 
-<script>
+<section class="progress">
+  <div class="container">
+    <div class="content">
+      <h2>Our progress</h2>
+      <div class="card complete">
+        <ul>
+          <li class="checklist-item checked"><h3>Get started with OpenPGP (v0.1)</h3></li>
+        </ul>
+        <p>You can now create a best practice PGP key from the command line. Fluidkeys backs it up and pushes it into GnuPG so you can start using it right away.</p>
+      </div>
 
-function ready(fn) {
-  if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
-    fn();
-  } else {
-    document.addEventListener('DOMContentLoaded', fn);
-  }
-}
+      <div class="card">
+        <h3>Level up your legacy keys (v0.2)</h3>
+        <ul>
+          <li class="checklist-item">Allow Fluidkeys to inspect your existing key in GnuPG</li>
+          <li class="checklist-item">Get recommendations for how to improve your existing keys</li>
+        </ul>
+      </div>
 
-function setupEventHandlers() {
-  var forms = document.getElementsByTagName('form');
-  for(var i = 0 ; i < forms.length ; ++i) {
-    forms[i].addEventListener('submit', handleFormSubmit);
-  }
-}
+      <div class="card">
+        <ul>
+          <li class="checklist-item"><h3>Synchronise keys across your technical team (v0.3)</h3></li>
+        </ul>
+        <p>You’ll be able to add and remove team members and their keys will be automatically synchronised across the whole team.</p>
+      </div>
 
-function googleAnalyticsIsLoaded() {
-  return typeof ga !== "undefined";
-}
+      <div class="card">
+        <ul>
+          <li class="checklist-item"><h3>Level up your git security</h3></li>
+        </ul>
+        <p>Your team will be signing git commits, and verifying commits from other team mates. Fluidkeys will configure git for you, and everyone’s keys will be synchronised with Github automatically.</p>
+      </div>
 
-function handleFormSubmit(event) {
+      <div class="card">
+        <ul>
+          <li class="checklist-item"><h3>Send secret text snippets</h3></li>
+        </ul>
+        <p>You can send and receive passwords and tokens to team mates right from the command line. Fluidkeys will handle the encryption so only your team-mate can access it.</p>
+      </div>
 
-  if(googleAnalyticsIsLoaded()) {
-    console.debug("Google analytics is loaded, firing form submit event");
+      <div class="card">
+        <ul>
+          <li class="checklist-item"><h3>Send sensitive files</h3></li>
+        </ul>
+        <p>You can send files of any size to team mates from the command line. Fluidkeys will handle the encryption, delivery and verify that the file arrived ok.</p>
+      </div>
 
-    // this is a bit tricksy, since submitting forms causes the page to unload
-    // and stop javascript running, we have to prevent the form submit,
-    // fire the GA tracking event and have it submit the form on success.
-    //
-    // *But* if the GA tracking event fails, the form won't be submitted, so
-    // we need to schedule it to happen automatically as a fallback.
-    //
-    // See:
-    // https://developers.google.com/analytics/devguides/collection/analyticsjs/sending-hits#knowing_when_the_hit_has_been_sent
+      <div class="card">
+        <ul>
+          <li class="checklist-item"><h3>Integrate with Slack</h3></li>
+        </ul>
+        <p>You can use the convenience of Slack with the added protection of end to end encryption. You’ll no longer have to worry about Slack’s security.</p>
+      </div>
 
-    var form = event.target,
-        formSubmitted = false; // prevent submitting the form twice
+      <div class="card major">
+        <ul>
+          <li class="checklist-item"><h3>Synchronise keys across your organisation (v1)</h3></li>
+        </ul>
+        <p>You’ll have a graphical interface for people less familiar with the command line.</p>
+      </div>
 
-    // Prevents the browser from submitting the form
-    // and thus unloading the current page.
-    event.preventDefault();
+      <div class="subscribe">
+        <p>
+          View our <%= link_to "release roadmap on Trello", "https://trello.com/b/dB9j4JaG/fluidkeys?menu=filter&filter=label:release" %>
+          or read our <%= link_to "weeknotes", "/blog" %>
+      </div>
 
-    function submitForm() {
-      if (!formSubmitted) {
-        formSubmitted = true;
-        console.log("calling form.submit()");
-        form.submit();
-      }
-    }
 
-    setTimeout(submitForm, 1000);  // in case the GA hitCallback never fires
+    </div>
+  </div>
+</section>
 
-    ga('send', 'event', {
-      eventCategory: 'Sign up form',
-      eventAction: 'form_submit',
-      eventLabel: form.id,
-      hitCallback: function() {
-        console.debug("Got GA event hit callback");
-        submitForm();
-      }
-    });
-  } else {
-    console.debug("No Google Analytics, not preventing form submit");
-  }
-
-}
-
-ready(setupEventHandlers);
-
-</script>
+<section class="final-cta">
+  <div class="container">
+    <div class="content">
+      <p>We’re building a better way to do PGP, you can <%= link_to 'test the current release', '#current_release' %> or sign up for release announcements:</p>
+      <%= partial "signup_form", locals: { form_id: "footer-sign-up" } %>
+    </div>
+  </div>
+</section>

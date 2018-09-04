@@ -1,35 +1,207 @@
-@import "sassline-base";
+@import 'reset';
+
+$font-size:    16px;
+$line-height-ratio: 1.5;
+$line-height-base:  1rem * $line-height-ratio;
+// base line-height = 16px * 1.5 = 24px
 
 $white: #ffffff;
 $dark-grey: #232732;
+$light-grey: #efefef;
 $button-primary: #d33d5c;
 $button-hover: #3DA450;
+$light-green: #00BB3D;
+
+html {
+  font-size:    $font-size;
+  line-height:  $line-height-ratio;
+  // background:   url(http://basehold.it/i/24);
+  background: $white;
+}
+
+* {
+  margin-top:     0;
+  margin-bottom:  0;
+  padding-top:    0;
+  padding-bottom: 0;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin vertical-rhythm($font-size, $bottom-rows: 1, $top-rows: 0, $use-height: false, $border: 0rem) {
+  $font-size: $font-size;
+  $border: $border;
+  $multiplier: ceil($font-size / $line-height-base);
+
+  // check if height-based element
+  // if so use height property for height, otherwise use line-height property
+  @if $use-height {
+    $leftover:      $line-height-base * $multiplier - $font-size;
+    height:         $font-size;
+    margin-top:     $line-height-base * $top-rows + $leftover / 2;
+    margin-bottom:  $line-height-base * $bottom-rows + $leftover / 2;
+  }
+  @else { // text based element (uses line-height)
+    font-size:      $font-size;
+    line-height:    $line-height-base * $multiplier;
+    margin-top:     $line-height-base * $top-rows;
+    margin-bottom:  $line-height-base * $bottom-rows - $border;
+  }
+}
+
+$breakpoints: (
+  break-0: 0,     // 0px       Mobile first
+  break-1: 640,   // 640px   ~ Small tablet up
+  break-2: 800,   // 800px   ~ Large tablet up
+  break-3: 1024,  // 1024px  ~ Desktop up
+  break-4: 1600   // 1600px  ~ Large desktop up
+) !default;
+
+@mixin breakpoint($break: 0, $max: 0) {
+  // Type of break variable
+  $value: type-of($break);
+
+  // If it is a string (i.e. a breakpoint variable).
+  @if $value == string {
+    // If using 'break-1', 'break-2' etc output the correct breakpoints from map.
+    @if map-has-key($breakpoints, $break) {
+      @media screen and (min-width: #{map-get($breakpoints, $break) / 16 * 1em} ) { @content; }
+    } @else {
+      @warn "#{$break} is not a set breakpoint variable";
+    }
+
+  // If it is a number, use this for the breakpoint.
+  } @else if $value == number {
+    // If using other numbers output value in ems either for min, min & max or max width breakpoints.
+    $query: "all" !default;
+    @if      $break != 0 and $max != 0 { $query: "(min-width: #{$break / 16 * 1em}) and (max-width: #{$max / 16 * 1em})"; }
+    @else if $break != 0 and $max == 0 { $query: "(min-width: #{$break / 16 * 1em})"; }
+    @else if $break == 0 and $max != 0 { $query: "(max-width: #{$max / 16 * 1em})"; }
+    @media #{$query} { @content; }
+
+  } @else {
+    @warn "#{$break} is not valid to use as a breakpoint";
+  }
+}
 
 body {
   overflow-x: hidden;
 }
 
-header.typeset {
-  background: $dark-grey;
-  padding: 1rem;
-  h1 {
-    color: $white;
-    font-size: 1.5em;
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+p, li {
+    @include vertical-rhythm(1rem, 1, 0);
+    font-family: 'Merriweather', sans-serif;
+}
+
+a {
+  color: $button-primary;
+}
+
+p.button {
+  a {
+    @include vertical-rhythm(1rem, 0.25, 0.25);
+    text-align: center;
+    border: 0;
+    padding: #{$line-height-base * 0.5} #{$line-height-base * 2};
+    background-color: $button-primary;
+    text-decoration: none;
+    color: #ffffff;
+    @include border-radius(3px);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.4), $dark-grey 0px 0px 1px inset;
+    transition: all 0.15s linear;
+    outline: none;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      background: $button-hover;
+      border: 0;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5), #505050 0px 0px 1px inset;
+    }
   }
 }
 
-.hero {
+h2 {
+    @include vertical-rhythm(2.2rem, 1, 0);
+    color: $button-primary;
+}
+
+label, input {
+    font-family: 'Merriweather', sans-serif;
+}
+
+header {
   background: $dark-grey;
-  color: $white;
-  padding: 1rem;
+  @include breakpoint(break-1) {
+    display: flex;
+    justify-content: space-between;
+  }
+  h1 {
+    color: $white;
+    @include vertical-rhythm(2rem, 0, 0);
+    font-weight: 700;
+    padding: $line-height-base;
+    a {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+  nav {
+    ul {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      width: 100%;
+      overflow-x: hidden;
+      border-bottom: 1px solid $button-primary;
+      @include breakpoint(break-1) {
+        border: none;
+        justify-content: flex-end;
+      }
+      li {
+        padding: 0;
+        margin: 0;
+        a {
+          display: block;
+          padding: 0 $line-height-base $line-height-base $line-height-base;
+          @include breakpoint(break-1) {
+            padding: #{$line-height-base * 1.5} $line-height-base;
+          }
+          color: $white;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+            @include breakpoint(break-1) {
+              text-decoration: none;
+              background: $button-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+section {
+  @include breakpoint(break-0) {
+    padding: $line-height-base;
+  }
   @include breakpoint(break-2) {
-    padding: 4rem 1rem;
+    padding: #{3 * $line-height-base} #{5 * $line-height-base};
   }
   .container {
     max-width: 100%;
     @include breakpoint(break-2) {
       display: flex;
-      max-width: 80%;
     }
     margin: 0 auto;
     .content {
@@ -40,75 +212,49 @@ header.typeset {
     .illustration {
       @include breakpoint(break-2) {
         width: 50%;
-        margin-left: 2rem;
+        margin-left: #{2 * $line-height-base};
+      }
+      img {
+        max-width:100%;
+      }
+    }
+  }
+}
+
+.hero {
+  background: $dark-grey;
+  //opacity: 0.5;
+  color: $white;
+  a {
+    color: $white;
+  }
+  .container {
+    .illustration {
+      @include breakpoint(break-2) {
+        width: 50%;
+        margin-left: #{2 * $line-height-base};
       }
       img {
         max-width:100%;
         max-height:100%;
         @include breakpoint(break-2) {
+          max-width: 60%;
           position: absolute;
-          width: 65%;
         }
       }
     }
   }
-
   h1 {
-    color: $white;
-    font-size: 4rem;
-    line-height: 4rem;
-    font-weight: normal;
+    @include vertical-rhythm(2.5rem, 1, 0);
   }
 }
 
-.challenge, .solution {
-  padding-top: 4rem;
+.pain {
   .container {
-    margin: 0 auto;
-    padding: 0 1em;
-    @include breakpoint(break-2) {
-      max-width: 70%;
-    }
-  }
-  h2 {
-    @include breakpoint(break-1) {
-      font-size: 2rem;
-      line-height: 3rem;
-      margin-bottom: 1rem;
-    }
-    @include breakpoint(break-2) {
-      text-align: center;
-      font-size: 3rem;
-      line-height: 4rem;
-      margin-bottom: 2rem;
-    }
-    color: $button-primary;
-    font-weight: normal;
-  }
-}
-
-.challenge {
-  .container {
-    @include breakpoint(break-2) {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    h2 {
-      max-width: 100%;
-    }
-    .content {
-      @include breakpoint(break-2) {
-        flex: 1;
-        max-width: 50%;
-      }
-    }
     .illustration {
-      @include breakpoint(break-2) {
-        flex: 1;
-        max-width: 50%;
-      }
+      max-height: #{18 * $line-height-base};
       img {
-        max-width: 100%;
+        max-height: 100%;
       }
     }
   }
@@ -116,37 +262,15 @@ header.typeset {
 
 .solution {
   .container {
-    img.screencast {
-      -webkit-border-radius: 1rem;
-      -moz-border-radius: 1rem;
-      border-radius: 1rem;
-      background: #211f1c;
-      padding: 0.5rem;
-      max-width: 100%;
-      @include breakpoint(break-1) {
-        max-width: 70%;
-      }
-      display: block;
-      margin: 0 auto 2rem auto;
-    }
-  }
-}
-
-.features {
-  margin: 0 3rem;
-  @include breakpoint(break-1) {
-    margin: 0 5rem;
-  }
-  .container {
     @include breakpoint(break-1) {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
     }
     .feature {
-      margin-top: 3rem;
+      //margin-top: 3rem;
       @include breakpoint(break-1) {
-        margin-top: 1rem;
+        margin-bottom: $line-height-base;
       }
       width: 100%;
       @include breakpoint(break-1) {
@@ -154,55 +278,164 @@ header.typeset {
       }
       img {
         display: block;
-        margin-top: 1rem;
-        height: 60px;
+        height: #{2.5 * $line-height-base};
+        margin-bottom: #{0.5 * $line-height-base};
       }
       h3 {
-        text-align: left;
-        font-size: 1.2rem;
-        line-height: 1.5rem;
+        @include vertical-rhythm(1.2rem, 1, 0);
+        font-weight: bold;
       }
     }
   }
-  padding-bottom: 8rem;
+}
+
+.release {
+  background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url(/images/release01.jpg) center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  @include breakpoint(break-2) {
+    background:linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ),url(/images/release01.jpg) center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  h2, p, a {
+    color: $white;
+  }
+  .container {
+    .content {
+      @include breakpoint(break-2) {
+        width: 40%;
+      }
+    }
+  }
+}
+
+.progress {
+  .container {
+    justify-content: center;
+    .content {
+      .card {
+        @include border-radius(5px);
+        background: $light-grey;
+        padding: 0 $line-height-base $line-height-base $line-height-base;
+        margin-bottom: $line-height-base;
+        &.complete {
+          background: $button-hover;
+          color: $white;
+        }
+        &.major {
+          border: 2px solid $button-primary;
+        }
+        h3 {
+          @include vertical-rhythm(1rem, 1, 0);
+          font-family: 'Merriweather', sans-serif;
+          font-weight: 800;
+          padding-top: $line-height-base;
+          margin-bottom: 0;
+        }
+        ul {
+          li.checklist-item {
+            padding-top: $line-height-base;
+            background-image: url(/images/checklist-item.svg);
+            background-repeat: no-repeat;
+            background-position: -5px 20px;
+            padding-left: 32px;
+            margin-bottom: 0;
+            h3 {
+              padding-top: 0;
+            }
+            &.checked {
+              background-image: url(/images/checklist-item-light-checked.svg);
+            }
+          }
+        }
+        p {
+          margin-top: $line-height-base;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
 
 .final-cta {
   background: $dark-grey;
-  padding: 4rem 0;
-  .container {
-    margin: 0 1rem;
-    @include breakpoint(break-1) {
-      max-width: 50%;
-      margin: 0 auto;
-    }
+  color: $white;
+  a {
     color: $white;
-    h2 {
-      color: $white;
-      margin-bottom: 1rem;
+  }
+  .container {
+    justify-content: center;
+  }
+}
+
+.blog {
+  .container {
+    justify-content: center;
+    .content {
+      width: 100%;
+      @include breakpoint(break-3) {
+        width: 70%;
+      }
+      h1 {
+        @include vertical-rhythm(2rem, 0.5, 0.5);
+      }
+      h2 {
+        @include vertical-rhythm(1.7rem, 0.5, 1.5);
+      }
+      hr {
+        margin-bottom: #{2 * $line-height-base};
+      }
+      pre.terminal {
+        @include vertical-rhythm(1.1rem);
+        padding: $line-height-base;
+      }
+      ul {
+        li {
+          list-style: disc;
+          &.blog-index {
+            @include vertical-rhythm(1rem, 0.5, 0);
+          }
+        }
+        ol {
+          list-style: decimal;
+        }
+      }
     }
   }
 }
 
 form {
   div {
+    label {
+      @include vertical-rhythm(1rem);
+    }
     input[type="email"] {
+      -webkit-appearance: none;
       font-size: 1em;
-      padding: 1rem 1rem;
-      border: 1px solid $dark-grey;
+      @include vertical-rhythm(1rem, 0.25, 0.25);
+      border: 0;
+      outline: 1px solid $dark-grey;
+      padding: ($line-height-base * 0.5) ($line-height-base * 0.5);
       width: 100%;
+      box-sizing: border-box;
     }
     input[type="submit"] {
-      margin-top: 0.5rem;
-      width: 100%;
+      -webkit-appearance: none;
       font-size: 1em;
+      @include vertical-rhythm(1rem, 2.25, 0.25);
+      width: 100%;
       display: block;
-      padding: 1rem 1.5rem;
       text-align: center;
       border: 0;
+      padding: $line-height-base * 0.5;
       background-color: $button-primary;
       color: #ffffff;
-      border-radius: 3px;
+      @include border-radius(3px);
       box-shadow: 0 2px 5px 0 rgba(0,0,0,0.4), $dark-grey 0px 0px 1px inset;
       transition: all 0.15s linear;
       outline: none;
@@ -215,5 +448,4 @@ form {
       }
     }
   }
-  margin-bottom: 4rem;
 }
