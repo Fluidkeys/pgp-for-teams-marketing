@@ -157,6 +157,7 @@ header {
       align-items: stretch;
       justify-content: space-between;
       width: 100%;
+      overflow-x: hidden;
       border-bottom: 1px solid $button-primary;
       @include breakpoint(break-1) {
         border: none;
