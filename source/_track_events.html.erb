@@ -1,0 +1,70 @@
+<script>
+
+function ready(fn) {
+  if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+
+function setupEventHandlers() {
+  var forms = document.getElementsByTagName('form');
+  for(var i = 0 ; i < forms.length ; ++i) {
+    forms[i].addEventListener('submit', handleFormSubmit);
+  }
+}
+
+function googleAnalyticsIsLoaded() {
+  return typeof ga !== "undefined";
+}
+
+function handleFormSubmit(event) {
+
+  if(googleAnalyticsIsLoaded()) {
+    console.debug("Google analytics is loaded, firing form submit event");
+
+    // this is a bit tricksy, since submitting forms causes the page to unload
+    // and stop javascript running, we have to prevent the form submit,
+    // fire the GA tracking event and have it submit the form on success.
+    //
+    // *But* if the GA tracking event fails, the form won't be submitted, so
+    // we need to schedule it to happen automatically as a fallback.
+    //
+    // See:
+    // https://developers.google.com/analytics/devguides/collection/analyticsjs/sending-hits#knowing_when_the_hit_has_been_sent
+
+    var form = event.target,
+        formSubmitted = false; // prevent submitting the form twice
+
+    // Prevents the browser from submitting the form
+    // and thus unloading the current page.
+    event.preventDefault();
+
+    function submitForm() {
+      if (!formSubmitted) {
+        formSubmitted = true;
+        console.log("calling form.submit()");
+        form.submit();
+      }
+    }
+
+    setTimeout(submitForm, 1000);  // in case the GA hitCallback never fires
+
+    ga('send', 'event', {
+      eventCategory: 'Sign up form',
+      eventAction: 'form_submit',
+      eventLabel: form.id,
+      hitCallback: function() {
+        console.debug("Got GA event hit callback");
+        submitForm();
+      }
+    });
+  } else {
+    console.debug("No Google Analytics, not preventing form submit");
+  }
+
+}
+ready(setupEventHandlers);
+
+</script>
