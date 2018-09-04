@@ -397,12 +397,14 @@ section {
       ul {
         li {
           list-style: disc;
+          margin-left: $line-height-base;
           &.blog-index {
             @include vertical-rhythm(1rem, 0.5, 0);
           }
         }
         ol {
           list-style: decimal;
+          margin-left: $line-height-base;
         }
       }
     }
@@ -446,6 +448,25 @@ form {
         border: 0;
         box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5), #505050 0px 0px 1px inset;
       }
+    }
+  }
+}
+
+form.inline-button {
+  @include breakpoint(break-2) {
+    display: flex;
+    align-items: space-between;
+  }
+  div {
+    input[type="email"] {
+      @include breakpoint(break-2) {
+        width: 20rem;
+        margin-right: $line-height-base;
+      }
+    }
+    input[type="submit"] {
+      display: block;
+      padding: #{$line-height-base * 0.5} $line-height-base;
     }
   }
 }
