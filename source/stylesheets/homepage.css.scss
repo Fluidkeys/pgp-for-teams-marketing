@@ -95,6 +95,7 @@ body {
 
 h1, h2, h3, h4 {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 p, li {
@@ -136,6 +137,51 @@ h2 {
 
 label, input {
     font-family: 'Merriweather', sans-serif;
+}
+
+header {
+  background: $dark-grey;
+  @include breakpoint(break-1) {
+    display: flex;
+    justify-content: space-between;
+  }
+  h1 {
+    color: $white;
+    @include vertical-rhythm(2rem, 0, 0);
+    font-weight: 700;
+    padding: $line-height-base;
+  }
+  nav {
+    ul {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      width: 100%;
+      border-bottom: 1px solid $button-primary;
+      @include breakpoint(break-1) {
+        border: none;
+        justify-content: flex-end;
+      }
+      li {
+        a {
+          display: block;
+          padding: 0 $line-height-base;
+          @include breakpoint(break-1) {
+            padding: #{$line-height-base * 1.5} $line-height-base;
+          }
+          color: $white;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+            @include breakpoint(break-1) {
+              text-decoration: none;
+              background: $button-primary;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 section {
@@ -192,7 +238,7 @@ section {
     }
   }
   h1 {
-    @include vertical-rhythm(2.2rem, 1, 0);
+    @include vertical-rhythm(2.5rem, 1, 0);
   }
 }
 
