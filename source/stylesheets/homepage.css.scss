@@ -7,7 +7,7 @@ $line-height-base:  1rem * $line-height-ratio;
 
 $white: #ffffff;
 $dark-grey: #232732;
-$light-grey: #f7f7f7;
+$light-grey: #efefef;
 $button-primary: #d33d5c;
 $button-hover: #3DA450;
 $light-green: #00BB3D;
@@ -274,6 +274,9 @@ section {
           background: $button-hover;
           color: $white;
         }
+        &.major {
+          border: 2px solid $button-primary;
+        }
         h3 {
           @include vertical-rhythm(1rem, 1, 0);
           font-family: 'Merriweather', sans-serif;
@@ -323,6 +326,7 @@ form {
       @include vertical-rhythm(1rem);
     }
     input[type="email"] {
+      -webkit-appearance: none;
       font-size: 1em;
       @include vertical-rhythm(1rem, 0.25, 0.25);
       border: 0;
@@ -332,6 +336,7 @@ form {
       box-sizing: border-box;
     }
     input[type="submit"] {
+      -webkit-appearance: none;
       font-size: 1em;
       @include vertical-rhythm(1rem, 2.25, 0.25);
       width: 100%;
