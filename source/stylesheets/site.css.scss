@@ -394,6 +394,9 @@ section {
         @include vertical-rhythm(1.1rem);
         padding: $line-height-base;
       }
+      img {
+        max-width: 100%
+      }
       ul {
         li {
           list-style: disc;
