@@ -429,7 +429,7 @@ form {
     input[type="submit"] {
       -webkit-appearance: none;
       font-size: 1em;
-      @include vertical-rhythm(1rem, 2.25, 0.25);
+      @include vertical-rhythm(1rem, 0.25, 0.25);
       width: 100%;
       display: block;
       text-align: center;
@@ -452,6 +452,11 @@ form {
   }
 }
 
+.rss-icon {
+  height: 1rem;
+  padding-right: 0.5rem;
+}
+
 form.inline-button {
   @include breakpoint(break-2) {
     display: flex;
@@ -467,6 +472,32 @@ form.inline-button {
     input[type="submit"] {
       display: block;
       padding: #{$line-height-base * 0.5} $line-height-base;
+    }
+  }
+}
+
+footer {
+  border-top: 1px solid $light-grey;
+  background: $dark-grey;
+  display: flex;
+  justify-content: center;
+  @include breakpoint(break-0) {
+    padding: $line-height-base;
+  }
+  @include breakpoint(break-2) {
+    padding: $line-height-base #{5 * $line-height-base};
+  }
+  .content {
+    width: 100%;
+    @include breakpoint(break-3) {
+      width: 70%;
+    }
+    p {
+      margin: 0;
+      a {
+        color: $white;
+        margin-right: $line-height-base;
+      }
     }
   }
 }

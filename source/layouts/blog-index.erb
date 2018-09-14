@@ -7,4 +7,7 @@
       </div>
     </section>
     <%= partial "analytics" %>
+    <% content_for :footer do %>
+      <%= link_to image_tag("rss-icon.svg", class: "rss-icon") + "RSS feed", "/blog/feed.xml" %>
+    <% end %>
 <% end %>
