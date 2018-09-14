@@ -429,7 +429,7 @@ form {
     input[type="submit"] {
       -webkit-appearance: none;
       font-size: 1em;
-      @include vertical-rhythm(1rem, 2.25, 0.25);
+      @include vertical-rhythm(1rem, 0.25, 0.25);
       width: 100%;
       display: block;
       text-align: center;

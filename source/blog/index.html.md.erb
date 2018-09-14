@@ -8,6 +8,8 @@ We send out a update on our work each week. You can sign up or read the archives
 
 <%= partial "blog/weeknotes_signup_form"  %>
 
+## Archives
+
 <ul>
 <% blog.articles.each do |article| %>
   <li class="blog-index"><%= link_to "#{article.title} — #{article.date.strftime('%A')} #{article.date.day.ordinalize} #{article.date.strftime('%b %Y')}", article.url %></li>
