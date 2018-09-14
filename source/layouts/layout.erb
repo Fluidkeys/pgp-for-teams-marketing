@@ -23,6 +23,14 @@
       </nav>
     </header>
     <%= yield %>
+    <footer>
+      <div class="content">
+        <p>
+          <%= mail_to 'hello@fluidkeys.com' %>
+          <%= yield_content :footer %>
+        </p>
+      </div>
+    </footer>
     <%= partial "analytics" %>
   </body>
 </html>
