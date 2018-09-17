@@ -7,6 +7,7 @@ gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'middleman-autoprefixer', '~> 2.7'
 gem 'middleman-livereload', '~> 3.4.3'
 gem 'middleman-gh-pages'
+gem "middleman-imageoptim", git: "https://github.com/plasticine/middleman-imageoptim", branch: "master"
 gem 'redcarpet'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
