@@ -25,3 +25,5 @@ activate :blog do |blog|
   blog.prefix = "blog"
   blog.permalink = "{title}.html"
 end
+
+activate :imageoptim
