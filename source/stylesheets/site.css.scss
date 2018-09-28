@@ -125,6 +125,12 @@ code {
   border: 1px solid #CCCCCC;
 }
 
+img.terminal {
+  padding: #{$line-height-base};
+  background: #1C1C1C;
+  @include border-radius(#{$line-height-base * 0.5});
+}
+
 blockquote {
   border-left: 1px solid $button-primary;
   padding-left: #{$line-height-base}
