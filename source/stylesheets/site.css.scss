@@ -12,6 +12,8 @@ $button-primary: #d33d5c;
 $button-hover: #3DA450;
 $light-green: #00BB3D;
 
+$terminal-light-red: #F05350;
+
 html {
   font-size:    $font-size;
   line-height:  $line-height-ratio;
@@ -112,6 +114,20 @@ p, li {
 
 a {
   color: $button-primary;
+}
+
+code {
+  font-family: 'Inconsolata', monospace;
+  color: $terminal-light-red;
+  background: $light-grey;
+  padding: 3px;
+  margin: 0 4px;
+  border: 1px solid #CCCCCC;
+}
+
+blockquote {
+  border-left: 1px solid $button-primary;
+  padding-left: #{$line-height-base}
 }
 
 p.button {
