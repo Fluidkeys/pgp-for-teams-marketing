@@ -125,10 +125,14 @@ code {
   border: 1px solid #CCCCCC;
 }
 
-img.terminal {
-  padding: #{$line-height-base};
+.terminal-wrapper {
   background: #1C1C1C;
-  @include border-radius(#{$line-height-base * 0.5});
+  margin: 0 -#{$line-height-base};
+  padding: #{$line-height-base * 0.5} 2px;
+  @include breakpoint(break-1) {
+    padding: #{$line-height-base};
+    @include border-radius(#{$line-height-base * 0.5});
+  }
 }
 
 blockquote {
