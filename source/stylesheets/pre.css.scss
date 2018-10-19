@@ -1,5 +1,6 @@
 $terminal-background: #202020;
 $terminal-foreground: #EAEAEA;
+$terminal-disabled: #7C7C7C;
 $terminal-light-green: #8BC34B;
 $terminal-light-blue: #65B5F6;
 $terminal-light-yellow: #F9A825;
@@ -40,5 +41,8 @@ pre.terminal {
   }
   .bold {
     font-weight: bold;
+  }
+  .comment {
+    color: $terminal-disabled;
   }
 }
