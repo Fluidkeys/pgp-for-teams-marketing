@@ -100,11 +100,9 @@ h1, h2, h3, h4 {
   font-weight: 500;
 }
 
-.blog {
-    h3 {
-        font-family: 'Merriweather', sans-serif;
-        font-weight: bold;
-    }
+h2 {
+  @include vertical-rhythm(2.2rem, 1, 0);
+  color: $button-primary;
 }
 
 p, li {
@@ -119,13 +117,31 @@ a {
   color: $button-primary;
 }
 
-code {
+pre {
   font-family: 'Inconsolata', monospace;
   color: $terminal-light-red;
   background: $light-grey;
-  padding: 3px;
-  margin: 0 4px;
   border: 1px solid #CCCCCC;
+  padding: 0.5rem;
+  @include vertical-rhythm(1rem, 1, 0);
+  @include border-radius(3px);
+  white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word; 
+}
+
+p {
+  code {
+    font-family: 'Inconsolata', monospace;
+    color: $terminal-light-red;
+    background: $light-grey;
+    padding: 3px;
+    margin: 0 4px;
+    border: 1px solid #CCCCCC;
+    @include border-radius(2px);
+  }
 }
 
 .terminal-wrapper {
@@ -164,11 +180,6 @@ p.button {
       box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5), #505050 0px 0px 1px inset;
     }
   }
-}
-
-h2 {
-    @include vertical-rhythm(2.2rem, 1, 0);
-    color: $button-primary;
 }
 
 label, input {
@@ -409,7 +420,7 @@ section {
   }
 }
 
-.blog {
+.markdown {
   .container {
     justify-content: center;
     .content {
@@ -418,10 +429,10 @@ section {
         width: 70%;
       }
       h1 {
-        @include vertical-rhythm(2rem, 0.5, 0.5);
+        @include vertical-rhythm(1.7rem, 0.5, 0.5);
       }
       h2 {
-        @include vertical-rhythm(1.7rem, 0.5, 1.5);
+        @include vertical-rhythm(1.4rem, 0.5, 1.5);
       }
       hr {
         margin-bottom: #{2 * $line-height-base};
