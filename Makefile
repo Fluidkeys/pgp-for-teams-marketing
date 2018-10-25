@@ -16,3 +16,4 @@ source/fingerprints.txt.sig: source/fingerprints.txt
 download_nginx_config:
 	scp www.fluidkeys.com:/etc/nginx/sites-enabled/fluidkeys.com* _config/etc/nginx/sites-enabled/
 	scp www.fluidkeys.com:/etc/nginx/sites-enabled/www.fluidkeys.com* _config/etc/nginx/sites-enabled/
+	scp www.fluidkeys.com:/etc/nginx/sites-enabled/download.fluidkeys.com* _config/etc/nginx/sites-enabled/
