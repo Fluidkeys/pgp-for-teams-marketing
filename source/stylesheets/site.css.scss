@@ -461,6 +461,9 @@ section {
           margin-left: $line-height-base;
         }
       }
+      p.date {
+        text-align: right;
+      }
     }
   }
 }
