@@ -434,6 +434,10 @@ section {
       h2 {
         @include vertical-rhythm(1.4rem, 0.5, 1.5);
       }
+      h3 {
+          font-family: 'Merriweather', sans-serif;
+          font-weight: bold;
+      }
       hr {
         margin-bottom: #{2 * $line-height-base};
       }
