@@ -105,7 +105,7 @@ h2 {
   color: $button-primary;
 }
 
-p, li {
+p, ul, ol {
     @include vertical-rhythm(1rem, 1, 0);
     font-family: 'Merriweather', sans-serif;
     em {
@@ -119,11 +119,10 @@ a {
 
 pre {
   font-family: 'Inconsolata', monospace;
-  color: $terminal-light-red;
   background: $light-grey;
   border: 1px solid #CCCCCC;
   padding: 0.5rem;
-  @include vertical-rhythm(1rem, 1, 0);
+  @include vertical-rhythm(1rem, 1, 1);
   @include border-radius(3px);
   white-space: pre-wrap;       /* css-3 */
  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
@@ -135,11 +134,9 @@ pre {
 p {
   code {
     font-family: 'Inconsolata', monospace;
-    color: $terminal-light-red;
     background: $light-grey;
     padding: 3px;
     margin: 0 4px;
-    border: 1px solid #CCCCCC;
     @include border-radius(2px);
   }
 }
@@ -434,6 +431,10 @@ section {
       h2 {
         @include vertical-rhythm(1.4rem, 0.5, 1.5);
       }
+      h3 {
+          font-family: 'Merriweather', sans-serif;
+          font-weight: bold;
+      }
       hr {
         margin-bottom: #{2 * $line-height-base};
       }
@@ -456,6 +457,9 @@ section {
           list-style: decimal;
           margin-left: $line-height-base;
         }
+      }
+      p.date {
+        text-align: right;
       }
     }
   }
