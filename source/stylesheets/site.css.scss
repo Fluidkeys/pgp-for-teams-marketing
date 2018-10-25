@@ -119,7 +119,6 @@ a {
 
 pre {
   font-family: 'Inconsolata', monospace;
-  color: $terminal-light-red;
   background: $light-grey;
   border: 1px solid #CCCCCC;
   padding: 0.5rem;
@@ -135,11 +134,9 @@ pre {
 p {
   code {
     font-family: 'Inconsolata', monospace;
-    color: $terminal-light-red;
     background: $light-grey;
     padding: 3px;
     margin: 0 4px;
-    border: 1px solid #CCCCCC;
     @include border-radius(2px);
   }
 }
