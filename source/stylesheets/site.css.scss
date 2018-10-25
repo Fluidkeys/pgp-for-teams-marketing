@@ -105,7 +105,7 @@ h2 {
   color: $button-primary;
 }
 
-p, li {
+p, ul, ol {
     @include vertical-rhythm(1rem, 1, 0);
     font-family: 'Merriweather', sans-serif;
     em {
@@ -123,7 +123,7 @@ pre {
   background: $light-grey;
   border: 1px solid #CCCCCC;
   padding: 0.5rem;
-  @include vertical-rhythm(1rem, 1, 0);
+  @include vertical-rhythm(1rem, 1, 1);
   @include border-radius(3px);
   white-space: pre-wrap;       /* css-3 */
  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
