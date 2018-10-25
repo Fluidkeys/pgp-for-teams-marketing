@@ -38,6 +38,8 @@ server {
     access_log            /var/log/nginx/download.fluidkeys.com/access.log;
     error_log             /var/log/nginx/download.fluidkeys.com/error.log;
 
+    rewrite_log on;
+
     location ~* ^.+\.(css|js|png|jpg)$ {
         # Set css and js to expire in a very long time
         access_log off;
@@ -59,4 +61,5 @@ server {
     # rewrite ^/something/?$ https://something-else permanent;
 
     rewrite ^/$ https://github.com/fluidkeys/fluidkeys/#install-on-debian--ubuntu redirect;
+    rewrite ^/source/(.*).tar.gz$ https://github.com/fluidkeys/fluidkeys-cli/archive/$1.tar.gz;
 }
