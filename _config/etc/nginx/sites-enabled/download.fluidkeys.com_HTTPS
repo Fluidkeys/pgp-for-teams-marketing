@@ -61,5 +61,5 @@ server {
     # rewrite ^/something/?$ https://something-else permanent;
 
     rewrite ^/$ https://github.com/fluidkeys/fluidkeys/#install-on-debian--ubuntu redirect;
-    rewrite ^/source/(.*).tar.gz$ https://github.com/fluidkeys/fluidkeys-cli/archive/$1.tar.gz
+    rewrite ^/source/(.*).tar.gz$ https://github.com/fluidkeys/fluidkeys-cli/archive/$1.tar.gz;
 }
