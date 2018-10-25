@@ -1,18 +1,24 @@
+---
+layout: markdown
+title: Enable pinentry mode 'loopback' on GnuPG 2.1.11
+---
 # Enable pinentry mode 'loopback' on GnuPG 2.1.11
 
-## Add this line to ~/.gnupg/gpg-agent.conf
+Add this line to `~/.gnupg/gpg-agent.conf`:
 
 ```
-# edit this file: $HOME/.gnupg/gpg-agent.conf
-
 allow-loopback-pinentry
 ```
 
-Then restart `gpg-agent`, the bit in charge of password prompts:
+Then restart `gpg-agent`:
 
 ```
-gpgconf --reload gpg-agent
+$ gpgconf --reload gpg-agent
 ```
+
+That's all 🙌
+
+---
 
 ## Fluidkeys uses loopback mode to maintain keys automatically
 
