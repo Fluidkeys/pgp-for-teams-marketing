@@ -3,14 +3,7 @@ layout: singlepage
 blog: weeknotes
 ---
 
-# Weeknotes
-
-We send out an update on our work each week. Here’s the latest, and there’s
-a <a href="#previous">list of the older ones below</a>.
-
----
-
-<h2>Latest: <%= blog.articles.first.title %></h2>
+<h1 class="blog-title"><%= link_to blog.articles.first.title, blog.articles.first.url %></h1>
 <%= blog.articles.first.body %>
 
 ---
