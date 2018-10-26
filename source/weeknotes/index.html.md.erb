@@ -1,0 +1,33 @@
+---
+layout: singlepage
+blog: weeknotes
+---
+
+# Weeknotes
+
+We send out an update on our work each week. Here’s the latest, and there’s
+a <a href="#previous">list of the older ones below</a>.
+
+---
+
+<h2>Latest: <%= blog.articles.first.title %></h2>
+<%= blog.articles.first.body %>
+
+---
+
+## <a name="previous"></a> Previous weeknotes:
+
+<ul>
+<% blog.articles[1..-1].each do |article| %>
+  <li class="blog-index">
+    <%= link_to "#{article.title}", article.url %>
+    <%= article.date.strftime('%A') %> <%= article.date.day.ordinalize %> <%= article.date.strftime('%b %Y') %>
+  </li>
+<% end %>
+</ul>
+
+---
+
+## Sign up to get emailed them each week:
+
+<%= partial "weeknotes/signup_form"  %>

@@ -236,261 +236,269 @@ header {
   }
 }
 
-section {
-  @include breakpoint(break-0) {
-    padding: $line-height-base;
-  }
-  @include breakpoint(break-2) {
-    padding: #{3 * $line-height-base} #{5 * $line-height-base};
-  }
-  .container {
-    max-width: 100%;
+#home-page {
+  section {
+    @include breakpoint(break-0) {
+      padding: $line-height-base;
+    }
     @include breakpoint(break-2) {
-      display: flex;
+      padding: #{3 * $line-height-base} #{5 * $line-height-base};
     }
-    margin: 0 auto;
-    .content {
+    .container {
+      max-width: 100%;
       @include breakpoint(break-2) {
-        width: 50%;
+        display: flex;
       }
-    }
-    .illustration {
-      @include breakpoint(break-2) {
-        width: 50%;
-        margin-left: #{2 * $line-height-base};
-      }
-      img {
-        max-width:100%;
-      }
-    }
-  }
-}
-
-.hero {
-  background: $dark-grey;
-  //opacity: 0.5;
-  color: $white;
-  a {
-    color: $white;
-  }
-  .container {
-    .illustration {
-      @include breakpoint(break-2) {
-        width: 50%;
-        margin-left: #{2 * $line-height-base};
-      }
-      img {
-        max-width:100%;
-        max-height:100%;
+      margin: 0 auto;
+      .content {
         @include breakpoint(break-2) {
-          max-width: 60%;
-          position: absolute;
+          width: 50%;
+        }
+      }
+      .illustration {
+        @include breakpoint(break-2) {
+          width: 50%;
+          margin-left: #{2 * $line-height-base};
+        }
+        img {
+          max-width:100%;
         }
       }
     }
   }
-  h1 {
-    @include vertical-rhythm(2.5rem, 1, 0);
-  }
-}
 
-.pain {
-  .container {
-    .illustration {
-      max-height: #{18 * $line-height-base};
-      img {
-        max-height: 100%;
+  .hero {
+    background: $dark-grey;
+    //opacity: 0.5;
+    color: $white;
+    a {
+      color: $white;
+    }
+    .container {
+      .illustration {
+        @include breakpoint(break-2) {
+          width: 50%;
+          margin-left: #{2 * $line-height-base};
+        }
+        img {
+          max-width:100%;
+          max-height:100%;
+          @include breakpoint(break-2) {
+            max-width: 60%;
+            position: absolute;
+          }
+        }
+      }
+    }
+    h1 {
+      @include vertical-rhythm(2.5rem, 1, 0);
+    }
+  }
+
+  .pain {
+    .container {
+      .illustration {
+        max-height: #{18 * $line-height-base};
+        img {
+          max-height: 100%;
+        }
       }
     }
   }
-}
 
-.solution {
-  .container {
-    @include breakpoint(break-1) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    .feature {
-      //margin-top: 3rem;
+  .solution {
+    .container {
       @include breakpoint(break-1) {
-        margin-bottom: $line-height-base;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
       }
-      width: 100%;
-      @include breakpoint(break-1) {
-        width: 31%;
-      }
-      img {
-        display: block;
-        height: #{2.5 * $line-height-base};
-        margin-bottom: #{0.5 * $line-height-base};
-      }
-      h3 {
-        @include vertical-rhythm(1.2rem, 1, 0);
-        font-weight: bold;
+      .feature {
+        //margin-top: 3rem;
+        @include breakpoint(break-1) {
+          margin-bottom: $line-height-base;
+        }
+        width: 100%;
+        @include breakpoint(break-1) {
+          width: 31%;
+        }
+        img {
+          display: block;
+          height: #{2.5 * $line-height-base};
+          margin-bottom: #{0.5 * $line-height-base};
+        }
+        h3 {
+          @include vertical-rhythm(1.2rem, 1, 0);
+          font-weight: bold;
+        }
       }
     }
   }
-}
 
-.release {
-  background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url(/images/release02-1000x500.jpg) center no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  @include breakpoint(break-2) {
-    background:linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ),url(/images/release02-2000x1000.jpg) center no-repeat;
+  .release {
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url(/images/release02-1000x500.jpg) center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
-  h2, p, a {
-    color: $white;
-  }
-  .container {
-    .content {
-      @include breakpoint(break-2) {
-        width: 40%;
+    @include breakpoint(break-2) {
+      background:linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ),url(/images/release02-2000x1000.jpg) center no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    h2, p, a {
+      color: $white;
+    }
+    .container {
+      .content {
+        @include breakpoint(break-2) {
+          width: 40%;
+        }
       }
     }
   }
-}
 
-.progress {
-  .container {
-    justify-content: center;
-    .content {
-      .card {
-        @include border-radius(5px);
-        background: $light-grey;
-        padding: 0 $line-height-base $line-height-base $line-height-base;
-        margin-bottom: $line-height-base;
-        &.complete {
-          background: $button-hover;
-          color: $white;
-        }
-        &.major {
-          border: 2px solid $button-primary;
-        }
-        h3 {
-          @include vertical-rhythm(1rem, 1, 0);
-          font-family: 'Merriweather', sans-serif;
-          font-weight: 800;
-          padding-top: $line-height-base;
-          margin-bottom: 0;
-        }
-        ul {
-          li.checklist-item {
+  .progress {
+    .container {
+      justify-content: center;
+      .content {
+        .card {
+          @include border-radius(5px);
+          background: $light-grey;
+          padding: 0 $line-height-base $line-height-base $line-height-base;
+          margin-bottom: $line-height-base;
+          &.complete {
+            background: $button-hover;
+            color: $white;
+          }
+          &.major {
+            border: 2px solid $button-primary;
+          }
+          h3 {
+            @include vertical-rhythm(1rem, 1, 0);
+            font-family: 'Merriweather', sans-serif;
+            font-weight: 800;
             padding-top: $line-height-base;
-            background-image: url(/images/checklist-item.svg);
-            background-repeat: no-repeat;
-            background-position: -5px 20px;
-            padding-left: 32px;
             margin-bottom: 0;
-            h3 {
-              padding-top: 0;
-            }
-            &.checked {
-              background-image: url(/images/checklist-item-light-checked.svg);
+          }
+          ul {
+            li.checklist-item {
+              padding-top: $line-height-base;
+              background-image: url(/images/checklist-item.svg);
+              background-repeat: no-repeat;
+              background-position: -5px 20px;
+              padding-left: 32px;
+              margin-bottom: 0;
+              h3 {
+                padding-top: 0;
+              }
+              &.checked {
+                background-image: url(/images/checklist-item-light-checked.svg);
+              }
             }
           }
-        }
-        p {
-          margin-top: $line-height-base;
-          margin-bottom: 0;
+          p {
+            margin-top: $line-height-base;
+            margin-bottom: 0;
+          }
         }
       }
     }
   }
-}
 
-.final-cta {
-  background: $dark-grey;
-  color: $white;
-  a {
+  .final-cta {
+    background: $dark-grey;
     color: $white;
-  }
-  .container {
-    justify-content: center;
+    a {
+      color: $white;
+    }
+    .container {
+      justify-content: center;
+    }
   }
 }
 
-.markdown {
-  .container {
-    justify-content: center;
-    .content {
+div.full-width {
+  padding-left: #{0.5 * $line-height-base};
+  padding-right: #{0.5 * $line-height-base};
+  @include breakpoint(break-1) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  section.variable-width-container {
+    margin: $line-height-base auto;
+    width: 100%;
+    @include breakpoint(break-1) {
+      width: #{map-get($breakpoints, break-1) + "px"};
+    }
+    h1 {
+      @include vertical-rhythm(1.7rem, 0.5, 0.5);
+      &.blog-title {
+        border-bottom: 1px solid $button-primary;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+    h2 {
+      @include vertical-rhythm(1.4rem, 0.5, 1.5);
+    }
+    h3 {
+        font-family: 'Merriweather', sans-serif;
+        font-weight: bold;
+    }
+    hr {
+      margin-bottom: #{2 * $line-height-base};
+    }
+    img {
+      max-width: 100%;
       width: 100%;
-      @include breakpoint(break-3) {
-        width: 70%;
-      }
-      h1 {
-        @include vertical-rhythm(1.7rem, 0.5, 0.5);
-      }
-      h2 {
-        @include vertical-rhythm(1.4rem, 0.5, 1.5);
-      }
-      h3 {
-          font-family: 'Merriweather', sans-serif;
-          font-weight: bold;
-      }
-      hr {
-        margin-bottom: #{2 * $line-height-base};
-      }
-      pre.terminal {
-        @include vertical-rhythm(1.1rem);
-        padding: $line-height-base;
-      }
-      img {
-        width: 100%;
-        max-width: 100%
-      }
-      ul {
-        li {
-          list-style: disc;
-          margin-left: $line-height-base;
-          &.blog-index {
-            @include vertical-rhythm(1rem, 0.5, 0);
-          }
-        }
-        ol {
-          list-style: decimal;
-          margin-left: $line-height-base;
+    }
+    pre.terminal {
+      @include vertical-rhythm(1.1rem);
+      padding: $line-height-base;
+    }
+    ul {
+      li {
+        list-style: disc;
+        margin-left: $line-height-base;
+        &.blog-index {
+          @include vertical-rhythm(1rem, 0.5, 0);
         }
       }
-      p.date {
-        text-align: right;
+      ol {
+        list-style: decimal;
+        margin-left: $line-height-base;
       }
+    }
+    p.date {
+      text-align: right;
     }
   }
 }
 
 .download {
-  .container {
-    .content {
-      .operating-system {
-        .logos {
-          display: flex;
-          img.logo {
-            display: block;
-            height: ($line-height-base * 3);
-            width: auto;
-            margin-right: 0.5rem;
-          }
-        }
-        padding: ($line-height-base * 1);
-        border: 1px solid #949494;
-        margin-bottom: ($line-height-base * 2);
-      }
-      h1 {
-        @include vertical-rhythm(1.7rem, 0.5, 0.5);
-      }
-      h2 {
-        @include vertical-rhythm(1.7rem, 0.5, 0.5);
+  .operating-system {
+    .logos {
+      display: flex;
+      img.logo {
+        display: block;
+        height: ($line-height-base * 3);
+        width: auto;
+        margin-right: 0.5rem;
       }
     }
+    padding: ($line-height-base * 1);
+    border: 1px solid #949494;
+    margin-bottom: ($line-height-base * 2);
+  }
+  h1 {
+    @include vertical-rhythm(1.7rem, 0.5, 0.5);
+  }
+  h2 {
+    @include vertical-rhythm(1.7rem, 0.5, 0.5);
   }
 }
 

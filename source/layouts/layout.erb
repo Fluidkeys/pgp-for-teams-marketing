@@ -12,16 +12,18 @@
     <% end if %>
     <link rel="alternate" type="application/atom+xml" title="Fluidkeys Blog" href="/blog/feed.xml" />
     <%= yield_content :head %>
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900|Montserrat:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900|Montserrat:500,700|Inconsolata" rel="stylesheet">
     <%= stylesheet_link_tag 'stylesheets/site' %>
+    <%= stylesheet_link_tag 'pre-terminal' %>
   </head>
-  <body>
+  <body id="<%= yield_content :body_id %>">
     <header>
       <h1><%= link_to "Fluidkeys", "/" %></h1>
       <nav>
         <ul>
-          <li><%= link_to "Weeknotes", "/blog" %></li>
-          <li><%= link_to "About&nbsp;us", "/about" %></li>
+          <li><%= link_to "Blog", "/blog" %></li>
+          <li><%= link_to "Weeknotes", "/weeknotes" %></li>
+          <li><%= link_to "About", "/about" %></li>
           <li><%= link_to "Download", "https://download.fluidkeys.com" %></li>
         </ul>
       </nav>
@@ -31,7 +33,7 @@
       <div class="content">
         <p>
           <%= mail_to 'hello@fluidkeys.com' %>
-          <%= yield_content :footer %>
+          <a href="/blog/feed.xml"><%= image_tag("rss-icon.svg", class: "rss-icon") + "RSS feed" %></a>
         </p>
       </div>
     </footer>

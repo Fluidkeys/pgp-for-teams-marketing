@@ -1,0 +1,9 @@
+<% wrap_layout :singlepage do %>
+    <p class="date"><%= current_article.date.strftime('%d %B %Y') %></p>
+    <h1><%= current_page.title %></h1>
+    <%= yield %>
+    <hr />
+    <p><a href="/weeknotes">Back to all weeknotes</a></p>
+    <h2>Subscribe to the weeknotes</h2>
+    <%= partial "weeknotes/signup_form" %>
+<% end %>
