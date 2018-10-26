@@ -207,6 +207,7 @@ header {
       width: 100%;
       overflow-x: hidden;
       border-bottom: 1px solid $button-primary;
+      margin-bottom: 0;
       @include breakpoint(break-1) {
         border: none;
         justify-content: flex-end;
