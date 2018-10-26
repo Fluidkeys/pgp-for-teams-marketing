@@ -1,9 +1,0 @@
-<% wrap_layout 'blog-index' do %>
-  <p class="date"><%= current_article.date.strftime('%d %B %Y') %></p>
-  <h1><%= current_page.data.title %></h1>
-  <%= yield %>
-  <hr />
-  <p><a href="/blog">Back to all posts</a></p>
-  <h2>Subscribe to the weeknotes</h2>
-  <%= partial "blog/weeknotes_signup_form"  %>
-<% end %>

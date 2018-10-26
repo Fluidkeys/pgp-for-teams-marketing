@@ -22,6 +22,15 @@ end
 activate :livereload
 
 activate :blog do |blog|
+  blog.name = "weeknotes"
+  blog.prefix = "weeknotes"
+  blog.layout = "weeknote"
+  blog.permalink = "{title}.html"
+end
+
+activate :blog do |blog|
+  blog.name = "blog"
   blog.prefix = "blog"
+  blog.layout = "blog-post"
   blog.permalink = "{title}.html"
 end

@@ -1,40 +1,39 @@
-<section class="markdown download">
-    <div class="container">
-        <div class="content">
-            <h1>Download Fluidkeys</h1>
-            <div class="systems">
-                <div class="operating-system" id="debian-ubuntu">
-                    <div class="logos">
-                        <%= image_tag 'logos/debian-logo.svg', alt: "Debian logo", class: "logo" %>
-                        <%= image_tag 'logos/ubuntu-logo.svg', alt: "Debian logo", class: "logo" %>
-                    </div>
-                    <h2>Debian / Ubuntu</h2>
-                    <p>1. Get our public key:</p>
-                    <pre>curl --silent https://www.fluidkeys.com/release.asc | sudo apt-key add -</pre>
-                    <p>2. Add our apt repository:</p>
-                    <pre>echo 'deb [arch=amd64] https://download.fluidkeys.com/desktop/apt any main' | sudo tee /etc/apt/sources.list.d/fluidkeys.list</pre>
-                    <p>3. Install:</p>
-                    <pre>sudo apt update
-sudo apt install fluidkeys</pre>
-                </div>
-                <div class="operating-system" id="mac">
-                    <div class="logos">
-                        <%= image_tag 'logos/apple-logo.svg', alt: "Apple logo", class: "logo" %>
-                    </div>
-                    <h2>macOS</h2>
-                    <p>You can use <a href="https://brew.sh/">Homebrew</a> to install Fluidkeys:</p>
-                    <pre>brew tap fluidkeys/tap
-brew update
-brew install fluidkeys</pre>
-                </div>
-                <div class="operating-system" id="source">
-                    <h2>Source install</h2>
-                    <p><a href="https://github.com/fluidkeys/fluidkeys/blob/master/README.md#install-from-source">Install from source</a></p>
-                </div>
+---
+layout: singlepage
+---
+<div class="download">
+    <h1>Download Fluidkeys</h1>
+    <div class="systems">
+        <div class="operating-system" id="debian-ubuntu">
+            <div class="logos">
+                <%= image_tag 'logos/debian-logo.svg', alt: "Debian logo", class: "logo" %>
+                <%= image_tag 'logos/ubuntu-logo.svg', alt: "Debian logo", class: "logo" %>
             </div>
+            <h2>Debian / Ubuntu</h2>
+            <p>1. Get our public key:</p>
+            <pre>curl --silent https://www.fluidkeys.com/release.asc | sudo apt-key add -</pre>
+            <p>2. Add our apt repository:</p>
+            <pre>echo 'deb [arch=amd64] https://download.fluidkeys.com/desktop/apt any main' | sudo tee /etc/apt/sources.list.d/fluidkeys.list</pre>
+            <p>3. Install:</p>
+            <pre>sudo apt update
+    sudo apt install fluidkeys</pre>
+        </div>
+        <div class="operating-system" id="mac">
+            <div class="logos">
+                <%= image_tag 'logos/apple-logo.svg', alt: "Apple logo", class: "logo" %>
+            </div>
+            <h2>macOS</h2>
+            <p>You can use <a href="https://brew.sh/">Homebrew</a> to install Fluidkeys:</p>
+            <pre>brew tap fluidkeys/tap
+    brew update
+    brew install fluidkeys</pre>
+        </div>
+        <div class="operating-system" id="source">
+            <h2>Source install</h2>
+            <p><a href="https://github.com/fluidkeys/fluidkeys/blob/master/README.md#install-from-source">Install from source</a></p>
         </div>
     </div>
-</section>
+</div>
 
 <script>
 
