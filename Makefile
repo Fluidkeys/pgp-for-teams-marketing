@@ -6,6 +6,10 @@ build:
 run:
 	bundle exec middleman server
 
+.PHONY: run_polling
+run_polling:
+	bundle exec middleman server --watcher-force-polling
+
 .PHONY: deploy
 deploy: build
 	bundle exec middleman deploy
