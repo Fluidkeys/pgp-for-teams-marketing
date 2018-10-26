@@ -35,6 +35,8 @@ server {
     ##
     ssl_dhparam /etc/ssl/certs/dhparam.pem;  # LOGJAM and various others
 
+    rewrite ^/.well-known/openpgpkey/(.*)$ https://github.com/fluidkeys/web-key-directory/raw/master/.well-known/openpgpkey/$1 redirect;
+
     location / {
         return 301 https://www.fluidkeys.com$request_uri;
     }
