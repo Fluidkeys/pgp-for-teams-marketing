@@ -1,0 +1,51 @@
+<section class="markdown download">
+    <div class="container">
+        <div class="content">
+            <h1>Download Fluidkeys</h1>
+            <div class="systems">
+                <div class="operating-system" id="mac">
+                    <div class="logos">
+                        <%= image_tag 'logos/apple-logo.svg', alt: "Apple logo", class: "logo" %>
+                    </div>
+                    <h2>macOS</h2>
+                    <p>You can use <a href="https://brew.sh/">Homebrew</a> to install Fluidkeys:</p>
+                    <pre>brew tap fluidkeys/tap
+brew update
+brew install fluidkeys</pre>
+                </div>
+                <div class="operating-system" id="linux">
+                    <div class="logos">
+                        <%= image_tag 'logos/debian-logo.svg', alt: "Debian logo", class: "logo" %>
+                        <%= image_tag 'logos/ubuntu-logo.svg', alt: "Debian logo", class: "logo" %>
+                    </div>
+                    <h2>Debian / Ubuntu</h2>
+                    <p>1. Get our public key:</p>
+                    <pre>curl --silent https://www.fluidkeys.com/release.asc | sudo apt-key add -</pre>
+                    <p>2. Add our apt repository:</p>
+                    <pre>echo 'deb [arch=amd64] https://download.fluidkeys.com/desktop/apt any main' | sudo tee /etc/apt/sources.list.d/fluidkeys.list</pre>
+                    <p>3. Install:</p>
+                    <pre>sudo apt update
+sudo apt install fluidkeys</pre>
+                </div>
+                <div class="operating-system">
+                    <h2>Source install</h2>
+                    <p><a href="https://github.com/fluidkeys/fluidkeys/blob/master/README.md#install-from-source">Install from source</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    var OSName="Unknown OS";
+    if (navigator.userAgent.indexOf("Linux")!=-1) OSName="Linux";
+    if (navigator.userAgent.indexOf("Mac")!=-1) OSName="MacOS";
+    // Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36
+    if (navigator.appVersion.indexOf("iPhone")!=-1) OSName="MacOS";
+    // Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/69.0.3497.105 Mobile/15E148 Safari/605.1
+    if (OSName == "MacOS") {
+        var content = document.getElementById('linux');
+        var parent = content.parentNode;
+        parent.insertBefore(content, parent.firstChild);
+    }
+</script>

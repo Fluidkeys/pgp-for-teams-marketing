@@ -466,6 +466,33 @@ section {
   }
 }
 
+.download {
+  .container {
+    .content {
+      .operating-system {
+        .logos {
+          display: flex;
+          img.logo {
+            display: block;
+            height: ($line-height-base * 3);
+            width: auto;
+            margin-right: 0.5rem;
+          }
+        }
+        padding: ($line-height-base * 1);
+        border: 1px solid #949494;
+        margin-bottom: ($line-height-base * 2);
+      }
+      h1 {
+        @include vertical-rhythm(1.7rem, 0.5, 0.5);
+      }
+      h2 {
+        @include vertical-rhythm(1.7rem, 0.5, 0.5);
+      }
+    }
+  }
+}
+
 form {
   div {
     label {
