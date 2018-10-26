@@ -193,7 +193,7 @@ header {
     color: $white;
     @include vertical-rhythm(2rem, 0, 0);
     font-weight: 700;
-    padding: $line-height-base;
+    padding: $line-height-base #{$line-height-base * 0.5};
     a {
       text-decoration: none;
       color: $white;
@@ -217,7 +217,7 @@ header {
         margin: 0;
         a {
           display: block;
-          padding: 0 $line-height-base $line-height-base $line-height-base;
+          padding: 0 #{$line-height-base * 0.5} $line-height-base #{$line-height-base * 0.5};
           @include breakpoint(break-1) {
             padding: #{$line-height-base * 1.5} $line-height-base;
           }
@@ -573,7 +573,7 @@ footer {
   display: flex;
   justify-content: center;
   @include breakpoint(break-0) {
-    padding: $line-height-base;
+    padding: $line-height-base #{$line-height-base * 0.5};
   }
   @include breakpoint(break-2) {
     padding: $line-height-base #{5 * $line-height-base};
