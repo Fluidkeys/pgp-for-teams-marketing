@@ -3,17 +3,7 @@
         <div class="content">
             <h1>Download Fluidkeys</h1>
             <div class="systems">
-                <div class="operating-system" id="mac">
-                    <div class="logos">
-                        <%= image_tag 'logos/apple-logo.svg', alt: "Apple logo", class: "logo" %>
-                    </div>
-                    <h2>macOS</h2>
-                    <p>You can use <a href="https://brew.sh/">Homebrew</a> to install Fluidkeys:</p>
-                    <pre>brew tap fluidkeys/tap
-brew update
-brew install fluidkeys</pre>
-                </div>
-                <div class="operating-system" id="linux">
+                <div class="operating-system" id="debian-ubuntu">
                     <div class="logos">
                         <%= image_tag 'logos/debian-logo.svg', alt: "Debian logo", class: "logo" %>
                         <%= image_tag 'logos/ubuntu-logo.svg', alt: "Debian logo", class: "logo" %>
@@ -27,7 +17,17 @@ brew install fluidkeys</pre>
                     <pre>sudo apt update
 sudo apt install fluidkeys</pre>
                 </div>
-                <div class="operating-system">
+                <div class="operating-system" id="mac">
+                    <div class="logos">
+                        <%= image_tag 'logos/apple-logo.svg', alt: "Apple logo", class: "logo" %>
+                    </div>
+                    <h2>macOS</h2>
+                    <p>You can use <a href="https://brew.sh/">Homebrew</a> to install Fluidkeys:</p>
+                    <pre>brew tap fluidkeys/tap
+brew update
+brew install fluidkeys</pre>
+                </div>
+                <div class="operating-system" id="source">
                     <h2>Source install</h2>
                     <p><a href="https://github.com/fluidkeys/fluidkeys/blob/master/README.md#install-from-source">Install from source</a></p>
                 </div>
@@ -37,15 +37,77 @@ sudo apt install fluidkeys</pre>
 </section>
 
 <script>
-    var OSName="Unknown OS";
-    if (navigator.userAgent.indexOf("Linux")!=-1) OSName="Linux";
-    if (navigator.userAgent.indexOf("Mac")!=-1) OSName="MacOS";
-    // Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36
-    if (navigator.appVersion.indexOf("iPhone")!=-1) OSName="MacOS";
-    // Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/69.0.3497.105 Mobile/15E148 Safari/605.1
-    if (OSName == "MacOS") {
-        var content = document.getElementById('linux');
-        var parent = content.parentNode;
-        parent.insertBefore(content, parent.firstChild);
+
+function detectBestOperatingSystem() {
+    var operatingSystem="unknown",
+        userAgent = navigator.userAgent;
+
+    if (userAgent.indexOf("Debian")!=-1) {
+        // Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/605.1 (KHTML, like Gecko)
+        // Version/11.0 Safari/605.1 Debian/9.0 (3.22.7-1) Epiphany/3.22.7
+
+        operatingSystem = "debian";
+    } else if (userAgent.indexOf("Ubuntu")!=-1) {
+        // Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101
+        // Firefox/62.0
+
+        operatingSystem = "ubuntu";
+    } else if (userAgent.indexOf("Android")!=-1) {
+        // Mozilla/5.0 (Linux; Android 7.0; Moto G (5) Plus Build/NPNS25.137-93-14)
+        // AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Mobile Safari/537.36
+
+        operatingSystem = "android";
+    } else if (userAgent.indexOf("Linux")!=-1) {
+        // Mozilla/5.0 (X11; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0
+
+        operatingSystem="linux";
+    } else if (userAgent.indexOf("Mac")!=-1) {
+        // Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36
+        // (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36
+
+        operatingSystem="mac";
+    } else if (userAgent.indexOf("iPhone")!=-1) {
+        // Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X)
+        // AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/69.0.3497.105
+        // Mobile/15E148 Safari/605.1
+
+        operatingSystem="iphone";
     }
+
+    console.debug("operating system: ", operatingSystem);
+
+    switch(operatingSystem) {
+        case "mac":
+        case "iphone":
+            moveOperatingSystemToTop("mac");
+            break
+
+        case "ubuntu":
+        case "debian":
+        case "android":
+            moveOperatingSystemToTop("debian-ubuntu");
+            break
+
+        case "linux":
+            moveOperatingSystemToTop("source");
+            break
+    }
+};
+
+function moveOperatingSystemToTop(operatingSystem) {
+    console.debug("moving ", operatingSystem, " to top")
+    var content = document.getElementById(operatingSystem);
+    var parentElement = content.parentNode;
+    parentElement.insertBefore(content, parentElement.firstChild);
+}
+
+function ready(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+        fn();
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
+}
+
+ready(detectBestOperatingSystem);
 </script>
