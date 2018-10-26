@@ -59,4 +59,16 @@ server {
     # rewrite ^/something/?$ https://something-else permanent;
 
     rewrite ^/patterns-for-using-pgp-in-teams/?$ https://docs.google.com/document/d/1suiNvAHVyI0fDBUd_Z6oFwrh5PrbcrhIt9zFb4KcHuA/edit#heading=h.5erb8nu4c2cn redirect;
+
+    rewrite ^/blog/week-1/?$ /weeknotes/week-1/ redirect;
+    rewrite ^/blog/week-2/?$ /weeknotes/week-2/ redirect;
+    rewrite ^/blog/week-3/?$ /weeknotes/week-3/ redirect;
+    rewrite ^/blog/week-4/?$ /weeknotes/week-4/ redirect;
+    rewrite ^/blog/week-5/?$ /weeknotes/week-5/ redirect;
+    rewrite ^/blog/week-6/?$ /weeknotes/week-6/ redirect;
+    rewrite ^/blog/week-7/?$ /weeknotes/week-7/ redirect;
+    rewrite ^/blog/week-8/?$ /weeknotes/week-8/ redirect;
+    rewrite ^/blog/week-9-fixing-existing-keys/?$ /weeknotes/week-9-fixing-existing-keys/ redirect;
+    rewrite ^/blog/week-10/?$ /weeknotes/week-10/ redirect;
+    rewrite ^/blog/week-11/?$ /weeknotes/week-11/ redirect;
 }
