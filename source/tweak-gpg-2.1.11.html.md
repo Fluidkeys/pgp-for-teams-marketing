@@ -1,5 +1,5 @@
 ---
-layout: markdown
+layout: singlepage
 title: Enable pinentry mode 'loopback' on GnuPG 2.1.11
 ---
 # Enable pinentry mode 'loopback' on GnuPG 2.1.11
