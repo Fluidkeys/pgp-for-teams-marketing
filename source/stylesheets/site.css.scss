@@ -435,12 +435,6 @@ div.full-width {
     }
     h1 {
       @include vertical-rhythm(1.7rem, 0.5, 0.5);
-      &.blog-title {
-        border-bottom: 1px solid $button-primary;
-        a {
-          text-decoration: none;
-        }
-      }
     }
     h2 {
       @include vertical-rhythm(1.4rem, 0.5, 1.5);
