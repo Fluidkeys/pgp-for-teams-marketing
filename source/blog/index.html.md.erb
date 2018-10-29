@@ -5,8 +5,8 @@ blog: blog
 
 <% latest_post = blog.articles.first %>
 
+<p class="date"><%= latest_post.date.strftime('%A') %> <%= latest_post.date.day.ordinalize %> <%= latest_post.date.strftime('%b %Y') %></p>
 <h1 class="blog-title"><%= link_to "#{latest_post.title}", latest_post.url %></h1>
-<p><%= latest_post.date.strftime('%A') %> <%= latest_post.date.day.ordinalize %> <%= latest_post.date.strftime('%b %Y') %></p>
 <%= latest_post.body %>
 
 ---
