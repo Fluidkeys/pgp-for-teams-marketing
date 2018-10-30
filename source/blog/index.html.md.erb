@@ -3,9 +3,21 @@ layout: singlepage
 blog: blog
 ---
 
+<% latest_post = blog.articles.first %>
+
+<p class="date"><%= latest_post.date.strftime('%A') %> <%= latest_post.date.day.ordinalize %> <%= latest_post.date.strftime('%b %Y') %></p>
+<h1><%= link_to "#{latest_post.title}", latest_post.url %></h1>
+<%= latest_post.body %>
+
+---
+
+<h2><a name="previous"></a> All blog posts:</h2>
+
+<ul>
 <% blog.articles.each do |article| %>
-  <h1 class="blog-title"><%= link_to "#{article.title}", article.url %></h1>
-  <p><%= article.date.strftime('%A') %> <%= article.date.day.ordinalize %> <%= article.date.strftime('%b %Y') %></p>
-  <%= article.body %>
-  <br />
+  <li class="blog-index">
+    <%= link_to "#{article.title}", article.url %>
+    <%= article.date.strftime('%A') %> <%= article.date.day.ordinalize %> <%= article.date.strftime('%b %Y') %>
+  </li>
 <% end %>
+</ul>

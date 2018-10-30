@@ -1,5 +1,5 @@
 <% wrap_layout :singlepage do %>
-    <p class="date"><%= current_article.date.strftime('%d %B %Y') %></p>
+    <p class="date"><%= current_article.date.strftime('%A') %> <%= current_article.date.day.ordinalize %> <%= current_article.date.strftime('%b %Y') %></p>
     <h1><%= current_page.title %></h1>
     <%= yield %>
     <hr />
