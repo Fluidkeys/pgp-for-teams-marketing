@@ -3,6 +3,7 @@ layout: singlepage
 blog: weeknotes
 ---
 
+<p class="date"><%= blog.articles.first.date.strftime('%d %B %Y') %></p>
 <h1 class="blog-title"><%= link_to blog.articles.first.title, blog.articles.first.url %></h1>
 <%= blog.articles.first.body %>
 
