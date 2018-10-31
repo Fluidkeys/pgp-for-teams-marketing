@@ -8,6 +8,7 @@ $line-height-base:  1rem * $line-height-ratio;
 $white: #ffffff;
 $dark-grey: #232732;
 $light-grey: #efefef;
+$mid-grey: #8c8c8c;
 $button-primary: #d33d5c;
 $button-hover: #3DA450;
 $light-green: #00BB3D;
@@ -584,5 +585,127 @@ footer {
         margin-right: $line-height-base;
       }
     }
+  }
+}
+
+#pricing-page {
+  section.variable-width-plans-container {
+    margin: $line-height-base auto;
+    width: 100%;
+    @include breakpoint(break-2) {
+      width: #{map-get($breakpoints, break-2) + "px"};
+    }
+
+    div.top {
+      h1 {
+        @include vertical-rhythm(2.8rem, 0, 2);
+      }
+      p.lead {
+        @include vertical-rhythm(1.7, 0, 0);
+        font-weight: bold;
+      }
+      h1, p.lead {
+        @include breakpoint(break-2) {
+          text-align: center;
+        }
+      }
+      padding-bottom: $line-height-base;
+      @include breakpoint(break-2) {
+        padding-bottom: #{$line-height-base * 2};
+      }
+    }
+
+    .plans {
+      @include breakpoint(break-2) {
+        display: flex;
+      }
+      .plan {
+        border: 1px solid $mid-grey;
+        padding: 0 $line-height-base;
+        margin-bottom: $line-height-base;
+        @include breakpoint(break-2) {
+          margin: 0 #{$line-height-base * 0.5};
+          width: 33%;
+        }
+        h2 {
+          @include vertical-rhythm(1.7rem, 0.5, 0.5);
+        }
+        p.team-size {
+          padding-bottom: $line-height-base;
+        }
+        p.price {
+          @include vertical-rhythm(2.5rem, 0.5, 0.0);
+        }
+        p.timeframe {
+          color: $mid-grey;
+          @include vertical-rhythm(.75rem, 1, 0.0);
+          text-transform: uppercase;
+        }
+
+        h2, p.team-size, p.price, p.timeframe, {
+          @include breakpoint(break-2) {
+            text-align: center;
+          }
+        }
+        .team-size {
+          border-bottom: 1px solid $mid-grey;
+        }
+        p.button {
+          @include breakpoint(break-2) {
+            margin: $line-height-base;
+          }
+          a {
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    .features {
+      outline: 1px solid $mid-grey;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: #{$line-height-base * 1.5};
+        margin-bottom: 0;
+        padding-bottom: 0;
+        li {
+          background-image: url(/images/tick.svg);
+          background-repeat: no-repeat;
+          background-position: 0px 0px;
+          padding-left: 32px;
+          @include vertical-rhythm(1, 1, 0);
+          @include breakpoint(break-2) {
+            display: block;
+            width: 25%;
+          }
+        }
+      }
+      p {
+        @include vertical-rhythm(1, 1, 0);
+        padding-bottom: $line-height-base;
+        text-align: center;
+      }
+    }
+
+    div.open-source-offer {
+      padding: #{$line-height-base * 1} 0;
+      @include breakpoint(break-2) {
+        text-align: center;
+      }
+      h2 {
+        color: $dark-grey;
+        @include vertical-rhythm(1.5rem, 1, 1);
+        @include breakpoint(break-2) {
+          @include vertical-rhythm(1.7rem, 1, 1);
+        }
+      }
+    }
+
   }
 }
