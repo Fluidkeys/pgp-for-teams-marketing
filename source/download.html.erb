@@ -10,7 +10,7 @@ layout: singlepage
                 <%= image_tag 'logos/ubuntu-logo.svg', alt: "Debian logo", class: "logo" %>
             </div>
             <h2>Install on Debian / Ubuntu</h2>
-            <p>1. Get our public key:</p>
+            <p>1. Get our signing key:</p>
             <pre>curl --silent https://www.fluidkeys.com/release.asc | sudo apt-key add -</pre>
             <p>2. Add our apt repository:</p>
             <pre>echo 'deb [arch=amd64] https://download.fluidkeys.com/desktop/apt any main' | sudo tee /etc/apt/sources.list.d/fluidkeys.list</pre>
