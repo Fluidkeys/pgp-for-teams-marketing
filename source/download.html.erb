@@ -29,8 +29,20 @@ brew install fluidkeys</pre>
             <p>Requires <a href="https://brew.sh/">Homebrew.</a></p>
         </div>
         <div class="operating-system" id="source">
-            <h2>Source install</h2>
-            <p><a href="https://github.com/fluidkeys/fluidkeys/blob/master/README.md#install-from-source">Install from source</a></p>
+            <h2>Install from source</h2>
+            <p>1. Install the <a href="https://golang.org/dl/#featured">Go compiler</a></p>
+
+            <p>2. Clone our repository:</p>
+            <pre>export REPO=$(go env GOPATH)/src/github.com/fluidkeys/fluidkeys
+
+git clone https://github.com/fluidkeys/fluidkeys.git $REPO
+cd $REPO</pre>
+
+            <p>3.a) Build and install to <code>/usr/local/bin/fk</code>
+            <pre>make && sudo make install</pre>
+
+            <p>3.b) Or without <code>sudo</code> (root):</p>
+            <pre>PREFIX=$HOME make && make install</pre>
         </div>
     </div>
 </div>
