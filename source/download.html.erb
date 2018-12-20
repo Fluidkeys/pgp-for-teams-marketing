@@ -18,7 +18,7 @@ layout: singlepage
             <pre>sudo apt update
 sudo apt install fluidkeys
 
-fk setup</pre>
+fk setup<span class="email-address"></span></pre>
         </div>
         <div class="operating-system" id="mac">
             <div class="logos">
@@ -28,7 +28,7 @@ fk setup</pre>
             <pre>brew tap fluidkeys/tap
 brew install fluidkeys
 
-fk setup</pre>
+fk setup<span class="email-address"></span></pre>
 
             <p>Requires <a href="https://brew.sh/">Homebrew.</a></p>
         </div>
@@ -45,12 +45,12 @@ cd $REPO</pre>
             <p>3.a) Build and install to <code>/usr/local/bin/fk</code>
             <pre>make && sudo make install
 
-fk setup</pre>
+fk setup <span class="email-address"></span></pre>
 
             <p>3.b) Or without <code>sudo</code> (root):</p>
             <pre>PREFIX=$HOME make && make install
 
-~/bin/fk setup</pre>
+~/bin/fk setup<span class="email-address"></span></pre>
         </div>
     </div>
 </div>
@@ -120,6 +120,17 @@ function moveOperatingSystemToTop(operatingSystem) {
     parentElement.insertBefore(content, parentElement.firstChild);
 }
 
+function replaceEmailArgumentInSetup() {
+    var email = decodeURIComponent(document.URL.split('#')[1]);
+    var emailAddresses = document.querySelectorAll("span.email-address");
+    console.log(emailAddresses)
+    if (email != "") {
+        for (var i = 0; i < emailAddresses.length; i++) {
+            emailAddresses[i].innerHTML = " " + email;
+        }
+    }
+}
+
 function ready(fn) {
     if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
         fn();
@@ -129,4 +140,6 @@ function ready(fn) {
 }
 
 ready(detectBestOperatingSystem);
+ready(replaceEmailArgumentInSetup);
+
 </script>
