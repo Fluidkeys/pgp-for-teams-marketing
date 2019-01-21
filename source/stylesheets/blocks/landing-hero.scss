@@ -2,22 +2,6 @@
     background: $color-hero--background;
     color: $color-hero--color;
     padding: #{$line-height-base * 3} #{0.5 * $line-height-base};
-    @include breakpoint(break-3) {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    &__inner {
-        @include breakpoint(break-2) {
-            display: flex;
-        }
-    }
-
-    &__content {
-        @include breakpoint(break-2) {
-            width: 50%;
-        }
-    }
 
     &__title {
         @include vertical-rhythm(2.75rem, 0.5, 0);
