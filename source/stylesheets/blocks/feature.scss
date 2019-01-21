@@ -1,10 +1,6 @@
 .feature {
     padding-bottom: $line-height-base * 1.5;
 
-    &__illustration {
-        background: $color-feature__illustration--background;
-    }
-
     &__title {
         @include vertical-rhythm(1.2rem, 0.5, 0);
     }

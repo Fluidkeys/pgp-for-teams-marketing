@@ -1,5 +1,6 @@
 .section {
-    padding: #{$line-height-base * 4} #{0.5 * $line-height-base};
+    padding-top: #{$line-height-base * 4};
+    padding-bottom: #{$line-height-base * 4};
     background: $color-section--background;
 
     &__intro {
