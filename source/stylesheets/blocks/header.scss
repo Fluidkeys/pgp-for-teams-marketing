@@ -1,0 +1,20 @@
+.header {
+    background: $color-header--background;
+
+    &__title {
+      @include vertical-rhythm(2rem, 0, 0);
+      font-weight: 600;
+      padding-top: #{$line-height-base * 0.5};
+      padding-bottom: #{$line-height-base * 0.5};
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-header__link--color;
+    }
+
+    &__nav {
+        text-align: right;
+    }
+    
+}

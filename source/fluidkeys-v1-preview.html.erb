@@ -9,14 +9,24 @@ layout: landing-page
 <header class="landing-hero">
     <div class="container--max-width-break-3">
         <div class="row">
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-12 col-md-6">
                 <h1 class="landing-hero__title">Automatic, user friendly PGP security for engineering teams</h1>
                 <p class="landing-hero__description">
-                    Fluidkeys is a security toolkit that creates strong, automatically rotating PGP keys
-                    for you and your team-mates.
+                    With Fluidkeys your team can share sensitive data, safeguard your
+                    source code and automatically configure popular PGP tools.
                 </p>
+                <form id="" action="#" method="post" class="form">
+                    <div class="form__element">
+                        <label for="email-address" class="form__label">Enter your email address to get started:</label>
+                        <input id="email-address" type="email" name="entry.2082822863"
+                        required placeholder="e.g. sandra@flextech.com" class="form__input">
+                    </div>
+                    <div class="form__element">
+                        <input type="submit" value="Try Fluidkeys free for 30 days" class="form__button">
+                    </div>
+                </form>
             </div>
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-12 col-md-6">
                 <div class="placeholder-image"></div>
             </div>
         </div>
@@ -32,48 +42,117 @@ layout: landing-page
             </p>
         </div>
     </div>
-    <div class="feature row">
-        <div class="col-xs-12 col-sm-6">
-            <div class="placeholder-image"></div>
+    <div class="feature row middle-md">
+        <div class="col-xs-12 col-md-6">
+            <%= image_tag 'landing/sensitive-data.png', class: 'feature__illustration' %>
         </div>
-        <div class="col-xs-12 col-sm-6">
-            <h3 class="feature__title">Make strong, synchronised PGP keys</h3>
-            <p class="feature__description">
+        <div class="col-xs-12 col-md-6">
+            <a href="#" class="feature__card">
+                <h3 class="feature__title">Share your data securely</h3>
+                <p class="feature__description">
+                    Send passwords, keys, tokens and personal data to team-mates using end-to-end
+                    encryption.
+                    <span class="feature__fake-link">Find out more about sharing securely</span>.
+                </p>
+            </a>
+        </div>
+    </div>
+    <div class="feature row middle-md">
+        <div class="col-xs-12 col-md-6">
+            <%= image_tag 'landing/protect-source-code.png', class: 'feature__illustration' %>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <a href="/features/sign-and-verify-code" class="feature__card">
+                <h3 class="feature__title">Safeguard your source code</h3>
+                <p class="feature__description">
+                    Sign your git commits, allowing Fluidkeys to configure git
+                    and keep your Github account in sync.
+                </p>
+                <p class="feature__description">
+                    Verify that all your code has come from people within your team. Only merge
+                    code from trusted developers.
+                    <span class="feature__fake-link">Find out more about signing and verifying code</span>.
+                </p>
+            </a>
+        </div>
+    </div>
+    <div class="feature row middle-md">
+        <div class="col-xs-12 col-md-6">
+            <%= image_tag 'landing/encrypt-email.png', class: 'feature__illustration' %>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <a href="/features/manage-your-team-pgp-keys" class="feature__card">
+                <h3 class="feature__title">Simply setup other PGP tools for team use</h3>
+                <p class="feature__description">
+                    Send encrypted emails, store passwords and manage deployment secrets
+                    with other open source software. Provision PGP tools for your
+                    team members, making everything work nicely together.
+                </p>
+                <p class="feature__description">
+                    Fluidkeys will work with anything that works with GnuPG.
+                    <span class="feature__fake-link">Find about more about third party tools
+                    for teams</span>.
+                </p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section container--max-width-break-3">
+    <div class="section__intro">
+        <h2 class="section__title">Works with other popular tools</h2>
+        <p class="section__description">
+            Fluidkeys can provision popular tools, synchronising keys and configuration for the team.
+            Any tool built to work with GnuPG is even simpler with Fluidkeys.
+        </p>
+    </div>
+    <div class="row">
+        <div class="pgp-app col-xs-6 col-sm-4 col-md-3">
+            <h3 class="pgp-app__title">Mailvelope</h3>
+            <p class="pgp-app__description">
+                Send and receive encrypted email in your browser.<br />Works with Gmail,
+                Yahoo, Outlook.com and more.
+            </p>
+        </div>
+        <div class="pgp-app col-xs-6 col-sm-4 col-md-3">
+            <h3 class="pgp-app__title">Pass</h3>
+            <p class="pgp-app__description">
+                Store passwords and other secrets with gpg and git. It's the standard UNIX manager
+                for the command line.
+            </p>
+        </div>
+        <div class="pgp-app col-xs-6 col-sm-4 col-md-3">
+            <h3 class="pgp-app__title">Enigmail</h3>
+            <p class="pgp-app__description">
+                Send and receive encrypted and signed email from Mozilla Thunderbird. Works with
+                macOS, Windows and Linux.
+            </p>
+        </div>
+        <div class="pgp-app col-xs-6 col-sm-4 col-md-3">
+            <h3 class="pgp-app__title">git-crypt</h3>
+            <p class="pgp-app__description">
+                Encrypt certain files in a git repository. Store secrets in the same repo
+                as code.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section container--max-width-break-3">
+    <div class="section__intro row">
+        <div class="col-xs-12">
+            <h2 class="section__title">Synchronise team keys automatically</h2>
+            <p class="section__description">
                 Fluidkeys creates keys with strong ciphers, short expiries and clear
                 certification policies on all the teams’ keys. New encryption keys are generated
                 every month for forward secrecy Fluidkeys ensures the teams’ keys are simply
-                kept in sync. <a href="#">Learn about keys and syncronisation.</a>
-            </p>
-        </div>
-    </div>
-    <div class="feature row">
-        <div class="col-xs-12 col-sm-6">
-            <div class="placeholder-image"></div>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-            <h3 class="feature__title">Safeguard your source code</h3>
-            <p class="feature__description">
-                Fluidkeys automatically configures git to sign commits while keeping your Github
-                account in sync with your signing key.<br />
-                Verify that all your code has come from people within your team. Don’t let
-                anything get merged that shouldn’t be there! <a href="#">Learn about PGP and
-                git.</a>
-            </p>
-        </div>
-    </div>
-    <div class="feature row">
-        <div class="col-xs-12 col-sm-6">
-            <div class="placeholder-image"></div>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-        <h3 class="feature__title">Protect your sensitive data</h3>
-            <p class="feature__description">
-                Send passwords, keys, tokens and personal data to team-mates using end-to-end
-                encryption. <a href="#">Learn about sending secrets.</a>
+                kept in sync.<br />
+                <a href="/features/manage-your-team-pgp-keys">Learn about automating PGP for your
+                team</a>.
             </p>
         </div>
     </div>
 </section>
 
 <%= partial "track_events" %>
-    
+

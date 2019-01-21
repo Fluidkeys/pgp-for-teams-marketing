@@ -1,0 +1,44 @@
+.form {
+
+  &__label {
+    font-family: 'Merriweather', sans-serif;
+    @include vertical-rhythm(1.3rem, 1, 0);
+  }
+
+  &__input {
+    -webkit-appearance: none;
+    font-size: 1em;
+    @include vertical-rhythm(1rem, 0.25, 0.25);
+    border: 0;
+    outline: 1px solid $color-form__input--outline;
+    padding: ($line-height-base * 0.25) ($line-height-base * 0.5);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__button {
+    -webkit-appearance: none;
+    @include vertical-rhythm(1rem, 0.25, 0.25);
+    width: 100%;
+    display: block;
+    text-align: center;
+    border: 0;
+    outline: none;
+    padding: ($line-height-base * 0.25) ($line-height-base * 0.5);
+    background-color: $color-form__button--primary;
+    color:  $color-form__button--color;
+    @include border-radius(3px);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.4), $color-form__button--box-shadow 0px 0px 1px inset;
+    transition: all 0.15s linear;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background: $color-form__button--hover;
+      border: 0;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5), #505050 0px 0px 1px inset;
+    }
+    
+  }
+  
+}

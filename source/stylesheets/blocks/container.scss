@@ -8,13 +8,13 @@
 .container {
     &--max-width-break-2 {
         @include breakpoint(break-2) {
-            max-width: #{map-get($breakpoints, break-2) + "px"};
+            max-width: #{map-get($breakpoints, break-2)};
         }
     }
 
     &--max-width-break-3 {
         @include breakpoint(break-3) {
-            max-width: #{map-get($breakpoints, break-3) + "px"};
+            max-width: #{map-get($breakpoints, break-3)};
         }
     }
 }

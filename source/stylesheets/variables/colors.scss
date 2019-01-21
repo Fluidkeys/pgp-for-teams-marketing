@@ -10,9 +10,25 @@ $color-green--light: #00BB3D;
 // Functional colors
 $color-html--background: $color-white;
 
+$color-header--background: $color-grey--dark;
+$color-header__link--color: $color-white;
+
 $color-hero--background: $color-grey--dark;
 $color-hero--color: $color-white;
+
+$color-menu__border-bottom: $color-pink;
+$color-menu__link--color: $color-white;
+$color-menu__link--hover--background: $color-pink;
+$color-menu__pill--color: $color-white;
+$color-menu__pill--background: $color-pink;
+$color-menu__pill--hover--background: $color-green;
 
 $color-section--background: $color-white;
 
 $color-placeholder-image--background: $color-grey--light;
+
+$color-form__button--color: $color-white;
+$color-form__button--primary: $color-pink;
+$color-form__button--hover: $color-green;
+$color-form__button--box-shadow: $color-grey--dark;
+$color-form__input--outline: $color-grey--dark;
