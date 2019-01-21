@@ -1,0 +1,19 @@
+.feature {
+    @include breakpoint(break-1) {
+        display: flex;
+    }
+    padding-bottom: $line-height-base * 1.5;
+    &__illustration {
+        background: $color-feature__illustration--background;
+        @include breakpoint(break-1) {
+            width: 50%;
+            margin-right: $line-height-base * 0.5;
+        }
+    }
+    &__content {
+        @include breakpoint(break-1) {
+            margin-left: $line-height-base * 0.5;
+            width: 50%;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+$font-size: 16px;
+$line-height-ratio: 1.875;
+$line-height-base: 1rem * $line-height-ratio;
+// base line-height = 16px * 1.876 = 30px
+
+html {
+    font-size: $font-size;
+    line-height: $line-height-ratio;
+    background: url(http://basehold.it/i/30);
+    //background: $color-html--background;
+}
+
+@mixin vertical-rhythm($font-size, $bottom-rows: 1, $top-rows: 0, $use-height: false, $border: 0rem) {
+    $font-size: $font-size;
+    $border: $border;
+    $multiplier: ceil($font-size / $line-height-base); // check if height-based element
+    // if so use height property for height, otherwise use line-height property
+    @if $use-height {
+        $leftover: $line-height-base * $multiplier - $font-size;
+        height: $font-size;
+        margin-top: $line-height-base * $top-rows + $leftover / 2;
+        margin-bottom: $line-height-base * $bottom-rows + $leftover / 2;
+    }
+    @else {
+        // text based element (uses line-height)
+        font-size: $font-size;
+        line-height: $line-height-base * $multiplier;
+        margin-top: $line-height-base * $top-rows;
+        margin-bottom: $line-height-base * $bottom-rows - $border;
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+p,
+ul,
+ol {
+    font-family: 'Merriweather', sans-serif;
+    @include vertical-rhythm(1rem, 1, 0);
+}
+
+h2 {
+    @include vertical-rhythm(2.75rem, 0.5, 0);
+}
+
+h3 {
+    @include vertical-rhythm(1.2rem, 0.5, 0);
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}

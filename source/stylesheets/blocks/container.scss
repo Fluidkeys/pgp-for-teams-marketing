@@ -1,0 +1,18 @@
+[class^="container--"], [class*=" container--"] {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.container {
+    &--max-width-break-2 {
+        @include breakpoint(break-2) {
+            width: #{map-get($breakpoints, break-2) + "px"};
+        }
+    }
+
+    &--max-width-break-3 {
+        @include breakpoint(break-3) {
+            width: #{map-get($breakpoints, break-3) + "px"};
+        }
+    }
+}
