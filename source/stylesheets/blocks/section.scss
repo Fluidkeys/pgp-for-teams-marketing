@@ -1,12 +1,18 @@
 .section {
     padding: #{$line-height-base * 4} #{0.5 * $line-height-base};
     background: $color-section--background;
+
     &__intro {
         padding-bottom: #{2 * $line-height-base};
         @include breakpoint(break-2) {
             text-align: center;
         }
     }
+
+    &__title {
+        @include vertical-rhythm(2.75rem, 0.5, 0);
+    }
+
     &__description {
         @include vertical-rhythm(1.3rem, 1, 0);
         width: 100%;
@@ -15,4 +21,5 @@
             width: 70%;
         }
     }
+    
 }
