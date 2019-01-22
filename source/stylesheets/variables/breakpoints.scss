@@ -1,8 +1,7 @@
 $breakpoints: ( break-0: 0, // 0px       Mobile first
-break-1: 640, // 640px   ~ Small tablet up
-break-2: 800, // 800px   ~ Large tablet up
-break-3: 1024, // 1024px  ~ Desktop up
-break-4: 1600 // 1600px  ~ Large desktop up
+break-1: 40em, // 640px   ~ Small tablet up
+break-2: 50em, // 800px   ~ Large tablet up
+break-3: 64em, // 1024px  ~ Desktop up
 ) !default;
 
 @mixin breakpoint($break: 0, $max: 0) {
@@ -11,7 +10,7 @@ break-4: 1600 // 1600px  ~ Large desktop up
     @if $value==string {
         // If using 'break-1', 'break-2' etc output the correct breakpoints from map.
         @if map-has-key($breakpoints, $break) {
-            @media screen and (min-width: #{map-get($breakpoints, $break) / 16 * 1em}) {
+            @media screen and (min-width: #{map-get($breakpoints, $break)}) {
                 @content;
             }
         }

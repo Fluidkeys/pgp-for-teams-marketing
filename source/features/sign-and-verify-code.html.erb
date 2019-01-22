@@ -1,0 +1,71 @@
+---
+layout: landing-page
+---
+
+<section class="section container--max-width-break-3 section__centered">
+    <div class="section__intro row">
+        <div class="col-xs-12">
+            <h2 class="section__title">Sign and verify code</h2>
+            <p class="section__description">
+                With Fluidkeys, signing and verifying commits, tags, releases and binaries is
+                simple. Your team can see that code changes really came from a trusted developer
+                and not a compromised account.
+            </p>
+        </div>
+    </div>
+    <%= image_tag 'features/01-sign-and-verify-code.png' %>
+</section>
+
+<section class="section container--max-width-break-3 section__centered">
+    <div class="section__intro row">
+        <div class="col-xs-12">
+            <h3 class="section__subtitle">Configure git to sign code</h3>
+            <p class="section__description">
+                Fluidkeys configures gpg, git and Github to work together seamlessly.
+            </p>
+        </div>
+    </div>
+    <%= image_tag 'features/02-configure-git-to-sign-code.png' %>
+</section>
+
+<section class="section container--max-width-break-3 section__centered">
+    <div class="section__intro row">
+        <div class="col-xs-12">
+            <h3 class="section__subtitle">Verify code with status checks</h3>
+            <p class="section__description">
+                Use Fluidkeys status check to verify that code was signed by an authorized
+                team member, not just anyone.
+            </p>
+        </div>
+    </div>
+    <%= image_tag 'features/03-github-fluidkeys-status-check.png' %>
+</section>
+
+<section class="section container--max-width-break-3 section__centered">
+    <div class="section__intro row">
+        <div class="col-xs-12">
+            <h3 class="section__subtitle">Enforce signed code</h3>
+            <p class="section__description">
+                For extra security, use Github branch protection to block unsigned code from
+                entering the codebase.
+            </p>
+        </div>
+    </div>
+    <%= image_tag 'features/04-status-checks-branch-protection.png' %>
+</section>
+
+<section class="section container--max-width-break-3 section__centered">
+    <div class="section__intro row">
+        <div class="col-xs-12">
+            <h3 class="section__subtitle">Verify signatures locally</h3>
+            <p class="section__description">
+                Verify signatures in the normal git log workflow. All the team's keys are download
+                automatically, allowing offline verification.
+            </p>
+        </div>
+    </div>
+    <%= image_tag 'features/05-verify-git-signatures-locally.png' %>
+</section>
+
+<%= partial "track_events" %>
+    

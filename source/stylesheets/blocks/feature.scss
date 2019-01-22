@@ -5,4 +5,38 @@
         @include vertical-rhythm(1.2rem, 0.5, 0);
     }
 
+    &__description {
+        @include vertical-rhythm(1, 1, 0);
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__illustration {
+        padding-bottom: #{1 * $line-height-base};
+        @include breakpoint(break-2) {
+            padding: $line-height-base;
+            box-sizing: border-box;
+        }
+    }
+
+    &__card {
+        color: black;
+        text-decoration: none;
+        display: block;
+
+        @include breakpoint(break-2) {
+            transition: all 0.1s linear;
+            padding: $line-height-base;
+            &:hover {
+                box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2), #505050 0px 0px 1px inset;
+            }
+        }
+    }
+
+    &__fake-link {
+        color: $color-pink;
+    }
+
 }
