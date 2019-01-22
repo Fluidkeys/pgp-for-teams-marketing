@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= current_page.data.title %></title>
+    <% if current_page.data.description != nil %>
+      <meta name="description" content="<%= current_page.data.description%>" />
+    <% else %>
+      <meta name="description" content="Fluidkeys makes it easy to implement the best security practices and demonstrate your team's expertise with PGP. Sign up now!" />
+    <% end if %>
+    <link rel="alternate" type="application/atom+xml" title="Fluidkeys Blog" href="/blog/feed.xml" />
+    <%= yield_content :head %>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900|Montserrat:500,600|Inconsolata" rel="stylesheet">
+    <%= stylesheet_link_tag 'stylesheets/landing-page' %>
+  </head>
+  <body id="<%= yield_content :body_id %>">
+    <%= yield %>
+    <%= partial "analytics" %>
+  </body>
+</html>

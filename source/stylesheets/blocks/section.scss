@@ -1,0 +1,26 @@
+.section {
+    padding-top: #{$line-height-base * 4};
+    padding-bottom: #{$line-height-base * 4};
+    background: $color-section--background;
+
+    &__intro {
+        padding-bottom: #{2 * $line-height-base};
+        @include breakpoint(break-2) {
+            text-align: center;
+        }
+    }
+
+    &__title {
+        @include vertical-rhythm(2.75rem, 0.5, 0);
+    }
+
+    &__description {
+        @include vertical-rhythm(1.3rem, 1, 0);
+        width: 100%;
+        @include breakpoint(break-2) {
+            display: inline-block;
+            width: 70%;
+        }
+    }
+    
+}
