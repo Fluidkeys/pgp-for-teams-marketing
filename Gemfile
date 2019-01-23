@@ -10,4 +10,4 @@ gem 'middleman-gh-pages'
 gem 'redcarpet'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
-gem 'nokogiri'
+gem "nokogiri", ">= 1.8.5"
