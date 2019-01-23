@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="627px" height="431px" viewBox="0 0 627 431" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>configure-git</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="601" height="405" rx="5"></rect>
+        <filter x="-3.2%" y="-4.8%" width="106.5%" height="109.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="1.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.134341033 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="configure-git" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="steph-actions" transform="translate(13.000000, 13.000000)">
+            <g id="Rectangle-7">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#313131" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <rect id="Rectangle" fill="#83B9F7" x="13" y="47" width="575" height="19"></rect>
+            <rect id="Rectangle" fill="#83B9F7" x="13" y="214" width="575" height="19"></rect>
+            <text id="Configuring-git-🛠️" font-family="Monaco, Ubuntu Mono" font-size="14" font-weight="normal">
+                <tspan x="13" y="61" fill="#000000"> Configuring git</tspan>
+                <tspan x="13" y="79" fill="#7ED321"></tspan>
+                <tspan x="13" y="97" font-family="AppleColorEmoji, Apple Color Emoji" fill="#FFFFFF">🛠️</tspan>
+                <tspan x="35" y="97" fill="#FFFFFF"> Configuring git:</tspan>
+                <tspan x="13" y="120" fill="#FFFFFF"></tspan>
+                <tspan x="13" y="138" fill="#FFFFFF">    [</tspan>
+                <tspan x="23" y="138" font-family="ZapfDingbatsITC, Zapf Dingbats" fill="#7ED321">✓</tspan>
+                <tspan x="35" y="138" fill="#FFFFFF">] Sign using key A3AE 4365 5BB8 FF24 B02D  1685 DD06 24C5 A179 7253</tspan>
+                <tspan x="13" y="156" fill="#FFFFFF">    [</tspan>
+                <tspan x="23" y="156" font-family="ZapfDingbatsITC, Zapf Dingbats" fill="#7ED321">✓</tspan>
+                <tspan x="35" y="156" fill="#FFFFFF">] Always sign commits</tspan>
+                <tspan x="13" y="174" fill="#FFFFFF">    [</tspan>
+                <tspan x="23" y="174" font-family="ZapfDingbatsITC, Zapf Dingbats" fill="#7ED321">✓</tspan>
+                <tspan x="35" y="174" fill="#FFFFFF">] Always sign annotated tags</tspan>
+                <tspan x="13" y="192" fill="#FFFFFF">    [</tspan>
+                <tspan x="23" y="192" font-family="ZapfDingbatsITC, Zapf Dingbats" fill="#7ED321">✓</tspan>
+                <tspan x="35" y="192" fill="#FFFFFF">] Use GnuPG at /usr/local/bin/gpg</tspan>
+                <tspan x="13" y="210" fill="#FFFFFF"></tspan>
+                <tspan x="13" y="228" fill="#000000"> Configuring Github</tspan>
+                <tspan x="13" y="246" fill="#FFFFFF"></tspan>
+                <tspan x="13" y="264" fill="#7ED321"> </tspan>
+                <tspan x="20" y="264" font-family="LucidaGrande, Lucida Grande" fill="#7ED321">▸</tspan>
+                <tspan x="35" y="264" fill="#7ED321">   Github token appears to be working</tspan>
+                <tspan x="13" y="282" fill="#FFFFFF"></tspan>
+                <tspan x="13" y="300" font-family="AppleColorEmoji, Apple Color Emoji" fill="#FFFFFF">🛠️</tspan>
+                <tspan x="35" y="300" fill="#FFFFFF"> Configuring Github:</tspan>
+                <tspan x="13" y="323" fill="#FFFFFF"></tspan>
+                <tspan x="13" y="341" fill="#FFFFFF">    [</tspan>
+                <tspan x="23" y="341" font-family="ZapfDingbatsITC, Zapf Dingbats" fill="#7ED321">✓</tspan>
+                <tspan x="35" y="341" fill="#FFFFFF">] romy@kiffix.com is listed in Github account rsnow</tspan>
+                <tspan x="13" y="359" fill="#FFFFFF">    [</tspan>
+                <tspan x="23" y="359" font-family="ZapfDingbatsITC, Zapf Dingbats" fill="#7ED321">✓</tspan>
+                <tspan x="35" y="359" fill="#FFFFFF">] uploaded PGP key to Github</tspan>
+            </text>
+            <g id="OS-buttons" transform="translate(13.000000, 12.000000)">
+                <circle id="Oval" fill="#FF6058" cx="6.5" cy="6.5" r="6.5"></circle>
+                <circle id="Oval" fill="#FFBF2F" cx="26.5" cy="6.5" r="6.5"></circle>
+                <circle id="Oval" fill="#28C940" cx="46.5" cy="6.5" r="6.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
