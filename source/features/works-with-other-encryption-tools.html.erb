@@ -1,0 +1,87 @@
+---
+layout: landing-page
+---
+
+<% content_for :head do %>
+<meta name="robots" content="noindex">
+<% end %>
+
+<section class="section container--max-width-break-3 section__centered">
+    <div class="section__intro row">
+        <div class="col-xs-12">
+            <h2 class="section__title">Works with other encryption tools</h2>
+            <p class="section__description">
+              Fluidkeys works with any tool that uses GnuPG. Once your team is set up, their keys will be automatically pushed into GnuPG, ensuring other tools can access those keys.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section container--max-width-break-3 section__centered">
+    <div class="section__intro row">
+        <div class="col-xs-12">
+            <h3 class="section__subtitle">Encrypt emails with Mailvelope, Enigmail and GPGMail</h3>
+            <p class="section__description">
+            <%= link_to "Mailvelope", "#" %>, <%= link_to "Enigmail", "#" %> and <%= link_to "GPGMail", "#" %> encrypt email using your GnuPG keyring. Fluidkeys automatically populates GnuPG with your team's keys.
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<section class="section container--max-width-break-3 section__centered">
+    <div class="section__intro row">
+        <div class="col-xs-12">
+            <h3 class="section__subtitle">Store team passwords &amp; secrets in pass</h3>
+            <p class="section__description">
+            <%= link_to "pass", "https://www.passwordstore.org/" %>, the unix password manager, uses GnuPG to encrypt passwords and secrets and git to synchronise them.
+            </p>
+
+            <p class="section__description">
+            Create a team subfolder for shared secrets and Fluidkeys can keep the <code>.gpg-id<code> up to date with the most recent team list.
+            </p>
+
+            <p class="section__feature-status">
+            Automation of .gpg-id expected Q2 2019.
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<section class="section container--max-width-break-3 section__centered">
+    <div class="section__intro row">
+        <div class="col-xs-12">
+            <h3 class="section__subtitle">Encrypt files in git repositories with git-crypt</h3>
+            <p class="section__description">
+            Store deployment secrets in git repos alongside source code.<br> <%= link_to "git-crypt", "https://www.agwa.name/projects/git-crypt/" %> uses GnuPG to encrypt and decrypt certain files in a repo.
+            </p>
+            <p class="section__description">
+            Configure Fluidkeys for each repo and it will keep the <code>.git-crypt</code> directory up to date with the most recent team list.
+            </p>
+
+            <p class="section__feature-status">
+            Automation of .git-crypt expected Q2 2019.
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<section class="section container--max-width-break-3 section__centered">
+    <div class="section__intro row">
+        <div class="col-xs-12">
+            <h3 class="section__subtitle">Publish keys using Web Key Directory</h3>
+            <p class="section__description">
+            Ensure people outside your team can find your keys using the <%= link_to "open WKD protocol.", "https://tools.ietf.org/html/draft-koch-openpgp-webkey-service-07" %>
+            </p>
+
+            <p class="section__description">
+            Since WKD is built into GnuPG and OpenPGP.js, tools like Mailvelope, Enigmail and GPGMail can find your keys without any manual effort.
+            </p>
+        </div>
+    </div>
+</section>
+
+<%= partial "track_events" %>
+
