@@ -15,16 +15,7 @@ layout: landing-page
                     With Fluidkeys your team can share sensitive data, safeguard your
                     source code and automatically configure popular PGP tools.
                 </p>
-                <form id="" action="#" method="post" class="form">
-                    <div class="form__element">
-                        <label for="email-address" class="form__label">Enter your email address to get started:</label>
-                        <input id="email-address" type="email" name="entry.2082822863"
-                        required placeholder="e.g. sandra@flextech.com" class="form__input">
-                    </div>
-                    <div class="form__element">
-                        <input type="submit" value="Try Fluidkeys free for 30 days" class="form__button">
-                    </div>
-                </form>
+                <%= partial "trial_signup_form" %>
             </div>
             <div class="col-xs-12 col-md-6">
                 <%= image_tag 'hero-image.svg', class: 'landing-hero__illustration' %>
@@ -158,6 +149,34 @@ layout: landing-page
         </div>
     </div>
 </section>
+
+<section class="section--call-out">
+    <div class="container--max-width-break-3">
+        <div class="section__intro row">
+            <div class="col-xs-12">
+                <h2 class="section__title">
+                    Get started for free - strengthen your
+                    engineering team's security practices
+                </h2>
+            </div>
+        </div>
+        <div class="row middle-lg">
+            <div class="col-xs-12 col-lg-6">
+                <%= partial "trial_signup_form" %>
+            </div>
+            <div class="col-xs-12 col-lg-6">
+                <ul class="benefits-list">
+                    <li class="benefits-list__item">You'll be safeguarding the team's source code</li>
+                    <li class="benefits-list__item">You'll be safely sending team secrets</li>
+                    <li class="benefits-list__item">You'll get all the power of PGP for your team</li>
+                <ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+</footer>
 
 <%= partial "track_events" %>
 
