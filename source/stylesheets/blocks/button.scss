@@ -1,0 +1,29 @@
+.button {
+    -webkit-appearance: none;
+    @include vertical-rhythm(1.2rem, 0.5, 0.5);
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid $color-button--border;
+    outline: none;
+    padding: ($line-height-base * 0.5) ($line-height-base * 0.5);
+    display: block;
+    @include breakpoint('break-1') {
+        padding: ($line-height-base * 0.5) ($line-height-base * 3);
+        display: inline;
+    }
+
+
+    background-color: $color-button--background;
+    color:  $color-button;
+    @include border-radius(3px);
+    transition: all 0.05s linear;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $color-button-hover--border;
+      background: $color-button-hover--background;
+      color: $color-button-hover;
+    }
+
+  }

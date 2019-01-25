@@ -26,5 +26,17 @@
             width: 70%;
         }
     }
+
+    &--plugs {
+        background-image: url(/images/plugs-left.svg);
+        background-position: left top;
+        background-repeat: no-repeat;
+
+        @include breakpoint(break-3) {
+            background-image: url(/images/plugs-left.svg), url(/images/plugs-right.svg);
+            background-position: left top, right top;
+            background-repeat: no-repeat, no-repeat;
+        }
+    }
     
 }
