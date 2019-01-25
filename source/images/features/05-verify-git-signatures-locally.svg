@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="768px" height="431px" viewBox="0 0 768 431" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>verify-signatures-locally</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="741" height="405" rx="5"></rect>
+        <filter x="-2.6%" y="-4.8%" width="105.3%" height="109.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="1.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.134341033 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="verify-signatures-locally" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="steph-actions" transform="translate(13.000000, 13.000000)">
+            <g id="Rectangle-7">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#313131" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <text id="git-log" font-family="Monaco, Ubuntu Mono" font-size="14" font-weight="normal" fill="#FFFFFF">
+                <tspan x="351" y="22">git log</tspan>
+            </text>
+            <g id="OS-buttons" transform="translate(13.000000, 12.000000)">
+                <circle id="Oval" fill="#FF6058" cx="6.5" cy="6.5" r="6.5"></circle>
+                <circle id="Oval" fill="#FFBF2F" cx="26.5" cy="6.5" r="6.5"></circle>
+                <circle id="Oval" fill="#28C940" cx="46.5" cy="6.5" r="6.5"></circle>
+            </g>
+        </g>
+        <text id="commit-d35ccce03bbeb" font-family="Monaco, Ubuntu Mono" font-size="14" font-weight="normal">
+            <tspan x="26" y="74" fill="#F5A623">commit d35ccce03bbeba84d026bd95c9b0982af68bcd31 (</tspan>
+            <tspan x="437.666992" y="74" fill="#57D1E4">HEAD-&gt;</tspan>
+            <tspan x="496.476562" y="74" fill="#7ED321"> intro-edit</tspan>
+            <tspan x="580.490234" y="74" fill="#F5A623">, </tspan>
+            <tspan x="597.292969" y="74" fill="#FF445B">origin/intro-edit</tspan>
+            <tspan x="741.714844" y="74" fill="#F5A623">)</tspan>
+            <tspan x="26" y="92" fill="#57D1E4">gpg: Signature made Mon 21 Jan 2019 11:58:05 GMT</tspan>
+            <tspan x="26" y="110" fill="#57D1E4">gpg:                using RSA key B79A0840DEF12EBBA72FF72D7327A44C2157A753</tspan>
+            <tspan x="26" y="128" fill="#57D1E4">gpg: Good signature from "&lt;rhollis@kiffix.com&gt;”</tspan>
+            <tspan x="26" y="146" fill="#57D1E4">Primary key fingerprint: B79A 0840 DEF1 2EBB A72F  F72D 7327 A44C 2157 A753</tspan>
+            <tspan x="656.102539" y="146" fill="#000000"></tspan>
+            <tspan x="26" y="164" fill="#FFFFFF">Author: Rea Hollis &lt;rhollis@kiffix.com&gt;</tspan>
+            <tspan x="26" y="182" fill="#FFFFFF">Date:   Mon Jan 21 11:57:50 2019</tspan>
+            <tspan x="26" y="200" fill="#FFFFFF"></tspan>
+            <tspan x="56" y="218" fill="#FFFFFF">Fix typo in introduction to user guide</tspan>
+            <tspan x="378.857422" y="218" fill="#000000"></tspan>
+            <tspan x="26" y="236" fill="#000000"></tspan>
+            <tspan x="26" y="254" fill="#F5A623">commit 243fd4365e26eb4278ae453cc230862aa627cc09</tspan>
+            <tspan x="26" y="272" fill="#57D1E4">gpg: Signature made Thu 17 Jan 2019 10:53:06 GMT</tspan>
+            <tspan x="26" y="290" fill="#57D1E4">gpg:                using RSA key B79A0840DEF12EBBA72FF72D7327A44C2157A753</tspan>
+            <tspan x="26" y="308" fill="#57D1E4">gpg: Good signature from "&lt;rhollis@kiffix.com&gt;"</tspan>
+            <tspan x="26" y="326" fill="#57D1E4">Primary key fingerprint: B79A 0840 DEF1 2EBB A72F  F72D 7327 A44C 2157 A753</tspan>
+            <tspan x="656.102539" y="326" fill="#000000"></tspan>
+            <tspan x="26" y="344" fill="#FFFFFF">Author: Rea Hollis &lt;rhollis@kiffix.com&gt;</tspan>
+            <tspan x="26" y="362" fill="#FFFFFF">Date:   Thu Jan 17 10:52:38 2019</tspan>
+            <tspan x="26" y="380" fill="#FFFFFF"></tspan>
+            <tspan x="56" y="398" fill="#FFFFFF">Add introduction to user guide</tspan>
+        </text>
+    </g>
+</svg>
