@@ -1,0 +1,10 @@
+.benefits-list {
+    @include vertical-rhythm(1.2rem, 0, 0);
+
+    &__item {
+        &:before {
+            content: '✔ ';
+        }
+
+    }
+}

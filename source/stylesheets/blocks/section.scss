@@ -3,6 +3,14 @@
     padding-bottom: #{$line-height-base * 4};
     background: $color-section--background;
 
+    &--call-out {
+        background: $color-section--call-out--background;
+        color: $color-section--call-out--color;
+
+        padding-top: #{$line-height-base * 4};
+        padding-bottom: #{$line-height-base * 4};
+    }
+
     &__intro {
         padding-bottom: #{2 * $line-height-base};
         @include breakpoint(break-2) {
