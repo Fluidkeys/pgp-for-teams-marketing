@@ -35,6 +35,15 @@
         }
     }
 
+    &__illustration {
+        @include breakpoint(break-2) {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
     &--plugs {
         background-image: url(/images/plugs-left.svg);
         background-position: left top;

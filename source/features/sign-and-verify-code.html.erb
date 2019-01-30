@@ -6,7 +6,7 @@ layout: landing-page
 <meta name="robots" content="noindex">
 <% end %>
 
-<section class="section container--max-width-break-3 section__centered">
+<section class="section container--max-width-break-3">
     <div class="section__intro row">
         <div class="col-xs-12">
             <h2 class="section__title">Sign and verify code</h2>
@@ -17,10 +17,10 @@ layout: landing-page
             </p>
         </div>
     </div>
-    <%= image_tag 'features/01-sign-and-verify-code.svg' %>
+    <%= image_tag 'features/01-sign-and-verify-code.svg', class: "section__illustration" %>
 </section>
 
-<section class="section container--max-width-break-3 section__centered">
+<section class="section container--max-width-break-3">
     <div class="section__intro row">
         <div class="col-xs-12">
             <h3 class="section__subtitle">Configure git to sign code</h3>
@@ -29,10 +29,10 @@ layout: landing-page
             </p>
         </div>
     </div>
-    <%= image_tag 'features/02-configure-git-to-sign-code.svg' %>
+    <%= image_tag 'features/02-configure-git-to-sign-code.svg', class: "section__illustration" %>
 </section>
 
-<section class="section container--max-width-break-3 section__centered">
+<section class="section container--max-width-break-3">
     <div class="section__intro row">
         <div class="col-xs-12">
             <h3 class="section__subtitle">Verify code with status checks</h3>
@@ -42,10 +42,10 @@ layout: landing-page
             </p>
         </div>
     </div>
-    <%= image_tag 'features/03-github-fluidkeys-status-check.svg' %>
+    <%= image_tag 'features/03-github-fluidkeys-status-check.svg', class: "section__illustration" %>
 </section>
 
-<section class="section container--max-width-break-3 section__centered">
+<section class="section container--max-width-break-3">
     <div class="section__intro row">
         <div class="col-xs-12">
             <h3 class="section__subtitle">Enforce signed code</h3>
@@ -55,10 +55,10 @@ layout: landing-page
             </p>
         </div>
     </div>
-    <%= image_tag 'features/04-status-checks-branch-protection.png' %>
+    <%= image_tag 'features/04-status-checks-branch-protection.png', class: "section__illustration" %>
 </section>
 
-<section class="section container--max-width-break-3 section__centered">
+<section class="section container--max-width-break-3">
     <div class="section__intro row">
         <div class="col-xs-12">
             <h3 class="section__subtitle">Verify signatures locally</h3>
@@ -68,7 +68,7 @@ layout: landing-page
             </p>
         </div>
     </div>
-    <%= image_tag 'features/05-verify-git-signatures-locally.svg' %>
+    <%= image_tag 'features/05-verify-git-signatures-locally.svg', class: "section__illustration" %>
 </section>
 
 <%= partial "track_events" %>

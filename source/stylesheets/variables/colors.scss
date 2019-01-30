@@ -6,6 +6,7 @@ $color-grey--dark: #232732;
 $color-pink: #d33d5c;
 $color-green: #3DA450;
 $color-green--light: #00BB3D;
+$color-yellow--light: #FFF4B3;
 
 // Functional colors
 $color-html--background: $color-white;
@@ -43,3 +44,6 @@ $color-button-hover--background: $color-pink;
 $color-button-hover--border: $color-pink;
 
 $color-footer--background: $color-grey--dark;
+
+$color-preview-announcement: $color-grey--dark;
+$color-preview-announcement--background: $color-yellow--light;
