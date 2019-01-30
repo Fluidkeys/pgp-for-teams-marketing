@@ -3,14 +3,6 @@ layout: singlepage
 ---
 
 <% content_for :head do %>
-<script>
-document.addEventListener("DOMContentLoaded", function(event) {
-    var urlParams = new URLSearchParams(window.location.search);
-    emailAddress = urlParams.get('email')
-
-    document.getElementById('email-address').value = emailAddress;
-});
-</script>
 <% end %>
 
 <h1>
@@ -26,3 +18,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 <%= partial "signup_form", locals: { form_id: "v1-preview-sign-up" } %>
 
 <%= partial "track_events" %>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(event) {
+    var urlParams = new URLSearchParams(window.location.search);
+    emailAddress = urlParams.get('email')
+
+    document.getElementById('email-address').value = emailAddress;
+});
+</script>
