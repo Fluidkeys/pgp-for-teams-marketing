@@ -1,0 +1,15 @@
+#!/bin/sh -eu
+
+make build
+
+set +e
+FILES_WITH_ERRORS=$(grep -Rin '^Error' build)
+set -e
+
+if [ "$FILES_WITH_ERRORS" != "" ]; then
+  echo
+  echo "Some files contained an error message:"
+  echo
+  echo "$FILES_WITH_ERRORS"
+  exit 1
+fi
