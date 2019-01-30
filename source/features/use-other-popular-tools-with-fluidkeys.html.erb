@@ -1,0 +1,82 @@
+---
+layout: landing-page
+---
+
+<% content_for :head do %>
+<meta name="robots" content="noindex">
+<% end %>
+
+<section class="section container--max-width-break-3 section__centered">
+    <div class="section__intro row">
+        <div class="col-xs-12">
+            <h2 class="section__title">Use other popular tools</h2>
+            <p class="section__description">
+              Fluidkeys works with any tool that uses GnuPG. Once your team is set up, their keys will be automatically pushed into GnuPG, ensuring other tools can access those keys.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section container--max-width-break-3 section__centered">
+    <div class="section__intro row">
+        <div class="col-xs-12">
+            <h3 class="section__subtitle">Store team passwords &amp; secrets in pass</h3>
+            <p class="section__description">
+            <%= link_to "pass", "https://www.passwordstore.org/" %>, the unix password manager, uses GnuPG to encrypt passwords and git to synchronise them.
+            </p>
+
+            <p class="section__description">
+            Create a team subfolder for shared secrets and Fluidkeys can keep the <code>.gpg-id<code> up to date with the most recent team list.
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<section class="section container--max-width-break-3 section__centered">
+    <div class="section__intro row">
+        <div class="col-xs-12">
+            <h3 class="section__subtitle">Encrypt files in git repos with git-crypt</h3>
+            <p class="section__description">
+            Store deployment secrets alongside source code in git.<br> <%= link_to "git-crypt", "https://www.agwa.name/projects/git-crypt/" %> uses GnuPG to encrypt and decrypt certain files in a repo.
+            </p>
+            <p class="section__description">
+            Configure Fluidkeys for each repo and it will keep the <code>.git-crypt</code> directory up to date with the most recent team list.
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<section class="section container--max-width-break-3 section__centered">
+    <div class="section__intro row">
+        <div class="col-xs-12">
+            <h3 class="section__subtitle">Encrypt and sign emails</h3>
+            <p class="section__description">
+            Protect sensitive emails using <%= link_to "Mailvelope", "#" %>, <%= link_to "Enigmail", "#" %> or <%= link_to "GPGMail.", "#" %>
+            </p>
+            <p class="section__description">
+            Fluidkeys handles key exchange and configuration to eliminate any manual setup.
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<section class="section container--max-width-break-3 section__centered">
+    <div class="section__intro row">
+        <div class="col-xs-12">
+            <h3 class="section__subtitle">Ensure others can find your keys</h3>
+            <p class="section__description">
+            Fluidkeys can publish the team's keys using the open <%= link_to "Web Key Directory protocol.", "https://tools.ietf.org/html/draft-koch-openpgp-webkey-service-07" %>
+            </p>
+
+            <p class="section__description">
+            Other people sending you encrypted email can find your keys automatically.
+            </p>
+        </div>
+    </div>
+</section>
+
+<%= partial "track_events" %>
+
