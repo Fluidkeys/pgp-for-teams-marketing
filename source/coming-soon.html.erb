@@ -1,0 +1,35 @@
+---
+layout: singlepage
+---
+<% content_for :head do %>
+<meta name="robots" content="noindex">
+<% end %>
+
+<h1>
+    We're nearly ready...
+</h1>
+
+<p>
+Thanks for wanting to try out Fluidkeys. This was a preview our upcoming release and we're working hard on it.
+</p>
+
+<p>
+We'd love for you to sign up to our release announcements and you'll be the first to hear when we're ready.
+</p>
+
+<p>
+  — Paul and Ian
+</p>
+
+<%= partial "signup_form", locals: { form_id: "v1-preview-sign-up" } %>
+
+<%= partial "track_events" %>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(event) {
+    var urlParams = new URLSearchParams(window.location.search);
+    emailAddress = urlParams.get('email')
+
+    document.getElementById('email-address').value = emailAddress;
+});
+</script>
