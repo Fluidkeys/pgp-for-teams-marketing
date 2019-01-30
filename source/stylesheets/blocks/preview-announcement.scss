@@ -1,0 +1,21 @@
+.preview-announcement {
+    padding-top: #{$line-height-base * 0.25};
+    padding-bottom: #{$line-height-base * 0.25};
+    background: $color-preview-announcement--background;
+
+    &--content {
+        text-align: center;
+        color: $color-preview-announcement;
+        font-family: Arial, Helvetica, sans-serif;
+        @include vertical-rhythm(0.9rem, 0, 0);
+        line-height: 1.3rem;
+
+        @include breakpoint('break-1') {
+            @include vertical-rhythm(1rem, 0, 0);
+        }
+            
+        a {
+            color: $color-preview-announcement;
+        }
+    }
+}

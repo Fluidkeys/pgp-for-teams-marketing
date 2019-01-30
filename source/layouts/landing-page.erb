@@ -16,19 +16,19 @@
     <%= stylesheet_link_tag 'stylesheets/landing-page' %>
   </head>
   <body id="<%= yield_content :body_id %>">
+    <div class="preview-announcement">
+      <p class="preview-announcement--content">
+        This is a preview of our upcoming release. We&nbsp;❤️&nbsp;feedback:&nbsp;<a href="mailto:hello@fluidkeys.com">hello@fluidkeys.com</a>
+      </p>
+    </div>
     <header class="header container--fill">
       <div class="row">
         <h1 class="header__title col-xs-12 col-sm-2"><%= link_to "Fluidkeys", "/fluidkeys-v1-preview", class: "header__link" %></h1>
-        <nav class="header__nav col-xs-12 col-sm-10">
-          <ul class="menu">
-            <li class="menu__item"><%= link_to "How it works", "/", class: "menu__link" %></li>
-            <li class="menu__item"><%= link_to "Pricing", "/", class: "menu__link" %></li>
-            <li class="menu__item"><%= link_to "Try it FREE", "/", class: "menu__link--pill" %></li>
-          </ul>
-        </nav>
       </div>
     </header>
     <%= yield %>
+    <footer class="footer">
+    </footer>
     <%= partial "analytics" %>
   </body>
 </html>

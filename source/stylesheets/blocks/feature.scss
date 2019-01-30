@@ -15,6 +15,8 @@
 
     &__illustration {
         padding-bottom: #{1 * $line-height-base};
+        max-width: 100%;
+        height: auto;
         @include breakpoint(break-2) {
             padding: $line-height-base;
             box-sizing: border-box;
