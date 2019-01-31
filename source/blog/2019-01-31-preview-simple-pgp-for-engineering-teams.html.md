@@ -20,6 +20,6 @@ We'd love to hear what you think!
 
 We're excited to hear from you :)
 
-Join in the [discussion on Hackernews]().
+Join in the [discussion on Hackernews](https://news.ycombinator.com/item?id=19044043).
 
 — Ian & Paul
