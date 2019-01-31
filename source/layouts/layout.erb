@@ -6,11 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= current_page.data.title %></title>
     <% if current_page.data.description != nil %>
-      <meta name="description" content="<%= current_page.data.description%>" />
+      <meta name="description" content="<%= current_page.data.description%>" property="og:description"/>
     <% else %>
       <meta name="description" content="Fluidkeys makes it easy to implement the best security practices and demonstrate your team's expertise with PGP. Sign up now!" />
     <% end if %>
     <link rel="alternate" type="application/atom+xml" title="Fluidkeys Blog" href="/blog/feed.xml" />
+
+    <meta property="og:title" content="<%= current_page.data.title %>">
+    <meta property="og:site_name" content="Fluidkeys" />
+    <meta property="og:locale" content="en_GB" />
+
+    <% if current_page.data.open_graph_type != nil %>
+    <meta property="og:type" content="<%= current_page.data.open_graph_type %>">
+    <% end if %>
+
+    <% if current_page.data.open_graph_image != nil %>
+    <meta property="og:image" content="https://www.fluidkeys.com/<%= current_page.data.open_graph_image %>" />
+    <% end if %>
+
+    <!-- https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@fluidkeys">
+
     <%= yield_content :head %>
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900|Montserrat:500,700|Inconsolata" rel="stylesheet">
     <%= stylesheet_link_tag 'stylesheets/site' %>
