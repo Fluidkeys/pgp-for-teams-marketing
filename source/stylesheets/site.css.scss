@@ -713,3 +713,30 @@ footer {
 
   }
 }
+
+.btn {
+    -webkit-appearance: none;
+    @include vertical-rhythm(1rem, 1, 1);
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid $button-primary;
+    outline: none;
+    padding: ($line-height-base * 0.5) ($line-height-base * 0.5);
+    display: inline-block;
+    margin: 0;
+
+
+    background-color: $white;
+    color:  $button-primary;
+    @include border-radius(3px);
+    transition: all 0.05s linear;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border: 2px solid $button-primary;
+      background: $button-primary;
+      color: $white;
+    }
+
+}
