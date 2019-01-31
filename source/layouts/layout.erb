@@ -9,7 +9,7 @@
       <meta name="description" content="<%= current_page.data.description%>" property="og:description"/>
     <% else %>
       <meta name="description" content="Fluidkeys makes it easy to implement the best security practices and demonstrate your team's expertise with PGP. Sign up now!" />
-    <% end if %>
+    <% end %>
     <link rel="alternate" type="application/atom+xml" title="Fluidkeys Blog" href="/blog/feed.xml" />
 
     <meta property="og:title" content="<%= current_page.data.title %>">
@@ -18,11 +18,11 @@
 
     <% if current_page.data.open_graph_type != nil %>
     <meta property="og:type" content="<%= current_page.data.open_graph_type %>">
-    <% end if %>
+    <% end %>
 
     <% if current_page.data.open_graph_image != nil %>
     <meta property="og:image" content="https://www.fluidkeys.com/<%= current_page.data.open_graph_image %>" />
-    <% end if %>
+    <% end %>
 
     <!-- https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards -->
     <meta name="twitter:card" content="summary">
