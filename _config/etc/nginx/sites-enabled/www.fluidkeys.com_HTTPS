@@ -71,4 +71,6 @@ server {
     rewrite ^/blog/week-9-fixing-existing-keys/?$ /weeknotes/week-9-fixing-existing-keys/ redirect;
     rewrite ^/blog/week-10/?$ /weeknotes/week-10/ redirect;
     rewrite ^/blog/week-11/?$ /weeknotes/week-11/ redirect;
+
+    rewrite ^/give-feedback/?$ https://fluidkeys.us20.list-manage.com/subscribe?u=fd279ba68240c3d0639990f7e&id=31b9f692f4 redirect;
 }
