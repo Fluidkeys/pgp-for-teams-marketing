@@ -1,9 +1,10 @@
-@import 'reset';
+@import 'lib/reset';
 
 @import 'variables/colors';
 
-@import 'lib/lib';
-@import 'helpers/helpers';
+@import 'lib/flexboxgrid';
+
+@import 'partials/border-radius';
 
 @import 'variables/breakpoints';
 @import 'variables/typography';
