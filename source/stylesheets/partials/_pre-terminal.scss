@@ -45,4 +45,9 @@ pre.terminal {
   .comment {
     color: $terminal-disabled;
   }
+
+  .header {
+    background: $terminal-light-blue;
+    color: $terminal-background;
+  }
 }
