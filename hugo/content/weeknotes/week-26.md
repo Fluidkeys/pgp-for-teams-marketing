@@ -1,4 +1,5 @@
 ---
+date: 2019-02-01
 title: "Week 26: Finished our preview site"
 author: Ian Drysdale
 ---

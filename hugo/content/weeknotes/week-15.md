@@ -1,4 +1,5 @@
 ---
+date: 2018-11-16
 title: "Week 15: Can you help intro us to infosec people?"
 author: Ian Drysdale
 ---

@@ -1,4 +1,5 @@
 ---
+date: 2018-09-14
 title: Week 6, Building Key Rotation
 author: Paul Furley
 ---
@@ -76,7 +77,7 @@ Do please send us an email to [hello@fluidkeys.com](mailto:hello@fluidkeys.com).
 
 Most of the work we did this week was displaying back the keys you've created or linked from GnuPG. Here's how we're looking:
 
-![a table with three columns displaying keys](images/2018-09-14-fluidkeys-list-pgp-keys.png)
+![a table with three columns displaying keys](/images/2018-09-14-fluidkeys-list-pgp-keys.png)
 
 The status column is starting to shape up… that's where we're starting to surface issues with the key, and below the table we'll put simple, plain-English instructions on how to fix the issue.
 

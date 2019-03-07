@@ -1,4 +1,5 @@
 ---
+date: 2019-02-08
 title: "Week 27: Looking ahead"
 author: Paul Fawkesley
 ---

@@ -1,4 +1,5 @@
 ---
+date: 2018-10-26
 title: "Week 12: Fluidkeys v0.2 and the OpenPGP Email summit"
 author: Paul Fawkesley
 ---

@@ -1,4 +1,5 @@
 ---
+date: 2018-11-30
 title: "Week 17: Rejigging our roadmap"
 author: Ian Drysdale
 ---
@@ -16,7 +17,7 @@ Paul’s back from his holiday, but I’ve not managed to stop him coding for lo
 ## A dashboard to help us focus
 This week we spent two days designing and building a dashboard that we now proudly display on our desks in our respective cities. Here’s Paul’s in Liverpool:
 
-![A photo of the dashboard on an Android tablet on a table](images/2018-11-30-dashboard.jpg)
+![A photo of the dashboard on an Android tablet on a table](/images/2018-11-30-dashboard.jpg)
 
 The theory is that by tracking some key numbers, we’ll improve! Firstly, we’re measuring the number of people signing up to our release notes, hopefully by looking at this every day we’ll then start to prioritise work to increase it. Currently it’s one every few days, most of this coming from [Expirybot](https://www.expirybot.com/). Next, we want to speak to at least 4 people every week, so next week’s looking good! We want to do a minor release every 30 days, so not so great there. And then ultimately we’re trying to make a living out of this. As you can see, there’s still some room for improvement.
 

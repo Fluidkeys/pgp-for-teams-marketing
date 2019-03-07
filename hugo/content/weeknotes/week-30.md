@@ -3,6 +3,7 @@ title: "Week 30: Request to join a team"
 author: Ian Drysdale
 open_graph_type: "article"
 open_graph_image: "images/2019-03-01-invitation-copy.png"
+date: 2019-03-01
 ---
 
 _Recap_: Fluidkeys makes PGP simple for engineering teams. It helps you safeguard your source code and protect passwords, secrets and personal data.

@@ -1,4 +1,5 @@
 ---
+date: 2019-01-25
 title: "Week 25: We've got our first customer!"
 author: Ian Drysdale
 ---
@@ -18,7 +19,7 @@ Hello, it's great to be back!
 
 We've had a stab at explaining how Fluidkeys will actually work for your teams. We're really narrowly targetting our niche: small to medium engineering teams. We're about to show how it looks (as a command line app) and how it works. I'm really pleased with what we've got done, [take a look](/fluidkeys-v1-preview).
 
-![A screenshot of the header of the landing page](images/2019-01-25-landing-page-header.png)
+![A screenshot of the header of the landing page](/images/2019-01-25-landing-page-header.png)
 
 We'll be testing this out with prospective users next week, seeing whether it's getting closer to being something valuable enough to pay for!
 

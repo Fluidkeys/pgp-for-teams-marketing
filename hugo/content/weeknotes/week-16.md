@@ -1,4 +1,5 @@
 ---
+date: 2018-11-23
 title: "Week 16: Getting started with teams"
 author: Ian Drysdale
 ---
@@ -22,7 +23,7 @@ I’ve got a ‘team-server’ working… almost.
 
 Check it out!
 
-<pre class="terminal">
+<pre class="terminal" style="font-size: 0.9em;">
 <span class="prompt">➜</span>  <span class="directory">~</span> fk team create Flextech
 
 What’s your Flextech email address?

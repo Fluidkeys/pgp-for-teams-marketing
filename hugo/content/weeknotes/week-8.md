@@ -1,4 +1,5 @@
 ---
+date: 2018-09-28
 title: Week 8, We've got key rotation working!
 author: Ian Drysdale
 ---

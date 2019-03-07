@@ -1,4 +1,5 @@
 ---
+date: 2019-02-15
 title: "Week 28: 0.4 and thinking about the future 🔮"
 author: Ian Drysdale
 ---
@@ -17,7 +18,7 @@ _Recap_: We’re building Fluidkeys to help teams safeguard their source code an
 On Monday we applied the last bit of polish to the way in which you send encrypted files using
 Fluidkeys. On Tuesday morning we hit the release button! 0.4 is out there!
 
-![An illustration of how you can send files from the command line](images/fluidkeys-0.4-release.png)
+![An illustration of how you can send files from the command line](/images/fluidkeys-0.4-release.png)
 
 [We announced it](/blog/release-0-4-send-encrypted-files/) and once more [posted it on Hackernews](https://news.ycombinator.com/item?id=19143770).
 Sadly, no one really took much notice again this time. It's a shame, [our post back in January](https://news.ycombinator.com/item?id=18863528)

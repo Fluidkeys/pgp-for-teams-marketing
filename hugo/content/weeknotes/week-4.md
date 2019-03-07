@@ -1,4 +1,5 @@
 ---
+date: 2018-08-31
 title: Week 4, Sketching a command line interface
 author: Ian Drysdale
 ---

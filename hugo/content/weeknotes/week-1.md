@@ -1,4 +1,5 @@
 ---
+date: 2018-08-10
 title: Week 1, Researching privacy and security
 author: Ian Drysdale
 ---

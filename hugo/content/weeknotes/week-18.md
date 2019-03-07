@@ -1,4 +1,5 @@
 ---
+date: 2018-12-07
 title: "Week 18: Send secrets with Fluidkeys"
 author: Paul Fawkesley
 ---

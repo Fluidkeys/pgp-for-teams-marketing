@@ -1,4 +1,5 @@
 ---
+date: 2018-08-24
 title: Week 3, Released 0.1 🎉
 author: Paul Furley
 ---

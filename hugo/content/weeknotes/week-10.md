@@ -1,4 +1,5 @@
 ---
+date: 2018-10-12
 title: Week 10, We put on a Digital Self Defence class!
 author: Ian Drysdale
 ---
@@ -19,7 +20,7 @@ We also made a [deck of six cards, each with a move you could use against Facebo
 
 It was a lovely evening with lots of interesting chat, as you might imagine. Thank you Lisa for helping run it with us! In respect of people's privacy, we didn't take photos, but here's one of the prototype cards:
 
-![Three of the self defence cards](images/2018-10-12-facebook-self-defence-cards.jpg)
+![Three of the self defence cards](/images/2018-10-12-facebook-self-defence-cards.jpg)
 
 ## More work on Fluidkeys
 

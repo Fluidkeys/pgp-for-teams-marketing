@@ -1,4 +1,5 @@
 ---
+date: 2018-08-17
 title: Week 2, Starting Fluidkeys
 author: Paul Furley
 ---

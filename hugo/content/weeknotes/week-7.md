@@ -1,4 +1,5 @@
 ---
+date: 2018-09-21
 title: Week 7, Patterns for PGP in teams
 author: Ian Drysdale
 ---

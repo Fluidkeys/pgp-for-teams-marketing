@@ -1,4 +1,5 @@
 ---
+date: 2019-01-11
 title: "Week 23: Telling the world about encrypted secrets"
 author: Paul Fawkesley
 ---

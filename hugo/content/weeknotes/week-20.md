@@ -1,4 +1,5 @@
 ---
+date: 2018-12-21
 title: "Week 20: Quietly releasing 0.3"
 author: Ian Drysdale
 ---

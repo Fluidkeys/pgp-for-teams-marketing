@@ -1,4 +1,5 @@
 ---
+date: 2019-02-22
 title: "Week 29: Create a team"
 author: Paul Fawkesley
 open_graph_type: "article"
