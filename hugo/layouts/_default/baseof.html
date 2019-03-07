@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+    {{ if (isset .Params "open_graph_type") }}
+    <meta name="description" content="{{ $.Params.description }}" property="og:description"/>
+    {{ else }}
+    <meta name="description" content="Simple PGP for engineering teams. Safeguard your source code and protect team secrets and customer data." />
+    {{ end }}
+
+    <link rel="alternate" type="application/atom+xml" title="Fluidkeys Blog" href="/blog/feed.xml" />
+
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:site_name" content="Fluidkeys" />
+    <meta property="og:locale" content="en_GB" />
+
+    {{ if (isset .Params "open_graph_type") }}
+    <meta property="og:type" content="{{ $.Params.open_graph_type }}">
+    {{ end }}
+
+    {{ if (isset .Params "open_graph_image") }}
+    <meta property="og:image" content="https://www.fluidkeys.com/{{ $.Params.open_graph_image }}" />
+    <meta name="twitter:card" content="summary_large_image">
+    {{ else }}
+    <meta name="twitter:card" content="summary">
+    {{ end }}
+
+    <!-- https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards -->
+    <meta name="twitter:site" content="@fluidkeys">
+
+    {{ block "extra_head" . }}{{ end }}
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900|Montserrat:500,600|Inconsolata" rel="stylesheet">
+    {{ $style := resources.Get "sass/site.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+  </head>
+
+  <body>
+    <header class="header container--fill">
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <h1 class="header__title col-xs-12 col-sm-2"><a href="/" class="header__link">Fluidkeys</a></h1>
+        </div>
+        <div class="col-xs-12 col-md-8">
+          <nav>
+            <ul class="nav">
+              <li class="nav__item"><a href="/blog" class="nav__link">Blog</a></li>
+              <li class="nav__item"><a href="/weeknotes" class="nav__link">Weeknotes</a></li>
+              <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+              <li class="nav__item"><a href="https://download.fluidkeys.com" class="nav__link">Download</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    {{ block "main" . }}
+    {{ end }}
+
+    {{ block "footer" . }}
+    <footer class="footer">
+      <div class="container--max-width-break-2">
+        <p>
+        <a href="mailto:hello@fluidkeys.com" class="footer__link">hello@fluidkeys.com</a>
+          <a href="/blog/feed.xml" class="footer__link"><img src="/images/rss-icon.svg" class="footer__rss-icon" />RSS feed</a>
+        </p>
+      </div>
+    </footer>
+    {{ end }}
+    {{ partial "analytics.html" }}
+  </body>
+</html>
