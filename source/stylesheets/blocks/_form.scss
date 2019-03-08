@@ -2,7 +2,7 @@
 
   &__label {
     font-family: 'Merriweather', sans-serif;
-    @include vertical-rhythm(1.3rem, 1, 0);
+    @include vertical-rhythm(1rem, 1, 0);
   }
 
   &__input {
@@ -38,7 +38,25 @@
       border: 0;
       box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5), #505050 0px 0px 1px inset;
     }
-    
+
   }
-  
+
+  &--compact {
+    @include breakpoint(break-2) {
+      display: flex;
+      align-items: space-between;
+    }
+    input[type="email"] {
+      @include breakpoint(break-2) {
+        width: 20rem;
+        margin-right: $line-height-base;
+      }
+    }
+    input[type="submit"] {
+      display: block;
+      padding: #{$line-height-base * 0.25} $line-height-base;
+    }
+}
+
+
 }

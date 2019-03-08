@@ -15,6 +15,10 @@ pre.terminal {
   word-break: break-word;
   background: $terminal-background;
   color: $terminal-foreground;
+  @include vertical-rhythm(1em, 0, 0);
+  line-height: #{$line-height-base * 0.65};
+  padding: $line-height-base;
+  @include border-radius(#{$line-height-base * 0.25});
   .prompt {
     color: $terminal-light-green;
   }
@@ -45,9 +49,9 @@ pre.terminal {
   .comment {
     color: $terminal-disabled;
   }
-
   .header {
     background: $terminal-light-blue;
     color: $terminal-background;
   }
+  margin-bottom: $line-height-base;
 }

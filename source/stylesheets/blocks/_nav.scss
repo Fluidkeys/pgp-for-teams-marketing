@@ -1,0 +1,33 @@
+.nav {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 0;
+    @include breakpoint(break-2) {
+      justify-content: flex-end;
+    }
+
+    &__item {
+      padding: 0;
+      margin: 0;
+    }
+
+    &__link {
+        display: block;
+        padding: 0 $line-height-base $line-height-base 0;
+        @include breakpoint(break-2) {
+            padding: $line-height-base;
+        }
+        color: $color-nav__link;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+            @include breakpoint(break-2) {
+            text-decoration: none;
+            background: $color-nav__link-hover;
+            }
+        }
+    }
+}

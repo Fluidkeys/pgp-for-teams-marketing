@@ -6,6 +6,8 @@
       font-weight: 600;
       padding-top: #{$line-height-base * 0.5};
       padding-bottom: #{$line-height-base * 0.5};
+      padding-left: 0;
+      padding-right: 0;
     }
 
     &__link {
@@ -16,5 +18,5 @@
     &__nav {
         text-align: right;
     }
-    
+
 }
