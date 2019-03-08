@@ -41,7 +41,19 @@ $color-button-hover: $color-white;
 $color-button-hover--background: $color-pink;
 $color-button-hover--border: $color-pink;
 
+$color-button--inverted: $color-white;
+$color-button--inverted--background: $color-pink;
+$color-button--inverted--border: $color-pink;
+$color-button--inverted-hover: $color-white;
+$color-button--inverted-hover--background: $color-green;
+$color-button--inverted-hover--border: $color-green;
+
 $color-footer--background: $color-grey--dark;
 
 $color-preview-announcement: $color-grey--dark;
 $color-preview-announcement--background: $color-yellow--light;
+
+$color-card--background: $color-grey--light;
+$color-card--complete: $color-white;
+$color-card--complete--background: $color-green;
+$color-card--major--border: $color-pink;

@@ -11,6 +11,25 @@
         padding-bottom: #{$line-height-base * 4};
     }
 
+    &--release {
+        background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url(/images/release03-1000x500.jpg) center no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        @include breakpoint(break-2) {
+            background:linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) ),url(/images/release03-2000x1000.jpg) center no-repeat;
+        }
+
+        color: $color-section--call-out--color;
+
+        padding-top: #{$line-height-base * 2};
+        padding-bottom: #{$line-height-base * 2};
+
+        margin-top: #{$line-height-base * 2};
+        margin-bottom: #{$line-height-base * 2};
+    }
+
     &__intro {
         padding-bottom: #{1 * $line-height-base};
         @include breakpoint(break-2) {
@@ -19,26 +38,29 @@
     }
 
     &__title {
-        @include vertical-rhythm(2.75rem, 0.5, 0);
+        @include vertical-rhythm(1.5rem, 0.5, 0.5);
+        @include breakpoint(break-2) {
+            @include vertical-rhythm(2.75rem, 0.5, 0);
+        }
     }
 
     &__subtitle {
-        @include vertical-rhythm(2rem, 0.5, 0);
+        @include vertical-rhythm(1.5rem, 0.5, 0.5);
+        @include breakpoint(break-2) {
+            @include vertical-rhythm(2rem, 0.5, 2);
+        }
     }
 
     &__description {
         @include vertical-rhythm(1.3rem, 1, 0);
-        width: 100%;
-        @include breakpoint(break-2) {
-            display: inline-block;
-            width: 70%;
-        }
     }
 
     &__illustration {
+        width: 100%;
         max-width: 100%;
         height: auto;
         @include breakpoint(break-2) {
+            padding-top: #{$line-height-base * 1};
             display: block;
             margin: 0 auto;
         }
@@ -55,5 +77,5 @@
             background-repeat: no-repeat, no-repeat;
         }
     }
-    
+
 }

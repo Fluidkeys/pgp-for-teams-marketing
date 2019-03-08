@@ -1,0 +1,45 @@
+.card {
+    @include border-radius(5px);
+    background: $color-card--background;
+    padding: $line-height-base;
+    margin-bottom: $line-height-base;
+    &--complete {
+      background: $color-card--complete--background;
+      color: $color-card--complete;
+    }
+    &--major {
+      border: 2px solid $color-card--major--border;
+    }
+
+    h3.card__title {
+      @include vertical-rhythm(1rem, 0.5, 0);
+      font-family: 'Merriweather', sans-serif;
+      font-weight: 800;
+    }
+
+    .card__list {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+
+    .card__list-item {
+        padding-bottom: #{$line-height-base * 0.5};
+        background-image: url(/images/checklist-item.svg);
+        background-repeat: no-repeat;
+        padding-left: 32px;
+
+        h3.card__title {
+            @include vertical-rhythm(1rem, 0, 0);
+        }
+
+        &--checked {
+            background-image: url(/images/checklist-item-light-checked.svg);
+        }
+    }
+
+    .card__description {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
