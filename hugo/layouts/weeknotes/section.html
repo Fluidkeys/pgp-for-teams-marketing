@@ -1,0 +1,32 @@
+{{ define "title"}}Fluidkeys Weeknotes{{ end }}
+{{ define "description" }} description: Keep up to date with our progress building Fluidkeys, a way
+to protect your team with strong encryption.{{ end }}
+{{ define "main" }}
+
+<section class="container--max-width-break-2">
+    <div class="markdown">
+
+        {{ $firstPage := index .Pages 0 }}
+        <p class="markdown__date">{{ $firstPage.Date.Format "2 January 2006" }}</p>
+        <h1><a href="{{ $firstPage.URL }}">{{ $firstPage.Title }}</a></h1>
+        {{ $firstPage.Content }}
+
+        <h2>Sign up to get emailed them each week:</h2>
+
+        {{ partial "weeknotes/signup_form.html" }}
+
+        <h2><a name="previous"></a> Previous weeknotes:</h2>
+
+        <ul>
+          <!-- TODO: paginate from 1 not 0 -->
+          {{ range .Pages }}
+          <li class="markdown__index-item">
+            <a href="{{ .URL }}">{{ .Title }}</a>
+            {{ .Date.Format "Monday 2 Jan 2006" }}
+          </li>
+          {{ end }}
+        </ul>
+    </div>
+</section>
+
+{{ end }}
