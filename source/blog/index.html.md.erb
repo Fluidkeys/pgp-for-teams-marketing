@@ -5,7 +5,7 @@ blog: blog
 
 <% latest_post = blog.articles.first %>
 
-<p class="weeknote__date"><%= latest_post.date.strftime('%A') %> <%= latest_post.date.day.ordinalize %> <%= latest_post.date.strftime('%b %Y') %></p>
+<p class="markdown__date"><%= latest_post.date.strftime('%A') %> <%= latest_post.date.day.ordinalize %> <%= latest_post.date.strftime('%b %Y') %></p>
 <h1><%= link_to "#{latest_post.title}", latest_post.url %></h1>
 <%= latest_post.body %>
 
