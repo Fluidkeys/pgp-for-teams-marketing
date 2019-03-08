@@ -2,13 +2,14 @@
 title: "Send encrypted secrets from the command-line: Fluidkeys v0.3"
 description: With Fluidkeys 0.3 you can send passwords, keys, tokens and personal data to team-mates using end-to-end encryption.
 author: Paul Fawkesley & Ian Drysdale
+date: 2019-01-08
 ---
 
 Today we proudly announce Fluidkeys 0.3 😄
 
 With Fluidkeys v0.3 you can send passwords, keys, tokens and personal data to team-mates using end-to-end encryption.
 
-![Terminal showing sending a secret token to a team-mate](images/release-0-3-send-secret.svg)
+![Terminal showing sending a secret token to a team-mate](/images/release-0-3-send-secret.svg)
 
 If you're keen to get started, head to [download.fluidkeys.com](https://download.fluidkeys.com)
 

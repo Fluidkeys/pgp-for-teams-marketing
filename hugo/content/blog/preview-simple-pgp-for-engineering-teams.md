@@ -4,6 +4,7 @@ description: "Take at look at a preview of the upcoming release of Fluidkeys"
 open_graph_image: "images/fluidkeys-v1-preview-screenshot.png"
 open_graph_type: "article"
 author: "Ian Drysdale & Paul Fawkesley"
+date: 2019-01-31
 ---
 
 We've made a [preview site to articulate what we're doing](/fluidkeys-v1-preview). We'd love your [feedback.](https://news.ycombinator.com/item?id=19044043)
@@ -16,7 +17,7 @@ The Hackernews discussion on v0.3 was extremely helpful. It became apparent that
 
 To illustrate this we've created a preview page for the upcoming release of Fluidkeys.
 
-[![A screenshot of the preview page for Fluidkeys](images/fluidkeys-v1-preview-screenshot.png)](/fluidkeys-v1-preview)
+[![A screenshot of the preview page for Fluidkeys](/images/fluidkeys-v1-preview-screenshot.png)](/fluidkeys-v1-preview)
 
 <a href="/fluidkeys-v1-preview" class="btn">View the preview of how Fluidkeys makes PGP simple for teams 👉</a>
 

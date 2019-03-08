@@ -2,13 +2,14 @@
 title: Announcing Fluidkeys v0.2!
 description: We're building Fluidkeys to help teams protect themselves with strong encryption. Today we're excited to announce Fluidkeys 0.2, a foundation for getting team members started with PGP.
 author: Paul Fawkesley & Ian Drysdale
+date: 2018-10-25
 ---
 
 Today we're excited to announce Fluidkeys 0.2 😄
 
 We're building Fluidkeys to help teams protect themselves with strong encryption. For now, Fluidkeys is aimed at software development teams who are comfortable using the command line.
 
-![Animation of the command line interface for Fluidkeys](images/release-0-2-0-animation.svg)
+![Animation of the command line interface for Fluidkeys](/images/release-0-2-0-animation.svg)
 
 In these first releases we're building a foundation for getting team members started with PGP. We've tried hard to make it extremely simple and automated by default.
 

@@ -4,6 +4,7 @@ description: With Fluidkeys 0.4 you can send SSL certificates and private keys d
 author: Paul Fawkesley & Ian Drysdale
 open_graph_image: "images/fluidkeys-0.4-release.png"
 open_graph_type: "article"
+date: 2019-02-12
 ---
 
 Today we're pleased to announce Fluidkeys v0.4 😄
@@ -11,7 +12,7 @@ Today we're pleased to announce Fluidkeys v0.4 😄
 As well as pasting secrets, you can now send *sensitive files* like SSL
 certificates and private keys using end-to-end encryption.
 
-![Terminal showing sending a secret file to a team-mate](images/release-0-4-send-secret-file.svg)
+![Terminal showing sending a secret file to a team-mate](/images/release-0-4-send-secret-file.svg)
 
 If you're keen to get started, head to [download.fluidkeys.com](https://download.fluidkeys.com)
 

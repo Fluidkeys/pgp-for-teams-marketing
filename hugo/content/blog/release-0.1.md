@@ -1,6 +1,7 @@
 ---
 title: Announcing Fluidkeys v0.1!
 author: Paul Furley
+date: 2018-08-23
 ---
 
 Ian and I are extremely proud to announce the very first (extremely minimal) release of Fluidkeys.
