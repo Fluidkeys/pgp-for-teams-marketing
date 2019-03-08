@@ -1,0 +1,45 @@
+.weeknote {
+    margin-top: #{$line-height-base};
+    margin-bottom: #{$line-height-base};
+
+    h1 {
+        @include vertical-rhythm(1.7rem, 0.5, 0.5);
+    }
+    h2 {
+        @include vertical-rhythm(1.4rem, 0.5, 1.5);
+    }
+    h3 {
+        font-family: 'Merriweather', sans-serif;
+        font-weight: bold;
+    }
+    hr {
+        margin-bottom: #{2 * $line-height-base};
+    }
+    img {
+        max-width: 100%;
+        width: 100%;
+    }
+    ul {
+        li {
+            list-style: disc;
+            margin-left: $line-height-base;
+        }
+        ol {
+            list-style: decimal;
+            margin-left: $line-height-base;
+        }
+    }
+    blockquote {
+        border-left: 1px solid $color-blockquote--border;
+        padding-left: #{$line-height-base};
+        margin-bottom: #{$line-height-base};
+    }
+
+    &__date {
+        text-align: right;
+    }
+
+    &__index-item {
+        @include vertical-rhythm(1rem, 0.5, 0);
+    }
+}

@@ -26,4 +26,17 @@
       color: $color-button-hover;
     }
 
+    &--inverted {
+      color:  $color-button--inverted;
+      background-color: $color-button--inverted--background;
+      border: 1px solid $color-button--inverted--border;
+
+      &:hover,
+      &:focus {
+        color: $color-button--inverted-hover;
+        background: $color-button--inverted-hover--background;
+        border: 1px solid $color-button--inverted-hover--border;
+      }
+    }
+
   }

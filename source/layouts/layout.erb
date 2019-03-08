@@ -31,27 +31,33 @@
     <meta name="twitter:site" content="@fluidkeys">
 
     <%= yield_content :head %>
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900|Montserrat:500,700|Inconsolata" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900|Montserrat:500,600|Inconsolata" rel="stylesheet">
     <%= stylesheet_link_tag 'stylesheets/site' %>
   </head>
   <body id="<%= yield_content :body_id %>">
-    <header>
-      <h1><%= link_to "Fluidkeys", "/" %></h1>
-      <nav>
-        <ul>
-          <li><%= link_to "Blog", "/blog" %></li>
-          <li><%= link_to "Weeknotes", "/weeknotes" %></li>
-          <li><%= link_to "About", "/about" %></li>
-          <li><%= link_to "Download", "https://download.fluidkeys.com" %></li>
-        </ul>
-      </nav>
+    <header class="header container--fill">
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <h1 class="header__title col-xs-12 col-sm-2"><%= link_to "Fluidkeys", "/", class: "header__link" %></h1>
+        </div>
+        <div class="col-xs-12 col-md-8">
+          <nav>
+            <ul class="nav">
+              <li class="nav__item"><%= link_to "Blog", "/blog", class: "nav__link"%></li>
+              <li class="nav__item"><%= link_to "Weeknotes", "/weeknotes", class: "nav__link"%></li>
+              <li class="nav__item"><%= link_to "About", "/about", class: "nav__link"%></li>
+              <li class="nav__item"><%= link_to "Download", "https://download.fluidkeys.com", class: "nav__link"%></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
     <%= yield %>
-    <footer>
-      <div class="content">
+    <footer class="footer">
+      <div class="container--max-width-break-2">
         <p>
-          <%= mail_to 'hello@fluidkeys.com' %>
-          <a href="/blog/feed.xml"><%= image_tag("rss-icon.svg", class: "rss-icon") + "RSS feed" %></a>
+          <%= mail_to 'hello@fluidkeys.com', 'hello@fluidkeys.com', class: "footer__link" %>
+          <a href="/blog/feed.xml" class="footer__link"><%= image_tag("rss-icon.svg", class: "footer__rss-icon") + "RSS feed" %></a>
         </p>
       </div>
     </footer>
