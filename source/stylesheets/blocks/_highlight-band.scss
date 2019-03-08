@@ -1,0 +1,12 @@
+.highlight-band {
+    background: $color-highlight-band--background;
+    padding-top: #{$line-height-base * 1};
+    padding-bottom: #{$line-height-base * 1};
+    margin-top: #{$line-height-base * 2};
+    margin-bottom: #{$line-height-base * 2};
+
+    &__subtitle {
+        color: $color-highlight-band__subtitle-color;
+        @include vertical-rhythm(1.5rem, 0.5, 0);
+    }
+}
