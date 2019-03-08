@@ -1,190 +1,398 @@
-<% content_for :body_id do %>home-page<% end %>
+---
+layout: layout
+---
 
-<section class="hero">
-  <div class="container">
-    <div class="content">
-      <h1>Simple PGP for engineering teams</h1>
-      <p>Fluidkeys automates configuration and key exchange for your team.</p>
-      <p>
-        It's simple to share sensitive data, safeguard your
-        source code and use popular PGP tools.
-      </p>
-      <%= partial "signup_form", locals: { form_id: "header-sign-up" } %>
+<% content_for :head do %>
+<meta name="robots" content="noindex">
+<% end %>
+
+<header class="landing-hero">
+    <div class="container--max-width-break-3">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="landing-hero__title">Simple PGP for engineering teams</h1>
+
+                <p class="landing-hero__description">
+                    Fluidkeys helps your team protect sensitive information by simplifying
+                    powerful encryption tools.
+                </p>
+
+                <p class="landing-hero__description">
+                    It’s simple to share and store sensitive data, safeguard your
+                    source code and use popular open source tools.
+                </p>
+                <%= partial "signup_form" %>
+            </div>
+            <div class="col-md-6">
+                <%= image_tag 'hero-image.svg', class: 'landing-hero__illustration' %>
+            </div>
+        </div>
     </div>
-    <div class="illustration">
-      <%= image_tag 'github.png', alt: 'Screenshots of signed emails and code commits.' %>
+</header>
+
+<section class="section container--max-width-break-3">
+    <div class="section__intro row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2 class="section__title">Give your team encryption superpowers 🚀</h2>
+        </div>
     </div>
-  </div>
+    <div class="feature row middle-md">
+        <div class="col-md-6">
+            <%= image_tag 'new-homepage/send-secrets.png', class: 'feature__illustration' %>
+        </div>
+        <div class="col-md-6">
+            <div class="feature__card">
+                <h3 class="feature__title">Send secrets from the terminal</h3>
+                <p class="feature__description">
+                    Send passwords, keys, tokens and personal information within your team.
+                    Everything’s protected with open source, end-to-end encryption.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="feature row middle-md">
+        <div class="col-md-6">
+            <%= image_tag 'new-homepage/encrypt-email.png', class: 'feature__illustration' %>
+        </div>
+        <div class="col-md-6">
+            <a href="/features/use-other-popular-tools-with-fluidkeys" class="feature__card">
+                <h3 class="feature__title">
+                    Send and receive signed and encrypted emails
+                </h3>
+
+                <p class="feature__description">
+                    Protect against phishing attacks with signed emails and keep sensitive
+                    emails safe with encryption. Fluidkeys automates key exchange and
+                    verification so you’ve always got the right key when you need it.
+                </p>
+            </a>
+        </div>
+    </div>
+    <div class="feature row middle-md">
+        <div class="col-md-6">
+            <%= image_tag 'new-homepage/share-passwords.png', class: 'feature__illustration' %>
+        </div>
+        <div class="col-md-6">
+            <a href="/features/use-other-popular-tools-with-fluidkeys" class="feature__card">
+                <h3 class="feature__title">
+                    Store team passwords in pass, the UNIX password manager
+                </h3>
+
+                <p class="feature__description">
+                    Store shared passwords in an encrypted git repository using the popular open
+                    source password manager. Fluidkeys keeps your <code>.gpg-ids</code> file up
+                    to date so joiners and leavers are added and removed automatically.
+                </p>
+            </a>
+        </div>
+    </div>
+    <div class="feature row middle-md">
+        <div class="col-md-6">
+            <%= image_tag 'new-homepage/sign-commits.png', class: 'feature__illustration' %>
+        </div>
+        <div class="col-md-6">
+            <a href="/features/use-other-popular-tools-with-fluidkeys" class="feature__card">
+                <h3 class="feature__title">
+                    Sign and verify git commits
+                </h3>
+
+                <p class="feature__description">
+                    Sign your git commits and only merge verified code from trusted developers.
+                    Fluidkeys helps you verify commits by ensuring you’ve always got the right
+                    keys for your whole team.
+                </p>
+            </a>
+        </div>
+    </div>
+    <div class="feature row middle-md">
+        <div class="col-md-6">
+            <%= image_tag 'new-homepage/supercharge-gpg.png', class: 'feature__illustration' %>
+        </div>
+        <div class="col-md-6">
+            <a href="/features/use-other-popular-tools-with-fluidkeys" class="feature__card">
+                <h3 class="feature__title">
+                    Use any other GnuPG powered tool
+                </h3>
+
+                <p class="feature__description">
+                    Many tools rely on GnuPG to carry out their encryption. Fluidkeys stores
+                    your team’s keys in GnuPG and ensures they’re correctly trusted, so any
+                    tool that relies on GnuPG works with your team.
+                </p>
+            </a>
+        </div>
+    </div>
 </section>
 
-<section class="pain">
-  <div class="container">
-    <div class="content">
-      <h2>Supporting PGP in a team is time consuming and error&#8209;prone</h2>
-      <p>The steep learning curve means supporting new team members is time consuming and costly.
-      <p>Keys get out of sync, leading to confusing errors. Verifying, retrieving and refreshing keys is a repetitive, manual process.
-      <p>A lack of agreed best practice means lots of keys use old, insecure algorithms. Auditing a team’s keys often gets forgotten.</p>
+
+<section class="section container--max-width-break-3">
+    <div class="row middle-md">
+        <div class="col-md-10 col-md-offset-1">
+            <h2 class="section__title">Save your team time and&nbsp;frustration</h2>
+
+            <p class="section__description">
+                By listening to engineering teams around the world, we’ve tackled the barriers
+                to using GnuPG and OpenPGP tools in a team.
+            </p>
+        </div>
     </div>
-    <div class="illustration">
-      <%= image_tag 'pain.jpg', alt: "An illustration of the world of pain and confusion managing PGP." %>
+    <div class="row middle-md">
+        <div class="col-md-10 col-md-offset-1">
+            <%= image_tag 'new-homepage/confusing-setup-slim.png', class: 'section__illustration' %>
+
+            <h3 class="section__subtitle">Simpler onboarding for new team members</h3>
+
+            <p class="section__description">
+                Setting up a PGP key for the first time can be daunting, with difficult questions
+                and unfamiliar concepts.
+            </p>
+
+            <p class="section__description">
+                Fluidkeys creates a new key, encrypted backup and revocation certificate without
+                asking any difficult questions. It creates a strong, memorable password which it
+                stores safely in the system keychain.
+            </p>
+
+            <h3 class="section__subtitle">No need to email keys around the team</h3>
+
+            <p class="section__description">
+                Emailing keys around the team doesn’t scale and using the keyservers can be
+                confusing and unreliable.
+            </p>
+
+            <p class="section__description">
+                Fluidkeys automatically fetches keys from a reliable, private keyserver. New
+                starters are added to everyone’s keyring seamlessly.
+            </p>
+
+            <%= image_tag 'new-homepage/confusing-key-exchange-slim.png', class: 'section__illustration' %>
+
+            <h3 class="section__subtitle">Everyone always has everyone else’s latest key</h3>
+
+            <p class="section__description">
+                Joining a team and fetching everyone’s keys is error prone, leading to missing,
+                outdated or incorrect keys. There’s no single source of truth for all the
+                keys in a team.
+            </p>
+
+            <p class="section__description">
+                With Fluidkeys you create a team roster: a list of email addresses linked to
+                keys and cryptographically signed by an administrator. Fluidkeys syncs the
+                roster to every team member, automatically fetching verified keys for the
+                whole team.
+            </p>
+
+            <h3 class="section__subtitle">
+                Better security with signed verification of keys
+            </h3>
+
+            <p class="section__description">
+                The web of trust was a nice idea, but key signing parties aren’t practical. We
+                all know we should verify fingerprints, but in practice many of us skip this
+                step and hope for the best.
+            </p>
+
+            <p class="section__description">
+                With Fluidkeys, the team admin verifies new keys using safety numbers and adds
+                them to the team roster. Everyone else in the team trusts keys verified by the
+                admin. And because the signed roster is verified client-side, it can’t be
+                tampered, even by us.
+            </p>
+
+            <%= image_tag 'new-homepage/confusing-files-slim.png', class: 'section__illustration' %>
+
+            <h3 class="section__subtitle">
+                Better security with rotating encryption keys
+            </h3>
+
+            <p class="section__description">
+                We know it’s insecure practice to use the same encryption key for years, but
+                current tooling makes it difficult to automate key rotation.
+            </p>
+
+            <p class="section__description">
+                Fluidkeys uses encryption subkeys which add to the end of your key without
+                changing the rest of the key. With a new key every month you get forward
+                secrecy without having to change your key.
+            </p>
+
+            <!--
+
+            <h3 class="section__subtitle">
+                Avoid confusing error messages
+            </h3>
+
+            <p class="section__description">
+                It’s unsettling seeing error messages about “unusable public keys” or
+                “missing trust”.
+            </p>
+
+            <p class="section__description">
+                Fluidkeys configures GnuPG so all your team’s keys are set up properly,
+                ensuring everything just works.
+            </p>
+
+            <h3 class="section__subtitle">
+                No need to use GnuPG’s confusing command-line
+            </h3>
+
+            <p class="section__description">
+                GnuPG is so flexible it can be difficult to remember all the options and
+                command-line flags you need. Simple tasks like extending your key or
+                encrypting a snippet can be daunting.
+            </p>
+
+            <p class="section__description">
+                Fluidkeys maintains your key itself, pushing the updated key into GnuPG.
+                It also offers simple workflows for engineering tasks like sending secrets
+                to the team, so you don’t have to remember all the options.
+            </p>
+
+            -->
+
+        </div>
     </div>
-  </div>
 </section>
 
-<section class="solution">
-  <div class="container">
-    <h2>Automate PGP for stronger, simpler&nbsp;security</h2>
-  </div>
-  <div class="container">
-    <div class="feature">
-      <%= image_tag 'new-team-member.svg', alt: 'Icon for a new key and backup' %>
-      <h3>Onboard new team members</h3>
-      <p>Automatically create a key for new starters, along with an encrypted backup and revocation certificate.</p>
-    </div>
-    <div class="feature">
-      <%= image_tag 'sync.svg', alt: 'Icon for syncronising keys' %>
-      <h3>Keep your team in sync</h3>
-      <p>Automatically update keys and sync across the team. Starters and leavers are added and removed seamlessly.</p>
-    </div>
-    <div class="feature">
-      <%= image_tag 'best.svg', alt: 'Icon for the best key' %>
-      <h3>Audit keys against best practice</h3>
-      <p>Use strong ciphers, short expiries and clear certification policies on all the teams' keys.</p>
-    </div>
-    <div class="feature">
-      <%= image_tag 'imposter.svg', alt: 'Icon for an imposter' %>
-      <h3>Look out for imposters!</h3>
-      <p>Get alerted for any new keys claiming to be @yourdomain.com</p>
-    </div>
-    <div class="feature">
-      <%= image_tag 'signed.svg', alt: 'Icon for signed code commits' %>
-      <h3>Enforce Github signed commits</h3>
-      <p>Monitor code repositories to ensure all code is correctly signed.</p>
-    </div>
-    <div class="feature">
-      <%= image_tag 'rotate.svg', alt: 'Icon for a key with an expiry date' %>
-      <h3>Rotate keys periodically</h3>
-      <p>Automatically generate new encryption keys every quarter for forward secrecy.</p>
+<section class="section--release">
+    <div class="container--max-width-break-3 row">
+        <div class="col-md-5">
+            <h2 class="section__subtitle">Current release: 0.4</h2>
+
+            <p class="section__description">
+                Send end-to-end encrypted secrets from the command line using strong,
+                automatically rotating PGP keys.
+            </p>
+
+            <p class="section__description">
+                <a href="" class="button button--inverted">Download now</a>
+            </p>
+        </div>
     </div>
 </section>
 
-<section class="release" id="current_release">
-  <div class="container">
-    <div class="content">
-      <h2>Current release: 0.4</h2>
-      <p>Send end-to-end encrypted secrets from the command line using strong, automatically rotating PGP keys.</p>
-      <p class="button"><%= link_to "Download now", "https://download.fluidkeys.com" %></p>
+
+<section class="section container--max-width-break-3">
+    <div class="row middle-md">
+        <div class="col-md-10 col-md-offset-1">
+            <h2 class="section__title"><a name="roadmap">Our progress</a></h2>
+            <div class="card card--complete">
+                <ul class="card__list">
+                    <li class="card__list-item card__list-item--checked"><h3 class="card__title">Get started with OpenPGP (v0.1)</h3></li>
+                </ul>
+                <p class="card__description">You can now create a best practice PGP key from the command line. Fluidkeys backs it up and pushes it into GnuPG so you can start using it right away.</p>
+            </div>
+
+            <div class="card card--complete">
+            <h3 class="card__title">Level up your legacy keys (v0.2)</h3>
+                <ul class="card__list">
+                    <li class="card__list-item card__list-item--checked">Connect Fluidkeys to your existing key in GnuPG</li>
+                    <li class="card__list-item card__list-item--checked">Fix issues like weak signatures and out of date preferences</li>
+                    <li class="card__list-item card__list-item--checked">Automatically rotate your encryption subkey to limit the impact of key compromise</li>
+                </ul>
+            </div>
+
+            <div class="card card--complete">
+                <h3 class="card__title">Send encrypted secrets (v0.3)</h3>
+                <ul class="card__list">
+                    <li class="card__list-item card__list-item--checked">Send and receive passwords, token and certificates right from the command line</li>
+                    <li class="card__list-item card__list-item--checked">End-to-end encrypt secrets so only the recipient can read them</li>
+                    <li class="card__list-item card__list-item--checked">Automatically fetch public keys from a verified email address</li>
+                </ul>
+            </div>
+
+            <div class="card card--complete">
+                <ul class="card__list">
+                    <li class="card__list-item card__list-item--checked"><h3 class="card__title">Send encrypted files (v0.4)</h3></li>
+                </ul>
+                <p class="card__description">You’ll be able to send private keys, certificates, and other sensitive text files from the terminal.</p>
+            </div>
+
+            <div class="card card--major">
+                <h3 class="card__title">Simple PGP for teams (26/03/2019)</h3>
+                <ul class="card__list">
+                    <li class="card__list-item">Add and remove team members and their keys will be automatically synchronised across the whole team.</li>
+                    <li class="card__list-item"> Allow anyone to find your team’s keys from their email address using Web Key Directory (WKD).</li>
+                    <li class="card__list-item"> Use <%= link_to "git-crypt", "https://www.agwa.name/projects/git-crypt/" %>, <%= link_to "pass", "https://www.passwordstore.org/" %>, and any other GnuPG-based tools with your team.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3 class="card__title">Safeguard your source code on Github</h3>
+                <ul class="card__list">
+                    <li class="card__list-item">Sign git commits and verify commits from other team members. Fluidkeys will configure git for you, and everyone’s keys will be synchronised with Github automatically.</li>
+                    <li class="card__list-item">Verify commits inside Github using status checks. You’ll be able to ensure pull requests are legitimate before merging them. </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <ul class="card__list">
+                    <li class="card__list-item"><h3 class="card__title">Automate configuring <code>git-crypt</code> and <code>pass</code></h3></li>
+                </ul>
+                <p class="card__description">You’ll be able to automatically configure these popular open source tools to work with your team.  When team members are added or keys are updated, everything will be kept in sync.</p>
+            </div>
+
+            <div class="card">
+                <ul class="card__list">
+                    <li class="card__list-item"><h3 class="card__title">Integrate with Mailvelope</h3></li>
+                </ul>
+                <p class="card__description">You’ll be able to send and receive encrypted emails from the browser using Mailvelope. Each team member will always have the right key for everyone in the team, eliminating awkward key exchanges.</p>
+            </div>
+
+            <div class="card">
+                <ul class="card__list">
+                    <li class="card__list-item"><h3 class="card__title">Send large sensitive files</h3></li>
+                </ul>
+                <p class="card__description">You can send files of any size to team mates from the command line. Fluidkeys will handle the encryption, delivery and verify that the file arrived ok.</p>
+            </div>
+
+            <div class="card">
+                <ul class="card__list">
+                    <li class="card__list-item"><h3 class="card__title">Integrate with Slack</h3></li>
+                </ul>
+                <p class="card__description">You can use the convenience of Slack with the added protection of end to end encryption. You’ll no longer have to worry about Slack’s security.</p>
+            </div>
+
+            <div class="card card--major">
+                <ul class="card__list">
+                    <li class="card__list-item"><h3 class="card__title">Use from the desktop</h3></li>
+                </ul>
+                <p class="card__description">You’ll have a graphical interface for people less familiar with the command line.</p>
+            </div>
+
+            <div class="subscribe">
+                <p>
+                View our <%= link_to "release roadmap on Trello", "https://trello.com/b/dB9j4JaG/fluidkeys?menu=filter&filter=label:release" %>
+                or read our <%= link_to "weeknotes", "weeknotes" %>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
-<section class="progress">
-  <div class="container">
-    <div class="content">
-      <h2><A name="roadmap">Our progress</a></h2>
-      <div class="card complete">
-        <ul>
-          <li class="checklist-item checked"><h3>Get started with OpenPGP (v0.1)</h3></li>
-        </ul>
-        <p>You can now create a best practice PGP key from the command line. Fluidkeys backs it up and pushes it into GnuPG so you can start using it right away.</p>
-      </div>
-
-      <div class="card complete">
-        <h3>Level up your legacy keys (v0.2)</h3>
-        <ul>
-          <li class="checklist-item checked">Connect Fluidkeys to your existing key in GnuPG</li>
-          <li class="checklist-item checked">Fix issues like weak signatures and out of date preferences</li>
-          <li class="checklist-item checked">Automatically rotate your encryption subkey to limit the impact of key compromise</li>
-        </ul>
-      </div>
-
-      <div class="card complete">
-        <h3>Send encrypted secrets (v0.3)</h3>
-        <ul>
-          <li class="checklist-item checked">Send and receive passwords, token and certificates right from the command line</li>
-          <li class="checklist-item checked">End-to-end encrypt secrets so only the recipient can read them</li>
-          <li class="checklist-item checked">Automatically fetch public keys from a verified email address</li>
-        </ul>
-      </div>
-
-      <div class="card complete">
-        <ul>
-          <li class="checklist-item checked"><h3>Send encrypted files (v0.4)</h3></li>
-        </ul>
-        <p>You'll be able to send private keys, certificates, and other sensitive text files from the terminal.</p>
-      </div>
-
-      <div class="card major">
-        <h3>Simple PGP for teams (26/03/2019)</h3>
-        <ul>
-          <li class="checklist-item">Add and remove team members and their keys will be automatically synchronised across the whole team.</li>
-          <li class="checklist-item"> Allow anyone to find your team's keys from their email address using Web Key Directory (WKD).</li>
-          <li class="checklist-item"> Use <%= link_to "git-crypt", "https://www.agwa.name/projects/git-crypt/" %>, <%= link_to "pass", "https://www.passwordstore.org/" %>, and any other GnuPG-based tools with your team.</li>
-        </ul>
-
-      </div>
-
-      <div class="card">
-        <h3>Safeguard your source code on Github</h3>
-          <ul>
-            <li class="checklist-item">Sign git commits and verify commits from other team members. Fluidkeys will configure git for you, and everyone’s keys will be synchronised with Github automatically.</li>
-            <li class="checklist-item">Verify commits inside Github using status checks. You'll be able to ensure pull requests are legitimate before merging them. </li>
-          </ul>
-      </div>
-
-      <div class="card">
-        <ul>
-          <li class="checklist-item"><h3>Automate configuring <code>git-crypt</code> and <code>pass</code></h3></li>
-        </ul>
-        <p>You'll be able to automatically configure these popular open source tools to work with your team.  When team members are added or keys are updated, everything will be kept in sync.</p>
-      </div>
-
-      <div class="card">
-        <ul>
-          <li class="checklist-item"><h3>Integrate with Mailvelope</h3></li>
-        </ul>
-        <p>You'll be able to send and receive encrypted emails from the browser using Mailvelope. Each team member will always have the right key for everyone in the team, eliminating awkward key exchanges.</p>
-      </div>
-
-      <div class="card">
-        <ul>
-          <li class="checklist-item"><h3>Send large sensitive files</h3></li>
-        </ul>
-        <p>You can send files of any size to team mates from the command line. Fluidkeys will handle the encryption, delivery and verify that the file arrived ok.</p>
-      </div>
-
-      <div class="card">
-        <ul>
-          <li class="checklist-item"><h3>Integrate with Slack</h3></li>
-        </ul>
-        <p>You can use the convenience of Slack with the added protection of end to end encryption. You’ll no longer have to worry about Slack’s security.</p>
-      </div>
-
-      <div class="card major">
-        <ul>
-          <li class="checklist-item"><h3>Use from the desktop</h3></li>
-        </ul>
-        <p>You’ll have a graphical interface for people less familiar with the command line.</p>
-      </div>
-
-      <div class="subscribe">
-        <p>
-          View our <%= link_to "release roadmap on Trello", "https://trello.com/b/dB9j4JaG/fluidkeys?menu=filter&filter=label:release" %>
-          or read our <%= link_to "weeknotes", "weeknotes" %>
-      </div>
-
-
+<section class="section--call-out">
+    <div class="container--max-width-break-3">
+        <div class="section__intro row">
+            <div>
+                <h2 class="section__subtitle">
+                    Strengthen your engineering team’s security practices - hear when we’re
+                    ready to release
+                </h2>
+            </div>
+        </div>
+        <div class="row middle-lg">
+            <div class="col-lg-6">
+                <%= partial "signup_form" %>
+            </div>
+            <div class="col-lg-6">
+                <ul class="benefits-list">
+                    <li class="benefits-list__item">You’ll be safeguarding the team’s source code</li>
+                    <li class="benefits-list__item">You’ll be safely sending team secrets</li>
+                    <li class="benefits-list__item">You’ll get all the power of PGP for your team</li>
+                <ul>
+            </div>
+        </div>
     </div>
-  </div>
-</section>
-
-<section class="final-cta">
-  <div class="container">
-    <div class="content">
-      <p>We’re building a better way to do PGP, you can <%= link_to 'test the current release', '#current_release' %> or sign up for release announcements:</p>
-      <%= partial "signup_form", locals: { form_id: "footer-sign-up" } %>
-    </div>
-  </div>
 </section>
 
 <%= partial "track_events" %>
+
