@@ -5,7 +5,7 @@ blog: weeknotes
 description: Keep up to date with our progress building Fluidkeys, a way to protect your team with strong encryption.
 ---
 
-<p class="weeknote__date"><%= blog.articles.first.date.strftime('%d %B %Y') %></p>
+<p class="markdown__date"><%= blog.articles.first.date.strftime('%d %B %Y') %></p>
 <h1><%= link_to blog.articles.first.title, blog.articles.first.url %></h1>
 <%= blog.articles.first.body %>
 
@@ -19,7 +19,7 @@ description: Keep up to date with our progress building Fluidkeys, a way to prot
 
 <ul>
 <% blog.articles[1..-1].each do |article| %>
-  <li class="weeknote__index-item">
+  <li class="markdown__index-item">
     <%= link_to "#{article.title}", article.url %>
     <%= article.date.strftime('%A') %> <%= article.date.day.ordinalize %> <%= article.date.strftime('%b %Y') %>
   </li>
