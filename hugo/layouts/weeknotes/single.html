@@ -1,0 +1,16 @@
+{{ define "title"}}{{ .Title }} | Fluidkeys{{ end }}
+{{ define "main" }}
+
+<section class="container--max-width-break-2">
+    <div class="markdown">
+        <p class="markdown__date">{{ .Date.Format "2 January 2006" }}</p>
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+        <hr />
+        <p><a href="/weeknotes">Back to all weeknotes</a></p>
+        <h2>Subscribe to the weeknotes</h2>
+        {{ partial "weeknotes/signup_form.html" }}
+    </div>
+</section>
+
+{{ end }}
