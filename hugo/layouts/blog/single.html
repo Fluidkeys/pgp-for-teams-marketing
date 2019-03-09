@@ -1,0 +1,13 @@
+{{ define "title"}}{{ .Title }} | Fluidkeys{{ end }}
+{{ define "main" }}
+
+<section class="container--max-width-break-2">
+    <div class="markdown">
+        <p class="markdown__date">{{ .Date.Format "Monday 2 January 2006" }}</p>
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+        <hr />
+        <p><a href="/blog">Back to all posts</a></p>
+    </div>
+</section>
+{{end}}
