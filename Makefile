@@ -15,7 +15,7 @@ test:
 
 .PHONY: deploy
 deploy: build
-	echo "Not implemented..."
+	./deploy
 
 source/fingerprints.txt.sig: source/fingerprints.txt
 	gpg --sign --local-user 'B79F 0840 DEF1 2EBB A72F  F72D 7327 A44C 2157 A758' --output source/fingerprints.txt.sig source/fingerprints.txt
