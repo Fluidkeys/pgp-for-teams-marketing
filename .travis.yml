@@ -1,6 +1,9 @@
-language: ruby
+language: go
 
 script: make test
+
+before_script:
+    go get -u github.com/gohugoio/hugo
 
 notifications:
     email: false
