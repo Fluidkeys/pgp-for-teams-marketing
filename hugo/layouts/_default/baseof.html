@@ -12,7 +12,9 @@
     <meta name="description" content="Simple PGP for engineering teams. Safeguard your source code and protect team secrets and customer data." />
     {{ end }}
 
-    <link rel="alternate" type="application/atom+xml" title="Fluidkeys Blog" href="/blog/feed.xml" />
+    {{ with .OutputFormats.Get "rss" -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
 
     <meta property="og:title" content="{{ .Title }}">
     <meta property="og:site_name" content="Fluidkeys" />
@@ -65,7 +67,7 @@
       <div class="container--max-width-break-2">
         <p>
         <a href="mailto:hello@fluidkeys.com" class="footer__link">hello@fluidkeys.com</a>
-          <a href="/blog/feed.xml" class="footer__link"><img src="/images/rss-icon.svg" class="footer__rss-icon" />RSS feed</a>
+          <a href="/index.xml" class="footer__link"><img src="/images/rss-icon.svg" class="footer__rss-icon" />RSS feed</a>
         </p>
       </div>
     </footer>
