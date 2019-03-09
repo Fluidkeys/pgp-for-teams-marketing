@@ -1,6 +1,7 @@
 ---
-layout: singlepage
+title: "About us | Fluidkeys"
 ---
+
 # Our mission
 We are building a future where companies respect their customers and users.
 
@@ -16,11 +17,3 @@ and maintain [a bot that reminds you if your PGP key is about to expire](https:/
 
 Previously they’ve run [cryptoparties](https://digitalblog.coop.co.uk/2017/04/26/cryptoparty-a-fun-way-to-learn-about-security/)
 at the UK’s largest consumer Co-op and helped setup [a gym that puts people’s physical energy to use in their local communities](https://www.goodgym.org/).
-
-----
-
-## Sign up for release notes
-
-We’re building a better way to do PGP. Sign up to hear when we release:
-
-<%= partial "signup_form", locals: { form_id: "footer-sign-up" } %>
