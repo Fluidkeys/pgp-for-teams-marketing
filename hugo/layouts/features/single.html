@@ -1,0 +1,11 @@
+{{ define "extra_head" }}
+<meta name="robots" content="noindex">
+{{ end }}
+
+{{ define "main" }}
+
+{{ .Content }}
+{{ partial "track_events.html" }}
+
+{{ end }}
+
