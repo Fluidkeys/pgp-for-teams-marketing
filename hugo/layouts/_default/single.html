@@ -1,7 +1,8 @@
-<% wrap_layout :layout do %>
+{{ define "title"}}{{ .Title }}{{ end }}
+{{ define "main" }}
     <section class="container--max-width-break-2">
         <div class="markdown">
-            <%= yield %>
+            {{ .Content }}
         </div>
     </section>
-<% end %>
+{{ end }}
