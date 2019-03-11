@@ -1,5 +1,6 @@
 ---
 title: "About us | Fluidkeys"
+type: "about"
 ---
 
 # Our mission
