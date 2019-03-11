@@ -15,7 +15,7 @@
                     It’s simple to share and store sensitive data, safeguard your
                     source code and use popular open source tools.
                 </p>
-                {{ partial "signup_form.html" }}
+                {{ partial "signup_form.html" (dict "form_id" "hero-signup-form")  }}
             </div>
             <div class="col-md-6">
                 <img src="/images/hero-image.svg" class="landing-hero__illustration" / >
@@ -123,7 +123,7 @@
         <div class="row">
             <div class="col-xs-6 col-xs-offset-3">
                 <h2 class="highlight-band__subtitle">Sign up to hear when we release</h2>
-                {{ partial "signup_form.html" }}
+                {{ partial "signup_form.html" (dict "form_id" "middle-signup-form")  }}
             </div>
         </div>
     </div>
@@ -385,7 +385,7 @@
         </div>
         <div class="row middle-lg">
             <div class="col-lg-6">
-                {{ partial "signup_form.html" }}
+                {{ partial "signup_form.html" (dict "form_id" "footer-signup-form")  }}
             </div>
             <div class="col-lg-6">
                 <ul class="benefits-list">
