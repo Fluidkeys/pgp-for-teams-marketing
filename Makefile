@@ -15,7 +15,10 @@ test:
 
 .PHONY: deploy
 deploy:
-	./deploy
+	@echo
+	@echo "Deployment is now done automatically by Jenkins when master is updated."
+	@echo "Jenkins updates the webserver directly rather than using the gh-pages branch"
+	@echo
 
 source/fingerprints.txt.sig: source/fingerprints.txt
 	gpg --sign --local-user 'B79F 0840 DEF1 2EBB A72F  F72D 7327 A44C 2157 A758' --output source/fingerprints.txt.sig source/fingerprints.txt
