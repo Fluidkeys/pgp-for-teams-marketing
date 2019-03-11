@@ -1,0 +1,31 @@
+{{ define "title"}}Fluidkeys release announcements and blog posts{{ end }}
+{{ define "description" }}Keep up to date with Fluidkeys release announcements and blog posts.{{ end }}
+{{ define "main" }}
+
+
+{{ $latest_post := index .Pages 0 }}
+
+<section class="container--max-width-break-2">
+    <div class="markdown">
+        <p class="markdown__date">{{ $latest_post.Date.Format "Monday 2 Jan 2006" }}</p>
+        <h1><a href="{{ $latest_post.URL }}">{{ $latest_post.Title }}</a></h1>
+        {{ $latest_post.Content }}
+
+        <hr>
+
+        <h2><a name="previous"></a> All blog posts:</h2>
+
+        <ul>
+          <!-- TODO: paginate from 1 not 0 -->
+          {{ range .Pages }}
+          <li class="blog-index">
+            <a href="{{ .URL }}">{{ .Title }}</a>
+            {{ .Date.Format "Monday 2 Jan 2006" }}
+          </li>
+          {{ end }}
+        </ul>
+
+    </div>
+</section>
+
+{{ end }}

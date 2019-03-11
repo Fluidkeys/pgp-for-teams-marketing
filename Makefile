@@ -1,22 +1,21 @@
 .PHONY: build
 build:
-	bundle exec middleman build
+	cd hugo ;\
+	hugo
 
 .PHONY: run
 run:
-	bundle exec middleman server
-
-.PHONY: run_polling
-run_polling:
-	bundle exec middleman server --watcher-force-polling
+	cd hugo ;\
+	hugo server
 
 .PHONY: test
 test:
-	./test
+	make build
+	@echo "OK"
 
 .PHONY: deploy
 deploy: build
-	bundle exec middleman deploy
+	./deploy
 
 source/fingerprints.txt.sig: source/fingerprints.txt
 	gpg --sign --local-user 'B79F 0840 DEF1 2EBB A72F  F72D 7327 A44C 2157 A758' --output source/fingerprints.txt.sig source/fingerprints.txt

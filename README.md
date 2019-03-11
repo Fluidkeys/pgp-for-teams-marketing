@@ -1,14 +1,25 @@
-# Fluidkeys Marketing Page
+# Fluidkeys website
 
-A simple brochure page for Fluidkeys.
+[www.fluidkeys.com](https://www.fluidkeys.com)
 
-## How to use this
+## Uses Hugo static site generator
 
-### Middleman
+[Getting started with Hugo](https://gohugo.io/getting-started)
 
-Middleman is a static site generator using all the shortcuts and tools in modern web development. [Read more about Middleman](https://middlemanapp.com/).
+### Install Hugo  Snap
 
-* Install Middleman with `gem install middleman`
-* In the command line use `middleman build`
-* Then, when working use `middleman serve`
-* See your site at `localhost:4567`
+```
+snap install hugo --channel=extended
+```
+
+### Install Hugo with homebrew
+
+```
+brew install hugo
+```
+
+### `make run`: run the development server
+
+Then visit [localhost:1313](http://localhost:1313)
+
+### `make`: build the site

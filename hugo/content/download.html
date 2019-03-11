@@ -1,0 +1,147 @@
+---
+title: "Download Fluidkeys"
+---
+<div class="download">
+    <h1>Install Fluidkeys</h1>
+    <div class="systems">
+        <div class="operating-system" id="debian-ubuntu">
+            <div class="logos">
+                <img src="/images/logos/debian-logo.svg" alt="Debian logo" class="logo" />
+                <img src="/images/logos/ubuntu-logo.svg" alt="Ubuntu logo" class="logo" />
+            </div>
+            <h2>Install on Debian / Ubuntu</h2>
+            <p>1. Get our signing key:</p>
+            <pre>curl https://www.fluidkeys.com/release.asc | sudo apt-key add -</pre>
+            <p>2. Add our apt repository:</p>
+            <pre>echo 'deb [arch=amd64] https://download.fluidkeys.com/desktop/apt any main' | sudo tee /etc/apt/sources.list.d/fluidkeys.list</pre>
+            <p>3. Install and run:</p>
+            <pre>sudo apt update
+sudo apt install fluidkeys
+
+fk setup<span class="email-address"></span></pre>
+        </div>
+        <div class="operating-system" id="mac">
+            <div class="logos">
+                <img src="/images/logos/apple-logo.svg" alt="Apple logo" class="logo" />
+            </div>
+            <h2>Install on macOS</h2>
+            <pre>brew tap fluidkeys/tap
+brew install fluidkeys
+
+fk setup<span class="email-address"></span></pre>
+
+            <p>Requires <a href="https://brew.sh/">Homebrew.</a></p>
+        </div>
+        <div class="operating-system" id="source">
+            <h2>Install from source</h2>
+            <p>1. Install the <a href="https://golang.org/dl/#featured">Go compiler</a></p>
+
+            <p>2. Clone our repository:</p>
+            <pre>export REPO=$(go env GOPATH)/src/github.com/fluidkeys/fluidkeys
+
+git clone https://github.com/fluidkeys/fluidkeys.git $REPO
+cd $REPO</pre>
+
+            <p>3.a) Build and install to <code>/usr/local/bin/fk</code>
+            <pre>make && sudo make install
+
+fk setup<span class="email-address"></span></pre>
+
+            <p>3.b) Or without <code>sudo</code> (root):</p>
+            <pre>PREFIX=$HOME make && make install
+
+~/bin/fk setup<span class="email-address"></span></pre>
+        </div>
+    </div>
+</div>
+
+<script>
+
+function detectBestOperatingSystem() {
+    var operatingSystem="unknown",
+        userAgent = navigator.userAgent;
+
+    if (userAgent.indexOf("Debian")!=-1) {
+        // Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/605.1 (KHTML, like Gecko)
+        // Version/11.0 Safari/605.1 Debian/9.0 (3.22.7-1) Epiphany/3.22.7
+
+        operatingSystem = "debian";
+    } else if (userAgent.indexOf("Ubuntu")!=-1) {
+        // Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101
+        // Firefox/62.0
+
+        operatingSystem = "ubuntu";
+    } else if (userAgent.indexOf("Android")!=-1) {
+        // Mozilla/5.0 (Linux; Android 7.0; Moto G (5) Plus Build/NPNS25.137-93-14)
+        // AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Mobile Safari/537.36
+
+        operatingSystem = "android";
+    } else if (userAgent.indexOf("Linux")!=-1) {
+        // Mozilla/5.0 (X11; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0
+
+        operatingSystem="linux";
+    } else if (userAgent.indexOf("Mac")!=-1) {
+        // Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36
+        // (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36
+
+        operatingSystem="mac";
+    } else if (userAgent.indexOf("iPhone")!=-1) {
+        // Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X)
+        // AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/69.0.3497.105
+        // Mobile/15E148 Safari/605.1
+
+        operatingSystem="iphone";
+    }
+
+    console.debug("operating system: ", operatingSystem);
+
+    switch(operatingSystem) {
+        case "mac":
+        case "iphone":
+            moveOperatingSystemToTop("mac");
+            break
+
+        case "ubuntu":
+        case "debian":
+        case "android":
+            moveOperatingSystemToTop("debian-ubuntu");
+            break
+
+        case "linux":
+            moveOperatingSystemToTop("source");
+            break
+    }
+};
+
+function moveOperatingSystemToTop(operatingSystem) {
+    console.debug("moving ", operatingSystem, " to top")
+    var content = document.getElementById(operatingSystem);
+    var parentElement = content.parentNode;
+    parentElement.insertBefore(content, parentElement.firstChild);
+}
+
+function replaceEmailArgumentInSetup() {
+    var email = decodeURIComponent(document.URL.split('#')[1]);
+    if (email !== 'undefined') {
+        var emailAddresses = document.querySelectorAll("span.email-address");
+        console.log(emailAddresses)
+        if (email != "") {
+            for (var i = 0; i < emailAddresses.length; i++) {
+                emailAddresses[i].innerHTML = " " + email;
+            }
+        }
+    }
+}
+
+function ready(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+        fn();
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
+}
+
+ready(detectBestOperatingSystem);
+ready(replaceEmailArgumentInSetup);
+
+</script>

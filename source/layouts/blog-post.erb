@@ -1,7 +1,0 @@
-<% wrap_layout :singlepage do %>
-    <p class="markdown__date"><%= current_article.date.strftime('%A') %> <%= current_article.date.day.ordinalize %> <%= current_article.date.strftime('%b %Y') %></p>
-    <h1><%= current_page.title %></h1>
-    <%= yield %>
-    <hr />
-    <p><a href="/blog">Back to all posts</a></p>
-<% end %>
