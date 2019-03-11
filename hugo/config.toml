@@ -1,4 +1,7 @@
 baseURL = "https://www.fluidkeys.com/"
 languageCode = "en-gb"
 title = "Fluidkeys"
+
+# disable taxonomy pages
+# https://discourse.gohugo.io/t/turning-off-taxonomy-pages/2622
 disableKinds = ["taxonomy","taxonomyTerm"]
