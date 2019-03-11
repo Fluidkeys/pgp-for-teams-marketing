@@ -6,7 +6,9 @@
         </div>
         <hr />
         <h2 class="section__subtitle">Sign up to hear when we release</h2>
-        {{ partial "signup_form.html" }}
+        {{ partial "signup_form.html" (dict "form_id" "about-signup-form")  }}
         <br />
     </section>
+
+    {{ partial "ga_track_form_submit_events.html" }}
 {{ end }}
