@@ -1,0 +1,12 @@
+{{ define "title"}}{{ .Title }}{{ end }}
+{{ define "main" }}
+    <section class="container--max-width-break-2">
+        <div class="markdown">
+            {{ .Content }}
+        </div>
+        <hr />
+        <h2 class="section__subtitle">Sign up to hear when we release</h2>
+        {{ partial "signup_form.html" }}
+        <br />
+    </section>
+{{ end }}
