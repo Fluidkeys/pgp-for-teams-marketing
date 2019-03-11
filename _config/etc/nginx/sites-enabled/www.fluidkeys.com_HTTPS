@@ -75,4 +75,5 @@ server {
     rewrite ^/give-feedback/?$ https://fluidkeys.us20.list-manage.com/subscribe?u=fd279ba68240c3d0639990f7e&id=31b9f692f4 redirect;
 
     rewrite ^/blog/feed.xml/?$ /index.xml permanent;
+    rewrite ^/fluidkeys-v1-preview/?$ /archive/v1-preview/ permanent;
 }
