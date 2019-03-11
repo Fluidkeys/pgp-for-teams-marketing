@@ -64,7 +64,7 @@ Now, just before that prompt comes up we hint *why* it's happening. And if the u
 we tell them how to add Fluidkeys to their crontab manually:
 
 
-![A screenshot of a terminal with an error message and instructions](2019-02-19-failed-to-schedule-maintenance.png)
+![A screenshot of a terminal with an error message and instructions](/images/2019-02-19-failed-to-schedule-maintenance.png)
 
 ## We've decided on a non-profit structure!
 
