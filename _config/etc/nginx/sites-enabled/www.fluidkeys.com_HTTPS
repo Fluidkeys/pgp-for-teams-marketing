@@ -76,4 +76,8 @@ server {
 
     rewrite ^/blog/feed.xml/?$ /index.xml permanent;
     rewrite ^/fluidkeys-v1-preview/?$ /archive/v1-preview/ permanent;
+    rewrite ^/features/manage-your-team-pgp-keys/?$ /archive/v1-preview/manage-your-team-pgp-keys/ redirect;
+    rewrite ^/features/sign-and-verify-code/?$ /archive/v1-preview/sign-and-verify-code/ redirect;
+    rewrite ^/features/use-other-popular-tools-with-fluidkeys/?$ /archive/v1-preview/use-other-popular-tools-with-fluidkeys/ redirect;
+
 }
