@@ -14,7 +14,7 @@ test:
 	@echo "OK"
 
 .PHONY: deploy
-deploy: build
+deploy:
 	./deploy
 
 source/fingerprints.txt.sig: source/fingerprints.txt

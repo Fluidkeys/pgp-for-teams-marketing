@@ -1,6 +1,6 @@
 #!/bin/sh -eu
 
-BRANCH="gh-pages-test"
+BRANCH="gh-pages"
 
 DIR=$(dirname "$0")
 
