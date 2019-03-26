@@ -18,7 +18,7 @@ title: "Download Fluidkeys"
             <pre>sudo apt update
 sudo apt install fluidkeys
 
-fk status<span class="email-address"></span></pre>
+fk <span class="verb">status</span><span class="email-address"></span></pre>
         </div>
         <div class="operating-system" id="mac">
             <div class="logos">
@@ -28,7 +28,7 @@ fk status<span class="email-address"></span></pre>
             <pre>brew tap fluidkeys/tap
 brew install fluidkeys
 
-fk status<span class="email-address"></span></pre>
+fk <span class="verb">status</span><span class="email-address"></span></pre>
 
             <p>Requires <a href="https://brew.sh/">Homebrew.</a></p>
         </div>
@@ -45,12 +45,12 @@ cd $REPO</pre>
             <p>3.a) Build and install to <code>/usr/local/bin/fk</code>
             <pre>make && sudo make install
 
-fk status<span class="email-address"></span></pre>
+fk <span class="verb">status</span><span class="email-address"></span></pre>
 
             <p>3.b) Or without <code>sudo</code> (root):</p>
             <pre>PREFIX=$HOME make && make install
 
-~/bin/fk status<span class="email-address"></span></pre>
+~/bin/fk <span class="verb">status</span><span class="email-address"></span></pre>
         </div>
     </div>
 </div>
@@ -128,6 +128,10 @@ function replaceEmailArgumentInSetup() {
         if (email != "") {
             for (var i = 0; i < emailAddresses.length; i++) {
                 emailAddresses[i].innerHTML = " " + email;
+            }
+            var verbs = document.querySelectorAll("span.verb");
+            for (var j = 0; j < verbs.length; j++) {
+                verbs[j].innerHTML = "setup";
             }
         }
     }
