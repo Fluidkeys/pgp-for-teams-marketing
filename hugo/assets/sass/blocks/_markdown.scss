@@ -44,10 +44,8 @@
     }
 
     &__illustration {
-        padding-bottom: #{1 * $line-height-base};
-        max-width: 100%;
+        padding: #{1 * $line-height-base};
         height: auto;
-        padding: $line-height-base;
         box-sizing: border-box;
     }
 

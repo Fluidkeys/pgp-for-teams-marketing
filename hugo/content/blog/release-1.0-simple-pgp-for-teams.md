@@ -65,11 +65,18 @@ With our first teams release, you can:
     secrecy, but never have to email keys around or look on the keyservers.
 *   **send passwords, certificates and tokens**—so your team has a strong default way to share
     sensitive data with frictionless end-to-end encryption.
-    <img src="/images/new-homepage/send-secrets.png" class="markdown__illustration" />
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+            <img src="/images/new-homepage/send-secrets.png" class="markdown__illustration" />
+        </div>
+    </div>
 *   **configures other tools to work out the box**—so GnuPG, enigmail, GPGMail, pass and other tools
     can see everyone's keys with the correct trust settings
-    <img src="/images/new-homepage/supercharge-gpg.png" class="markdown__illustration" />
-
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+            <img src="/images/new-homepage/supercharge-gpg.png" class="markdown__illustration" />
+        </div>
+    </div>
 
 ## New in 1.0: signed team rosters
 
@@ -82,8 +89,12 @@ create and manage a team.
 Your team is defined in a _signed team roster_. This is a cryptographically signed config file
 listing the email and key fingerprint of everyone in the team:
 
-![A screenshot of an example roster](/images/2019-03-26-release-1-0/roster-example.png)
-
+<div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <img src="/images/2019-03-26-release-1-0/roster-example.png" />
+        <br /><br />
+    </div>
+</div>
 
 ### People in the team delegate trust to their admins
 
