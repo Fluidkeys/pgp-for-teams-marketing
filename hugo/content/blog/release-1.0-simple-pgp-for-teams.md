@@ -113,8 +113,9 @@ GnuPG-powered tool, like pass, Enigmail or GPGMail.)
 No more emailing keys around the team and searching keyservers. Everyone that joins the team always
 has up-to-date and trusted keys.
 
-[download Fluidkeys v1 now]
-
+<p class="markdown__button-wrapper">
+    <a class="button button--inverted" href="/download">Download now</a>
+</p>
 
 # Fluidkeys uses a stable, verifying server
 

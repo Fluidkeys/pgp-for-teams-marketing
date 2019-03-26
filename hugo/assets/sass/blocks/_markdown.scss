@@ -50,4 +50,9 @@
         padding: $line-height-base;
         box-sizing: border-box;
     }
+
+    &__button-wrapper {
+        padding-top: #{0.5 * $line-height-base};
+        padding-bottom: #{0.5 * $line-height-base};
+    }
 }
