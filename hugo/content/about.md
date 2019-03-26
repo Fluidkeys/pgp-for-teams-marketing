@@ -10,6 +10,12 @@ We do this by making it simple for them to adopt technology and practices that p
 
 We build beautifully simple security software for teams.
 
+# We're (almost) a non-profit
+
+We have an honest business model where companies pay us for the service we provide.
+
+We're in the process of incorporating as a UK non-profit. This compels us to put our mission before profit. We believe this is a good way to keep ourselves honest to our mission.
+
 # About us
 
 Alongside building Fluidkeys, [Paul](https://www.paulfurley.com/) and [Ian](https://twitter.com/idrysdale)
