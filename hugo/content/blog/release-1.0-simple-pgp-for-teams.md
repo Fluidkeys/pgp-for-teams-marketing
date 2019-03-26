@@ -64,8 +64,10 @@ With our first teams release, you can:
     secrecy, but never have to email keys around or look on the keyservers.
 *   **send passwords, certificates and tokens**—so your team has a strong default way to share
     sensitive data with frictionless end-to-end encryption.
+    <img src="/images/new-homepage/send-secrets.png" class="markdown__illustration" />
 *   **configures other tools to work out the box**—so GnuPG, enigmail, GPGMail, pass and other tools
     can see everyone's keys with the correct trust settings
+    <img src="/images/new-homepage/supercharge-gpg.png" class="markdown__illustration" />
 
 
 ## New in 1.0: signed team rosters
