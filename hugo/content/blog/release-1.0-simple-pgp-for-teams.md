@@ -8,7 +8,7 @@ date: 2019-03-26
 ---
 
 _TLDR: As engineers we know our team should be encrypting data and signing software. We know this is
-possible with GnuPG & other PGP tools, but few teams succeed. Using PGP in a team is painful.
+possible with GnuPG & other PGP tools, but few succeed. Using PGP in a team is painful.
 Today's 1.0 release of Fluidkeys makes it painless to use PGP in a team by simplifying verification
 and automating configuration and key exchange._
 
@@ -38,7 +38,7 @@ Given that we have the knowledge, motivation and tools, why aren't we using them
 ## Complexity, friction and individualism hold back tools
 
 From talking to dozens of engineering teams who care deeply about security but struggle to use GnuPG
-or other OpenPGP tools, we've seen 3 patterns:
+or other OpenPGP tools, we've discovered 3 patterns:
 
 
 
@@ -94,7 +94,7 @@ a team admin. Whatever email and key are listed in the team roster is considered
 ### Only team admins can update the roster
 
 Only team admins can add people to the team. All updates to the roster are signed, and Fluidkeys
-won't accept an update that wasn't signed. That means **only you** can add people the team. Even
+won't accept an update that wasn't signed. That means **only you** can add people to the team. Even
 though we host your roster, we can't modify it.
 
 
