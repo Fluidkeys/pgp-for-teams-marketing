@@ -1,0 +1,15 @@
+table {
+    font-family: 'Merriweather', sans-serif;
+    @include vertical-rhythm(1rem, 1, 0);
+    text-align: center;
+    th {
+        font-weight: bold;
+    }
+    th {
+        padding: 0.5 * $line-height-base;
+        border-bottom: 1px solid grey;
+    }
+    td {
+        padding: $line-height-base;
+    }
+}
