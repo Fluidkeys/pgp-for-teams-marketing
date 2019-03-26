@@ -79,7 +79,7 @@ create and manage a team.
 Your team is defined in a _signed team roster_. This is a cryptographically signed config file
 listing the email and key fingerprint of everyone in the team:
 
-[show an example of a signed roster]
+![A screenshot of an example roster](/images/2019-03-26-release-1-0/roster-example.png)
 
 
 ### People in the team delegate trust to their admins
