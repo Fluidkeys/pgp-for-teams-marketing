@@ -6,7 +6,7 @@ build:
 .PHONY: run
 run:
 	cd hugo ;\
-	hugo server
+	hugo server --disableFastRender
 
 .PHONY: test
 test:
