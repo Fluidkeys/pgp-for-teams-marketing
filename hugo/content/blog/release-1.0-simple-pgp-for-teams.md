@@ -63,6 +63,11 @@ With our first teams release, you can:
 
 *   **automate rotation and key exchange among the team**—so you've got the benefit of forward
     secrecy, but never have to email keys around or look on the keyservers.
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+            <img src="/images/2019-03-26-release-1-0/animated-rotated-keys.svg" class="markdown__illustration" style="margin: -5rem auto -5rem auto;" />
+        </div>
+    </div>
 *   **send passwords, certificates and tokens**—so your team has a strong default way to share
     sensitive data with frictionless end-to-end encryption.
     <div class="row">
