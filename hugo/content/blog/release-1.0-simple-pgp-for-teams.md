@@ -48,6 +48,7 @@ or other OpenPGP tools, we've discovered 3 patterns:
     tradeoff between security and productivity.
 *   **Existing tools were designed for individuals**. They don't prescribe workflows for teams.
 
+<img src="/images/new-homepage/confusing-key-exchange-slim.png" class="markdown-illustration" %>
 
 ## Fluidkeys 1.0 makes PGP simple for teams
 
