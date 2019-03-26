@@ -117,7 +117,7 @@ has up-to-date and trusted keys.
     <a class="button button--inverted" href="/download">Download now</a>
 </p>
 
-# Fluidkeys uses a stable, verifying server
+## Fluidkeys uses a stable, verifying server
 
 Fluidkeys doesn't currently use the public keyserver network. We use our own verifying server which
 protects against spoofed keys.
@@ -125,16 +125,16 @@ protects against spoofed keys.
 Fluidkeys server also handles the transfer of encrypted secrets, and hosts team rosters.
 
 
-# Fluidkeys for teams is a subscription service
+## Fluidkeys for teams is a subscription service
 
 
-## Fluidkeys is free for individuals
+### Fluidkeys is free for individuals
 
 Fluidkeys is free for individuals. You get automatic key rotation and you can send end-to-end
 encrypted secrets to anyone in the world who uses Fluidkeys.
 
 
-## Fluidkeys is more powerful in a team
+### Fluidkeys is more powerful in a team
 
 Fluidkeys is better in a team: you'll get more value from its automatic key exchange and the way it
 configures tools for use in the team.
@@ -147,7 +147,7 @@ If you like it and want to carry on, we'll ask for a per-user, per-month [subscr
 fee.](/pricing)
 
 
-## We're incorporating as a non-profit
+### We're incorporating as a non-profit
 
 We have an honest business model where companies pay us for the service we provide.
 
@@ -158,7 +158,7 @@ Paying for a subscription to Fluidkeys ensures its development continues and sup
 mission.
 
 
-## Fluidkeys is open source
+### Fluidkeys is open source
 
 Fluidkeys command-line application and Fluidkeys server are AGPLv3. You can do whatever you like
 with the code as long as you respect the licence.
@@ -166,7 +166,7 @@ with the code as long as you respect the licence.
 We think being open source is a great way to keep ourselves honest. We hope you'll agree!
 
 
-# Try Fluidkeys now
+## Try Fluidkeys now
 
 We'd love you to try out Fluidkeys and let us know how you get on.
 
