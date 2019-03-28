@@ -24,10 +24,10 @@
             list-style: disc;
             margin-left: $line-height-base;
         }
-        ol {
-            list-style: decimal;
-            margin-left: $line-height-base;
-        }
+    }
+    ol {
+        list-style: decimal;
+        margin-left: $line-height-base;
     }
     blockquote {
         border-left: 1px solid $color-blockquote--border;
