@@ -1,19 +1,45 @@
 .markdown {
+    counter-reset: heading;
     margin-top: #{$line-height-base};
     margin-bottom: #{$line-height-base};
+
+    .numbered {
+        @include breakpoint(break-3) {
+            position: relative;
+            &:before {
+                position: absolute;
+                top: 0;
+                left: -3rem;
+                width: 2rem;
+                text-align: right;
+            }
+        }
+
+    }
 
     h1 {
         @include vertical-rhythm(1.7rem, 0.5, 0.5);
     }
     h2 {
         @include vertical-rhythm(1.4rem, 0.5, 1.5);
+        &.numbered {
+            counter-reset: subheading;
+            &:before {
+                content: counter(heading)". ";
+                counter-increment: heading;
+            }
+        }
     }
     h3 {
         font-family: 'Merriweather', sans-serif;
         font-weight: bold;
+        &.numbered:before {
+            content: counter(heading)"."counter(subheading)". ";
+            counter-increment: subheading;
+        }
     }
     hr {
-        margin-bottom: #{2 * $line-height-base};
+        border: 1px solid $color-grey--mid;
     }
     img {
         max-width: 100%;
@@ -52,5 +78,47 @@
     &__button-wrapper {
         padding-top: #{0.5 * $line-height-base};
         padding-bottom: #{0.5 * $line-height-base};
+    }
+
+    .callout {
+        &:before {
+            content: "";
+            position: absolute;
+            top: #{0.7 * $line-height-base};
+            left: #{0.5 * $line-height-base};
+            @include vertical-rhythm(1.5rem, 0.5, 0);
+        }
+        position: relative;
+        padding-top: #{0.5 * $line-height-base};
+        padding-bottom: #{0.5 * $line-height-base};
+        padding-left: $line-height-base * 1.8;
+        padding-right: #{0.5 * $line-height-base};
+        margin-bottom: $line-height-base;
+        @include border-radius(5px);
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .callout--warning {
+        &:before {
+            content: "⚠️";
+        }
+        background: $color-markdown-callout--warning--background;
+        border: 1px solid $color-markdown-callout--warning--border;
+    }
+
+    .callout--info {
+        &:before {
+            content: "ℹ️";
+        }
+        background: $color-markdown-callout--info--background;
+        border: 1px solid $color-markdown-callout--info--border;
+    }
+
+    pre {
+        code {
+            box-shadow: none;
+        }
     }
 }
