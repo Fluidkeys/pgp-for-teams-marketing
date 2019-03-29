@@ -39,7 +39,7 @@
         }
     }
     hr {
-        margin-bottom: #{2 * $line-height-base};
+        border: 1px solid $color-grey--mid;
     }
     img {
         max-width: 100%;

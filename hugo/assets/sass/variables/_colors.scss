@@ -1,7 +1,7 @@
 // Descriptive colors
 $color-white: #ffffff;
 $color-grey: #8c8c8c;
-$color-grey--light: #efefef;
+$color-grey--light: #f5f5f7;
 $color-grey--mid: #cccccc;
 $color-grey--dark: #232732;
 $color-pink: #d33d5c;
@@ -74,6 +74,7 @@ $color-nav__link: $color-white;
 $color-nav__link-hover: $color-pink;
 
 $color-pre--background: $color-grey--light;
+$color-pre: $color-grey--dark;
 $color-pre--border: $color-grey--mid;
 
 $color-highlight-band--background: $color-pink;

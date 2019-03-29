@@ -1,5 +1,6 @@
 $terminal-background: #202020;
 $terminal-foreground: #EAEAEA;
+$terminal-output: #bebec5;
 $terminal-disabled: #7C7C7C;
 $terminal-light-green: #8BC34B;
 $terminal-light-blue: #65B5F6;
@@ -8,19 +9,22 @@ $terminal-red: #C72828;
 $terminal-light-red: #F05350;
 
 pre.terminal {
+  border: 0;
   font-family: 'Inconsolata', monospace;
-  white-space: pre-wrap;
   text-align: justify;
   display: block;
-  word-break: break-word;
   background: $terminal-background;
   color: $terminal-foreground;
   @include vertical-rhythm(1em, 0, 0);
   line-height: #{$line-height-base * 0.65};
-  padding: $line-height-base;
+  padding: #{$line-height-base * 0.5};
   @include border-radius(#{$line-height-base * 0.25});
   .prompt {
     color: $terminal-light-green;
+  }
+  .command:before {
+    color: $terminal-light-green;
+    content: "> ";
   }
   .cursor {
     color: $terminal-light-blue;
@@ -52,6 +56,11 @@ pre.terminal {
   .header {
     background: $terminal-light-blue;
     color: $terminal-background;
+    width: 100%;
+    display: inline-block;
+  }
+  .output {
+    color: $terminal-output;
   }
   margin-bottom: $line-height-base;
 }
