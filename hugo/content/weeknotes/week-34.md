@@ -36,7 +36,7 @@ Following that start to the week we were wiped come Thursday. We started that da
 
 ![A screengrab Fluidkeys appearing on Google](/images/week-34/fluidkeys-google-result.png)
 
-To finish up, we've spent the last couple of days starting to write some documentation. Our theory is that by writing great guides, with very specific titles that appeal to Google Searches, people will discover Fluidkeys and use it to make their life managing PGP easier in a team. The first two we've written are how to [use pass, the standard UNIX password tool, to manage your team's passwords](docs/use-pass-with-fluidkeys/) and [get your team up and running with PGP](docs/get-started/).
+To finish up, we've spent the last couple of days starting to write some documentation. Our theory is that by writing great guides, with very specific titles that appeal to Google Searches, people will discover Fluidkeys and use it to make their life managing PGP easier in a team. The first two we've written are how to [use pass, the standard UNIX password tool, to manage your team's passwords](/docs/use-pass-with-fluidkeys/) and [get your team up and running with PGP](/docs/get-started/).
 
 ## Next week
 
