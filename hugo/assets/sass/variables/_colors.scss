@@ -7,7 +7,11 @@ $color-grey--dark: #232732;
 $color-pink: #d33d5c;
 $color-green: #3DA450;
 $color-green--light: #00BB3D;
+$color-yellow--dark: rgb(190, 174, 78);
 $color-yellow--light: #FFF4B3;
+$color-yellow--extra-light: rgb(255, 250, 219);
+$color-blue--dark: rgba(0,107,212,0.2);
+$color-blue--extra-light: rgba(0,107,212,0.1);
 
 // Functional colors
 $color-html--background: $color-white;
@@ -74,3 +78,8 @@ $color-pre--border: $color-grey--mid;
 
 $color-highlight-band--background: $color-pink;
 $color-highlight-band__subtitle-color: $color-white;
+
+$color-markdown-callout--warning--background: $color-yellow--extra-light;
+$color-markdown-callout--warning--border: $color-yellow--dark;
+$color-markdown-callout--info--background: $color-blue--extra-light;
+$color-markdown-callout--info--border: $color-blue--dark;
