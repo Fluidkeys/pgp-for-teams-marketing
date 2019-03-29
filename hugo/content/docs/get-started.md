@@ -1,3 +1,8 @@
+---
+title: "Getting started with Fluidkeys in your team"
+description: "Fluidkeys automates key rotation and exchange amongst a team. This guide will get you setup as a team and each member of the team setup with new PGP keys."
+---
+
 # Getting started with Fluidkeys in your team
 Fluidkeys is a command line application that gives your team PGP encryption superpowers. It makes it simple to share and store sensitive data, safeguard your source code and use popular open source PGP tools.
 
