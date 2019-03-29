@@ -35,15 +35,16 @@ You'll need:
 * [pass](https://www.passwordstore.org/#download)
 
 <a name="setup-pass"></a>
-## 1. Set up a shared password repo for the team
 
-### 1.1 Create the repo
+<h2 class="numbered">Set up a shared password repo for the team</h2>
+
+<h3 class="numbered">Create the repo</h3>
 
 Create new repo on e.g. [Github](https://github.com/new), [Bitbucket](#), [Gitlab.](#)
 
 We call our repo [fluidkeys/pass](https://github.com/fluidkeys/pass) and it's public.
 
-### 1.2 Get team emails from Fluidkeys
+<h3 class="numbered">Get team emails from Fluidkeys</h3>
 
 <div class="callout callout--info"><p>Future versions of Fluidkeys will automate these steps for your team. See our <a href="/#roadmap">public roadmap.</a></p></div>
 
@@ -55,7 +56,7 @@ Extract the team's emails from your signed team roster so pass knows who to encr
 setting up pass for tina@kiffix.com, chat@kiffix.com, mark@kiffix.com
 </pre>
 
-### 1.3 Initialize pass directory `~/.password-store`
+<h3 class="numbered">Initialize pass directory `~/.password-store`</h3>
 
 <pre class="terminal">
 <span class="command">pass init ${TEAM_EMAILS}</span>
@@ -63,20 +64,20 @@ setting up pass for tina@kiffix.com, chat@kiffix.com, mark@kiffix.com
 Password store initialized for tina@kiffix.com, chat@kiffix.com, mark@kiffix.com</span>
 </pre>
 
-### 1.4 Convert pass directory into a git repo
+<h3 class="numbered">Convert pass directory into a git repo</h3>
 
 <pre class="terminal">
 <span class="command">pass git init</span>
 <span class="output"Initialised empty Git repository in /home/paul/.password-store/.git/</span>
 </pre>
 
-### 1.5 Set the git remote
+<h3 class="numbered">Set the git remote</h3>
 
 <pre class="terminal">
 <span class="command">pass git remote add origin git@github.com:kiffix/pass.git</span>
 </pre>
 
-### 1.6 Automatically push changes to the repo
+<h3 class="numbered">Automatically push changes to the repo</h3>
 
 Edit `~/.password-store/.git/hooks/post-commit` and add these lines:
 
@@ -92,7 +93,7 @@ Make `post-commit` executable:
 chmod +x ~/.password-store/.git/hooks/post-commit
 </pre>
 
-### 1.7 Test everything's working
+<h3 class="numbered">Test everything's working</h3>
 
 So far, so good. Let's make sure we can encrypt and decrypt passwords. Try adding a password with `pass insert`:
 
@@ -130,11 +131,11 @@ Next, let's set up other team members.
 ---
 
 <a name="join-pass"></a>
-## 2. Subscribe team members to the password repo
+<h2 class="numbered">Subscribe team members to the password repo</h2>
 
 When someone joins the team, set up their machine to use the shared password repo:
 
-### 2.1 Clone the repo into `~/.password-store`
+<h3 class="numbered">Clone the repo into `~/.password-store`</h3>
 
 <pre class="terminal">
 <span class="command">git clone git@github.com:fluidkeys/pass.git ~/.password-store</span>
@@ -147,7 +148,7 @@ Receiving objects: 100% (26/26), 11.57 KiB | 5.78 MiB/s, done.
 Resolving deltas: 100% (4/4), done.
 </pre>
 
-### 2.2 Automatically push changes to the repo
+<h3 class="numbered">Automatically push changes to the repo</h3>
 
 Edit `~/.password-store/.git/hooks/post-commit` and add these lines:
 
@@ -168,7 +169,7 @@ That's it! Now you and your team can share passwords, automatically synced using
 ---
 
 <a name="use-pass"></a>
-## 3. Use pass day-to-day
+<h2 class="numbered">Use pass day-to-day</h2>
 
 Here are some helpful commands to get you started.
 
