@@ -116,5 +116,9 @@
         border: 1px solid $color-markdown-callout--info--border;
     }
 
-
+    pre {
+        code {
+            box-shadow: none;
+        }
+    }
 }
