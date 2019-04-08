@@ -22,6 +22,7 @@
         }
         color: $color-nav__link;
         text-decoration: none;
+        transition: all 0.07s linear;
         &:hover {
             text-decoration: underline;
             @include breakpoint(break-2) {
