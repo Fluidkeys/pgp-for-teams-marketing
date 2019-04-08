@@ -22,12 +22,32 @@
         }
         color: $color-nav__link;
         text-decoration: none;
+        transition: all 0.07s linear;
         &:hover {
             text-decoration: underline;
             @include breakpoint(break-2) {
-            text-decoration: none;
-            background: $color-nav__link-hover;
+                text-decoration: none;
+                background: $color-nav__link-hover;
             }
+        }
+
+        &--button {
+            @include breakpoint(break-2) {
+                padding: #{$line-height-base * 0.4} $line-height-base #{$line-height-base * 0.4} $line-height-base;
+                margin: #{$line-height-base * 0.6};
+                background: $color-nav__link--button--background;
+                @include border-radius(#{$line-height-base * 0.7});
+            }
+            &:hover {
+                background: $color-nav__link--button--background-hover;
+            }
+        }
+    }
+
+    &__extra_word {
+        display: none;
+        @include breakpoint(break-3) {
+            display: inline;
         }
     }
 }
