@@ -3,8 +3,10 @@ language: go
 script: make test
 
 before_install:
-    wget 'https://github.com/gohugoio/hugo/releases/download/v0.54.0/hugo_extended_0.54.0_Linux-64bit.deb'
-    sudo dpkg -i hugo_extended_0.54.0_Linux-64bit.deb
+    - git clone --single-branch --branch v0.54.0 -- https://github.com/gohugoio/hugo.git $GOPATH/github.com/gohugoio/hugo
+    - cd $GOPATH/github.com/gohugoio/hugo
+    - go install --tags extended
+    - cd -
 
 notifications:
     email: false
