@@ -26,7 +26,7 @@ Thanks to every that shared the news, it's been fun seeing people download it an
 
 Then on Wednesday we were interviewed on FLOSS Weekly by [Randal Schwartz](https://en.wikipedia.org/wiki/Randal_L._Schwartz) and [Simon Phipps](https://en.wikipedia.org/wiki/Simon_Phipps_(programmer)). I really enjoyed it and was suprised by how we got into speaking about how we work as a remote team. Simon questioned us about how we intend to make a business model on top of purely AGPL licensed code and it got us thinking and sharpening our explanation. You can expect more on that in coming weeks... I still stand by what I said though: our biggest risk right now isn't someone copying our code and not paying for it, our biggest risk is being irrelevant!
 
-[![A screengrab of Paul and Ian being interviewed on FLOSS weekly](/images/week-34/paul-and-ian-floss-weekly.png)](https://twit.tv/shows/floss-weekly/episodes/523?autostart=false)
+[![A screengrab of Paul and Ian being interviewed on FLOSS weekly](/images/weeknotes/week-34/paul-and-ian-floss-weekly.png)](https://twit.tv/shows/floss-weekly/episodes/523?autostart=false)
 
 If you want more, you can [listen back here](https://twit.tv/shows/floss-weekly/episodes/523?autostart=false) 📻 (58 mins)
 
@@ -34,7 +34,7 @@ If you want more, you can [listen back here](https://twit.tv/shows/floss-weekly/
 
 Following that start to the week we were wiped come Thursday. We started that day reviewing our urls, titles and descriptions for each page we have on fluidkeys.com and sharpening.  I was alarmed to see our description on the home page was blank! This stuff is important as it's what people see when searching around Google. We now look a bit more like this:
 
-![A screengrab Fluidkeys appearing on Google](/images/week-34/fluidkeys-google-result.png)
+![A screengrab Fluidkeys appearing on Google](/images/weeknotes/week-34/fluidkeys-google-result.png)
 
 To finish up, we've spent the last couple of days starting to write some documentation. Our theory is that by writing great guides, with very specific titles that appeal to Google Searches, people will discover Fluidkeys and use it to make their life managing PGP easier in a team. The first two we've written are how to [use pass, the standard UNIX password tool, to manage your team's passwords](/docs/use-pass-with-fluidkeys/) and [get your team up and running with PGP](/docs/get-started/).
 
