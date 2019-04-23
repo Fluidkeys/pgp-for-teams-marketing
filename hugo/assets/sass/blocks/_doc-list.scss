@@ -1,0 +1,37 @@
+.doc-list {
+    list-style: none;
+    .doc-list__item--file {
+        list-style: none;
+        margin-left: 0;
+        @include vertical-rhythm(1rem, 0.5, 0);
+        &:before {
+            content: '';
+            display: inline-block;
+            height: #{$line-height-base * 0.6};
+            width: #{$line-height-base * 0.6};
+            background-image: url(/images/docs/icons/file-icon.svg);
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: #{$line-height-base * 0.6};
+            position: relative;
+            top: 2px;
+        }
+    }
+    .doc-list__item--folder {
+        list-style: none;
+        margin-left: 0;
+        @include vertical-rhythm(1rem, 0.5, 0);
+        &:before {
+            content: '';
+            display: inline-block;
+            height: #{$line-height-base * 0.6};
+            width: #{$line-height-base * 0.6};
+            background-image: url(/images/docs/icons/folder-icon.svg);
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: #{$line-height-base * 0.6};
+            position: relative;
+            top: 2px;
+        }
+    }
+}

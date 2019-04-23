@@ -1,0 +1,27 @@
+{{ define "title"}}{{ .Title }}{{ end }}
+{{ define "description" }} description: Keep up to date with our progress building Fluidkeys, a way
+to protect your team with strong encryption.{{ end }}
+{{ define "main" }}
+
+<section class="container--max-width-break-2">
+    <div class="markdown">
+        <h1 class="title">Documentation</h1>
+        <p>This page provides all published documentation for Fluidkeys.</p>
+        <hr />
+        <ul class="doc-list">
+          {{ range .Pages }}
+          <li class="doc-list__item--file">
+            <a href="{{ .URL }}">{{ .Title }}</a>
+          </li>
+          {{ end }}
+        </ul>
+        <hr />
+        <p>
+            Still can't find what you need? Email
+            <a href="mailto:help@fluidkeys.com">help@fluidkeys.com</a> and we'll do our best to
+            help.
+        </p>
+    </div>
+</section>
+
+{{ end }}
