@@ -1,6 +1,5 @@
 ---
 title: "Deleting a team in Fluidkeys"
-description: "Fluidkeys automates key rotation and exchange amongst a team. This guide will get you setup as a team and each member of the team setup with new PGP keys."
 weight: 3
 ---
 
