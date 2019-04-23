@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>burger-burger</title>
+    <desc>Created with Sketch.</desc>
+    <g id="burger-burger" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <path d="M7.10962702,10.109627 L36,10.109627" id="Line" stroke="#FFFFFF" stroke-width="4" transform="translate(21.500000, 10.000000) scale(-1, 1) translate(-21.500000, -10.000000) "></path>
+        <path d="M7.10962702,21.109627 L36,21.109627" id="Line" stroke="#FFFFFF" stroke-width="4" transform="translate(21.500000, 21.000000) scale(-1, 1) translate(-21.500000, -21.000000) "></path>
+        <path d="M7.10962702,32.109627 L36,32.109627" id="Line" stroke="#FFFFFF" stroke-width="4" transform="translate(21.500000, 32.000000) scale(-1, 1) translate(-21.500000, -32.000000) "></path>
+    </g>
+</svg>

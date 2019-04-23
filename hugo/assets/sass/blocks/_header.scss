@@ -1,5 +1,10 @@
 .header {
     background: $color-header--background;
+    @include breakpoint(break-2) {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
 
     &__title {
       @include vertical-rhythm(2rem, 0, 0);
