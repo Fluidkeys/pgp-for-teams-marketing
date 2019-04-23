@@ -51,7 +51,7 @@ We call our repo [fluidkeys/pass](https://github.com/fluidkeys/pass) and it's pu
 Extract the team's emails from your signed team roster so pass knows who to encrypt to:
 
 <pre class="terminal">
-<span class="command">TEAM_EMAILS=$(cat ~/.config/fluidkeys/teams//roster.toml | grep email | cut -d'"' -f2)</span>
+<span class="command">TEAM_EMAILS=$(cat ~/.config/fluidkeys/teams/*/roster.toml | grep email | cut -d'"' -f2)</span>
 <span class="command">echo "setting up pass for $TEAM_EMAILS"</span>
 setting up pass for tina@kiffix.com, chat@kiffix.com, mark@kiffix.com
 </pre>
