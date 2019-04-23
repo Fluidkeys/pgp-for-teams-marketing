@@ -1,7 +1,9 @@
 .nav {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
+    @include breakpoint(break-2) {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
     width: 100%;
     overflow-x: hidden;
     margin-bottom: 0;
