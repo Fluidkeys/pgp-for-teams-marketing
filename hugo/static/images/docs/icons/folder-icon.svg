@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="223px" height="223px" viewBox="0 0 223 223" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>folder-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="folder-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#FFFFFF" x="0" y="23" width="112" height="52" rx="4"></rect>
+        <path d="M16,66 L96,66 L96,39 L16,39 L16,66 Z M112,66 L219,66 C221.209139,66 223,67.790861 223,70 L223,214 C223,216.209139 221.209139,218 219,218 L4,218 C1.790861,218 2.705415e-16,216.209139 0,214 L0,171 L0,27 C-2.705415e-16,24.790861 1.790861,23 4,23 L108,23 C110.209139,23 112,24.790861 112,27 L112,66 Z" id="Combined-Shape" fill="#979797" fill-rule="nonzero"></path>
+    </g>
+</svg>

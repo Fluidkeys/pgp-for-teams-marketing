@@ -1,6 +1,7 @@
 ---
 title: "Getting started with Fluidkeys in your team"
 description: "Fluidkeys automates key rotation and exchange amongst a team. This guide will get you setup as a team and each member of the team setup with new PGP keys."
+weight: 1
 ---
 
 # Getting started with Fluidkeys in your team

@@ -1,5 +1,6 @@
 ---
 title: "Use pass in a team with Fluidkeys"
+weight: 2
 ---
 
 # Use pass in your team with Fluidkeys
