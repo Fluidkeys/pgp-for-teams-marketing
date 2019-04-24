@@ -1,0 +1,42 @@
+.burger {
+    @include breakpoint(break-2) {
+        display: none;
+    }
+	display: inline-block;
+    border: 0;
+	background-image: url(/images/icons/burger-burger.svg);
+	outline: 0;
+	padding: 0;
+	cursor: pointer;
+    width: #{$line-height-base * 1.5};
+    height: #{$line-height-base * 1.5};
+
+	// Fix for extra space in Firefox
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+    }
+    position: absolute;
+    top: #{$line-height-base * 0.75};
+    right: #{$line-height-base * 0.75};
+}
+
+.burger-check {
+  display: none;
+}
+
+.burger-check:checked ~ .burger {
+    background-image: url(/images/icons/burger-cross.svg);
+}
+
+nav {
+  overflow: hidden;
+  max-height: 0;
+  @include breakpoint(break-2) {
+    max-height: 500px;
+  }
+}
+
+.burger-check:checked ~ nav {
+    max-height: 500px;
+}

@@ -1,22 +1,33 @@
 .nav {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
+    @include breakpoint(break-2) {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
     width: 100%;
     overflow-x: hidden;
     margin-bottom: 0;
+    border-bottom: 1px solid $color-white;
     @include breakpoint(break-2) {
+      border: 0;
       justify-content: flex-end;
     }
 
     &__item {
       padding: 0;
       margin: 0;
+      border-top: 1px solid $color-white;
+      @include breakpoint(break-2) {
+          border: 0;
+      }
     }
 
     &__link {
         display: block;
-        padding: 0 $line-height-base $line-height-base 0;
+        padding: #{$line-height-base * 0.5} $line-height-base #{$line-height-base * 0.5} 0;
+        @include breakpoint(break-2) {
+            padding: 0 $line-height-base $line-height-base 0;
+        }
         @include breakpoint(break-2) {
             padding: $line-height-base;
         }
@@ -37,9 +48,9 @@
                 margin: #{$line-height-base * 0.6};
                 background: $color-nav__link--button--background;
                 @include border-radius(#{$line-height-base * 0.7});
-            }
-            &:hover {
-                background: $color-nav__link--button--background-hover;
+                &:hover {
+                    background: $color-nav__link--button--background-hover;
+                }
             }
         }
     }
