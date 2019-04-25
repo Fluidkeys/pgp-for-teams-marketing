@@ -15,7 +15,8 @@ Contents:
 1. [Prerequisites](#prerequisites)
 2. [Import your PGP key into Fluidkeys](#import-key)
 3. [Upload your public key to the keyservers](#upload-to-keyservers)
-4. [Remind your contacts to refresh their keys](#remind-contacts)
+4. [Upload your public key to Fluidkeys](#upload-to-fluidkeys)
+5. [Remind your contacts to refresh their keys](#remind-contacts)
 
 <h2 class="numbered" id="prerequisites">Prerequisites</h2>
 
