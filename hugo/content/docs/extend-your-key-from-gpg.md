@@ -27,7 +27,11 @@ You'll need:
 
 <h2 class="numbered" id="connect-key">Connect Fluidkeys to your key in GnuPG</h2>
 
-Import your existing key stored in GnuPG to Fluidkeys by running `fk key from-gpg`.
+Allow Fluidkeys to access your key in GnuPG:
+
+<pre class="terminal">
+<span class="command">fk key from-gpg</span>
+</pre>
 
 When asked to "Connect this key?" type `Y` to say yes. (If you've more than one key in GPG, you
 can select which you'd like to manage with Fluidkeys).
@@ -39,7 +43,11 @@ like this:
  <span class="notice">▸</span>   <span class="error">Primary key needs extending now (expires in 2 days)</span>
 </pre>
 
-To fix this and any other errors, run `fk key maintain`.
+To extend your key and fix any other issues, run:
+
+<pre class="terminal">
+<span class="command">fk key maintain</span>
+</pre>
 
 You'll be asked three questions, answer `Y` for each:
 
