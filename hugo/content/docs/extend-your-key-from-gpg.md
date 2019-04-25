@@ -55,15 +55,17 @@ Fluidkeys will also have updated your cipher, hash and compression preferences t
 Remember to upload your updated key to the keyservers:
 
 <pre class="terminal">
-<span class="command">gpg --keyserver hkp://pool.sks-keyservers.net --send-keys 'A999 B749 8D1A 8DC4 73E5 3C92 309F 635D AD1B 5517'
+<span class="command">gpg --keyserver hkps://hkps.pool.sks-keyservers.net --send-keys 'KEY-FINGERPRINT'
 </pre>
 
-Given that you're key will be modified each month now, you should now setup a `cron` task to run this command on the 1st of each month.
+<div class="callout callout--info"><p>Replace <code>KEY-FINGERPRINT</code> with your fingerprint, for example <code>A999 B749 8D1A 8DC4 73E5  3C92 309F 635D AD1B 5517</code>. Make sure it's between quote marks.</p></div>
+
+Given that your key will be modified each month now, you should now setup a `cron` task to run this command on the 1st of each month.
 
 To do that, edit your cron file run by running `crontab -e` and add the following line:
 
 <pre>
-0 0 1 * * gpg --keyserver hkp://pool.sks-keyservers.net --send-keys 'A999 B749 8D1A 8DC4 73E5 3C92 309F 635D AD1B 5517'
+@daily gpg --keyserver hkps://hkps.pool.sks-keyservers.net --send-keys 'KEY-FINGERPRINT'
 </pre>
 
 <h2 class="numbered" id="upload-to-fluidkeys">Upload your public key to Fluidkeys</h2>
