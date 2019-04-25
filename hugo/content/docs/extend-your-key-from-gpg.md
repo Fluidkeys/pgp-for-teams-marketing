@@ -13,11 +13,12 @@ You can use it to automatically maintain a key you've already made using GnuPG, 
 Contents:
 
 1. [Prerequisites](#prerequisites)
-2. [Connect Fluidkeys to your key in GnuPG](#connect-key)
-3. [Upload your public key to the keyservers](#upload-to-keyservers)
-4. [Optional: automatically upload to the keyservers using cron](#upload-from-cron)
-5. [Upload your public key to Fluidkeys](#upload-to-fluidkeys)
-6. [Remind your contacts to refresh their keys](#remind-contacts)
+1. [Connect Fluidkeys to your key in GnuPG](#connect-key)
+1. [Extend your key, switch on automatic maintenance](#extend-key)
+1. [Upload your public key to the keyservers](#upload-to-keyservers)
+1. [Optional: automatically upload to the keyservers using cron](#upload-from-cron)
+1. [Upload your public key to Fluidkeys](#upload-to-fluidkeys)
+1. [Remind your contacts to refresh their keys](#remind-contacts)
 
 <h2 class="numbered" id="prerequisites">Prerequisites</h2>
 
@@ -43,6 +44,8 @@ like this:
 <pre class="terminal">
  <span class="notice">▸</span>   <span class="error">Primary key needs extending now (expires in 2 days)</span>
 </pre>
+
+<h2 class="numbered" id="connect-key">Extend your key, switch on automatic maintenance</h2>
 
 To extend your key and fix any other issues, run:
 
