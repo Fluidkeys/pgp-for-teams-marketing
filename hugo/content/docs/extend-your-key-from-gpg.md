@@ -15,8 +15,9 @@ Contents:
 1. [Prerequisites](#prerequisites)
 2. [Connect Fluidkeys to your key in GnuPG](#connect-key)
 3. [Upload your public key to the keyservers](#upload-to-keyservers)
-4. [Upload your public key to Fluidkeys](#upload-to-fluidkeys)
-5. [Remind your contacts to refresh their keys](#remind-contacts)
+4. [Optional: automatically upload to the keyservers using cron](#upload-from-cron)
+5. [Upload your public key to Fluidkeys](#upload-to-fluidkeys)
+6. [Remind your contacts to refresh their keys](#remind-contacts)
 
 <h2 class="numbered" id="prerequisites">Prerequisites</h2>
 
@@ -68,9 +69,20 @@ Remember to upload your updated key to the keyservers:
 
 <div class="callout callout--info"><p>Replace <code>KEY-FINGERPRINT</code> with your fingerprint, for example <code>A999 B749 8D1A 8DC4 73E5  3C92 309F 635D AD1B 5517</code>. Make sure it's between quote marks.</p></div>
 
-Given that your key will be modified each month now, you should now setup a `cron` task to run this command on the 1st of each month.
+<h2 class="numbered" id="upload-from-cron">Optional: automatically upload to the keyservers using cron</h2>
 
-To do that, edit your cron file run by running `crontab -e` and add the following line:
+Fluidkeys automatically extends your key every month.
+
+To ensure your key is always up to date in the keyservers, you should use `cron` to automatically
+push the key.
+
+Edit your crontab file:
+
+<pre class="terminal">
+<span class="command">crontab -e
+</pre>
+
+then add the following line:
 
 <pre>
 @daily gpg --keyserver hkps://hkps.pool.sks-keyservers.net --send-keys 'KEY-FINGERPRINT'
