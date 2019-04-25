@@ -14,7 +14,7 @@ Contents:
 
 1. [Prerequisites](#prerequisites)
 2. [Import your PGP key into Fluidkeys](#import-key)
-3. [Push it to the keyservers](#push-to-keyservers)
+3. [Upload your public key to the keyservers](#upload-to-keyservers)
 4. [Remind your contacts to refresh their keys](#remind-contacts)
 
 <h2 class="numbered" id="prerequisites">Prerequisites</h2>
@@ -49,9 +49,9 @@ You'll be asked three questions, answer `Y` for each:
 Once complete, your key will have a new expiry date set to at the end of next month.
 Fluidkeys will also have updated your cipher, hash and compression preferences to best practice recommendations.
 
-<h2 class="numbered" id="push-to-keyservers">Push it to the keyservers</h2>
+<h2 class="numbered" id="upload-to-keyservers">Upload your public key to the keyservers</h2>
 
-Remember to push your updated key to the keyservers:
+Remember to upload your updated key to the keyservers:
 
 <pre class="terminal">
 <span class="command">gpg --keyserver hkp://pool.sks-keyservers.net --send-keys 'A999 B749 8D1A 8DC4 73E5 3C92 309F 635D AD1B 5517'
@@ -65,7 +65,7 @@ To do that, edit your cron file run by running `crontab -e` and add the followin
 0 0 1 * * gpg --keyserver hkp://pool.sks-keyservers.net --send-keys 'A999 B749 8D1A 8DC4 73E5 3C92 309F 635D AD1B 5517'
 </pre>
 
-<h2 class="numbered" id="push-to-keyservers">Push it to Fluidkeys server</h2>
+<h2 class="numbered" id="upload-to-fluidkeys">Upload your public key to Fluidkeys</h2>
 
 If you'd like to receive secrets using Fluidkeys, you should also push your key to the Fluidkeys server:
 
