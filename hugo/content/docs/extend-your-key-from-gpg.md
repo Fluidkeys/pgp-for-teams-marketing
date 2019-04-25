@@ -26,7 +26,7 @@ You'll need:
 
 <h2 class="numbered" id="import-key">Import your PGP key into Fluidkeys</h2>
 
-Import your existing key stored in GnuPGP to Fluidkeys by running `fk key from-gpg`.
+Import your existing key stored in GnuPG to Fluidkeys by running `fk key from-gpg`.
 
 When asked to "Connect this key?" type `Y` to say yes. (If you've more than one key in GPG, you
 can select which you'd like to manage with Fluidkeys).
