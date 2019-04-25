@@ -13,9 +13,11 @@ You can use it to automatically maintain a key you've already made using GnuPG, 
 Contents:
 
 1. [Prerequisites](#prerequisites)
-2. [Import your PGP key into Fluidkeys](#import-key)
-3. [Push it to the keyservers](#push-to-keyservers)
-4. [Remind your contacts to refresh their keys](#remind-contacts)
+2. [Connect Fluidkeys to your key in GnuPG](#connect-key)
+3. [Upload your public key to the keyservers](#upload-to-keyservers)
+4. [Optional: automatically upload to the keyservers using cron](#upload-from-cron)
+5. [Upload your public key to Fluidkeys](#upload-to-fluidkeys)
+6. [Remind your contacts to refresh their keys](#remind-contacts)
 
 <h2 class="numbered" id="prerequisites">Prerequisites</h2>
 
@@ -24,9 +26,13 @@ You'll need:
 * [Fluidkeys](https://download.fluidkeys.com) &ge; 1.0
 * An existing PGP key stored in [GnuPG](https://www.gnupg.org/)
 
-<h2 class="numbered" id="import-key">Import your PGP key into Fluidkeys</h2>
+<h2 class="numbered" id="connect-key">Connect Fluidkeys to your key in GnuPG</h2>
 
-Import your existing key stored in GnuPGP to Fluidkeys by running `fk key from-gpg`.
+Allow Fluidkeys to access your key in GnuPG:
+
+<pre class="terminal">
+<span class="command">fk key from-gpg</span>
+</pre>
 
 When asked to "Connect this key?" type `Y` to say yes. (If you've more than one key in GPG, you
 can select which you'd like to manage with Fluidkeys).
@@ -38,7 +44,11 @@ like this:
  <span class="notice">▸</span>   <span class="error">Primary key needs extending now (expires in 2 days)</span>
 </pre>
 
-To fix this and any other errors, run `fk key maintain`.
+To extend your key and fix any other issues, run:
+
+<pre class="terminal">
+<span class="command">fk key maintain</span>
+</pre>
 
 You'll be asked three questions, answer `Y` for each:
 
@@ -49,25 +59,38 @@ You'll be asked three questions, answer `Y` for each:
 Once complete, your key will have a new expiry date set to at the end of next month.
 Fluidkeys will also have updated your cipher, hash and compression preferences to best practice recommendations.
 
-<h2 class="numbered" id="push-to-keyservers">Push it to the keyservers</h2>
+<h2 class="numbered" id="upload-to-keyservers">Upload your public key to the keyservers</h2>
 
-Remember to push your updated key to the keyservers:
-
-<pre class="terminal">
-<span class="command">gpg --keyserver hkp://pool.sks-keyservers.net --send-keys 'A999 B749 8D1A 8DC4 73E5 3C92 309F 635D AD1B 5517'
-</pre>
-
-Given that you're key will be modified each month now, you should now setup a `cron` task to run this command on the 1st of each month.
-
-To do that, edit your cron file run by running `crontab -e` and add the following line:
+Remember to upload your updated key to the keyservers:
 
 <pre class="terminal">
-0 0 1 * * gpg --keyserver hkp://pool.sks-keyservers.net --send-keys 'A999 B749 8D1A 8DC4 73E5 3C92 309F 635D AD1B 5517'
+<span class="command">gpg --keyserver hkps://hkps.pool.sks-keyservers.net --send-keys 'KEY-FINGERPRINT'
 </pre>
 
-<h2 class="numbered" id="push-to-keyservers">Push it to Fluidkeys server</h2>
+<div class="callout callout--info"><p>Replace <code>KEY-FINGERPRINT</code> with your fingerprint, for example <code>A999 B749 8D1A 8DC4 73E5  3C92 309F 635D AD1B 5517</code>. Make sure it's between quote marks.</p></div>
 
-If you'd like to receive secrets using Fluidkeys, you should also push your key to the Fluidkeys server:
+<h2 class="numbered" id="upload-from-cron">Optional: automatically upload to the keyservers using cron</h2>
+
+Fluidkeys automatically extends your key every month.
+
+To ensure your key is always up to date in the keyservers, you should use `cron` to automatically
+upload the key.
+
+Edit your crontab file:
+
+<pre class="terminal">
+<span class="command">crontab -e
+</pre>
+
+then add the following line:
+
+<pre>
+@daily gpg --keyserver hkps://hkps.pool.sks-keyservers.net --send-keys 'KEY-FINGERPRINT'
+</pre>
+
+<h2 class="numbered" id="upload-to-fluidkeys">Upload your public key to Fluidkeys</h2>
+
+If you'd like to receive secrets using Fluidkeys, you should also upload your key to the Fluidkeys server:
 
 <pre class="terminal">
 <span class="command">fk key upload</span>
