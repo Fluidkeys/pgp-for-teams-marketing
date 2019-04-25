@@ -1,18 +1,15 @@
 ---
-title: "Extend your PGP key from GPG with Fluidkeys"
+title: "Use Fluidkeys to extend your key in GnuPG"
 weight: 4
 ---
 
-# How to extend your PGP key expiry date with Fluidkeys (and never have to do it again)
+# Use Fluidkeys to extend your key in GnuPG
 
-Fluidkeys is a command line application that makes it simple for engineering teams to get up and
-running with PGP.
+Fluidkeys can automatically extend your key expiry and fix issues with keys you've made in GnuPG.
 
-You can use it to automatically maintain a key you've already made using GnuPG, send end-to-end encrypted secrets to other and use `pass` the open-source unix password manager to manage your team passwords.
+<div class="callout callout--info"><p>Fluidkeys simplifies using PGP in a team. You can send end-to-end encrypted secrets, use <code>pass</code> to store team secrets. Public keys are automatically distributed and trusted within the team.</p></div>
 
-Contents:
-
-1. [Prerequisites](#prerequisites)
+1. [Install Fluidkeys](#install-fluidkeys)
 1. [Connect Fluidkeys to your key in GnuPG](#connect-key)
 1. [Extend your key, switch on automatic maintenance](#extend-key)
 1. [Upload your public key to the keyservers](#upload-to-keyservers)
@@ -20,12 +17,9 @@ Contents:
 1. [Upload your public key to Fluidkeys](#upload-to-fluidkeys)
 1. [Remind your contacts to refresh their keys](#remind-contacts)
 
-<h2 class="numbered" id="prerequisites">Prerequisites</h2>
+<h2 class="numbered" id="prerequisites">Install Fluidkeys</h2>
 
-You'll need:
-
-* [Fluidkeys](https://download.fluidkeys.com) &ge; 1.0
-* An existing PGP key stored in [GnuPG](https://www.gnupg.org/)
+[Install Fluidkeys &ge; 1.0](https://download.fluidkeys.com)
 
 <h2 class="numbered" id="connect-key">Connect Fluidkeys to your key in GnuPG</h2>
 
