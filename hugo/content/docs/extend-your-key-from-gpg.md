@@ -62,7 +62,7 @@ Given that you're key will be modified each month now, you should now setup a `c
 
 To do that, edit your cron file run by running `crontab -e` and add the following line:
 
-<pre class="terminal">
+<pre>
 0 0 1 * * gpg --keyserver hkp://pool.sks-keyservers.net --send-keys 'A999 B749 8D1A 8DC4 73E5 3C92 309F 635D AD1B 5517'
 </pre>
 
