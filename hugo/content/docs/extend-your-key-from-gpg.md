@@ -13,7 +13,7 @@ You can use it to automatically maintain a key you've already made using GnuPG, 
 Contents:
 
 1. [Prerequisites](#prerequisites)
-2. [Import your PGP key into Fluidkeys](#import-key)
+2. [Connect Fluidkeys to your key in GnuPG](#connect-key)
 3. [Upload your public key to the keyservers](#upload-to-keyservers)
 4. [Upload your public key to Fluidkeys](#upload-to-fluidkeys)
 5. [Remind your contacts to refresh their keys](#remind-contacts)
@@ -25,7 +25,7 @@ You'll need:
 * [Fluidkeys](https://download.fluidkeys.com) &ge; 1.0
 * An existing PGP key stored in [GnuPG](https://www.gnupg.org/)
 
-<h2 class="numbered" id="import-key">Import your PGP key into Fluidkeys</h2>
+<h2 class="numbered" id="connect-key">Connect Fluidkeys to your key in GnuPG</h2>
 
 Import your existing key stored in GnuPG to Fluidkeys by running `fk key from-gpg`.
 
