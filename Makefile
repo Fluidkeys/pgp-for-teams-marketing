@@ -20,6 +20,12 @@ deploy:
 	@echo "Jenkins updates the webserver directly rather than using the gh-pages branch"
 	@echo
 
+.PHONY: deploy_manually
+deploy_manually:
+	make build
+	rsync -razd --progress hugo/public/ www-fluidkeys-com@www.fluidkeys.com:~/html
+
+
 source/fingerprints.txt.sig: source/fingerprints.txt
 	gpg --sign --local-user 'B79F 0840 DEF1 2EBB A72F  F72D 7327 A44C 2157 A758' --output source/fingerprints.txt.sig source/fingerprints.txt
 
