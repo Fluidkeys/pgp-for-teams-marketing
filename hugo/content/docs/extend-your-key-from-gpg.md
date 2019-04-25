@@ -74,7 +74,7 @@ Remember to upload your updated key to the keyservers:
 Fluidkeys automatically extends your key every month.
 
 To ensure your key is always up to date in the keyservers, you should use `cron` to automatically
-push the key.
+upload the key.
 
 Edit your crontab file:
 
@@ -90,7 +90,7 @@ then add the following line:
 
 <h2 class="numbered" id="upload-to-fluidkeys">Upload your public key to Fluidkeys</h2>
 
-If you'd like to receive secrets using Fluidkeys, you should also push your key to the Fluidkeys server:
+If you'd like to receive secrets using Fluidkeys, you should also upload your key to the Fluidkeys server:
 
 <pre class="terminal">
 <span class="command">fk key upload</span>
