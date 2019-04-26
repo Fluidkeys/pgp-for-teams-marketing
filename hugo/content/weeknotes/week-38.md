@@ -14,7 +14,7 @@ _Recap_: Fluidkeys makes PGP simple for engineering teams. It helps you safeguar
 
 ## We now remind people who's keys are expiring in Fluidkeys
 
-In our desire to get v1 out the door, we'd neglected a little how Fluidkeys runs in the background. Each day it trys to run a task that checks if the key you made needs to be updated and extended, but we knew this wasn't always working quite right, particularly on macOS.
+In our desire to get v1 out the door, we'd neglected a little how Fluidkeys runs in the background. Each day it trys to run a task that checks if the key you made needs to be updated and extended, but discovered this wasn't always working quite right on macOS.
 
 To address this before it becomes a problem, we wanted to warn everyone who had made a key, but hadn't got key maintenance working properly. We needed to let them know their keys would expire and what they could do about it!
 
