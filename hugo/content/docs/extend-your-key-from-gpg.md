@@ -27,10 +27,20 @@ Allow Fluidkeys to access your key in GnuPG:
 
 <pre class="terminal">
 <span class="command">fk key from-gpg</span>
+
+Connecting a key allows Fluidkeys to inspect your key and fix any issues.
+
+Found 1 key with <span class="information">gpg --list-secret-keys</span>:
+
+<span class="information">1.</span>  01CE 9E32 C62C 22A6 ECF1  4CA5 966C 11FE 6B6C 44BC
+    Created on 15 March 2019
+      <tina@example.com>
+
+Connect this key? [Y/n]
 </pre>
 
-When asked to "Connect this key?" type `Y` to say yes. (If you've more than one key in GPG, you
-can select which you'd like to manage with Fluidkeys).
+Type `Y` to connect Fluidkeys to the key in GnuPG. (If you've more than one key in GPG, you
+can select which you'd like to manage with Fluidkeys.)
 
 Fluidkeys will then list a number of issues it has found for the key.<br />One of the issues should look
 like this:
@@ -45,9 +55,24 @@ To extend your key and fix any other issues, run:
 
 <pre class="terminal">
 <span class="command">fk key maintain</span>
+
+Fluidkeys found 3 issues for tina@example.com:
+
+ <span class="notice">▸</span>   <span class="error">Primary key needs extending now (expires in 2 days)</span>
+ <span class="notice">▸</span>   Key not maintained automatically
+ <span class="notice">▸</span>   Key not uploaded, unable to receive secrets
+
+Fluidkeys will run the following actions:
+
+     [ ] Load private key from gpg
+     [ ] Extend the primary key expiry to 31 May 19
+     [ ] Store updated key in gpg
+     [ ] Make backup ZIP file
+
+Make a backup of gpg and run these actions? [Y/n]
 </pre>
 
-You'll be asked three questions, answer `Y` for each:
+Answer `Y` for each of three questions:
 
 1. Make a backup of gpg and run these actions?
 2. Save password to macOS Keychain / Linux keyring?
