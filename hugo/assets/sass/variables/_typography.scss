@@ -75,6 +75,10 @@ pre {
         overflow-wrap: normal;
         white-space: pre;
     }
+    .highlight {
+        border: 1px solid $color-pre--highlight;
+        @include border-radius(6px);
+    }
 }
 
 a {
