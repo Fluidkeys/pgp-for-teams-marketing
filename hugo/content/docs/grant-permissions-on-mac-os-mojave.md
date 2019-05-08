@@ -7,7 +7,7 @@ weight: 5
 
 Fluidkeys uses `cron` to schedule an hourly task that runs in the background. The task is called `fk sync` and attempts to do two things:
 
-1. It checks if your key is overdue for extension. If it is, Fluidkeys creates a new sub key and extends the primary key.
+1. It checks if your key is overdue for extension. If it is, Fluidkeys extends both your sub key and primary key.
 2. It checks whether there are any changes to the team roster. If there are, it then fetches any new public keys.
 
 Whenever you manually run `fk` it automatically attempts to schedule this task in `cron`, therefore it will have attempted to do this when you first install Fluidkeys, too.
