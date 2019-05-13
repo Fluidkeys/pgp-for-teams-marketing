@@ -25,7 +25,7 @@ Contents:
 
 <h2  class="numbered">Prerequisites: Install Fluidkeys</h2>
 
-* [Fluidkeys installation instructions](www.fluidkeys.com/download)
+* [Fluidkeys installation instructions](https://www.fluidkeys.com/download)
 
 <h2 id="setup-team" class="numbered">Set up your team</h2>
 
