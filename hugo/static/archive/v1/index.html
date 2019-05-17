@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="generator" content="Hugo 0.54.0">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fluidkeys: Simple PGP for engineering teams</title>
+
+    <meta name="description" content="Protect sensitive information with Fluidkeys. Share tokens and certificates securely among the team, encrypt your emails and sign and verify git commits. Fluidkeys works with git, GPG, Enigmail, GPGSuite, Mailvelope and pass." property="og:description">
+
+    <link rel="alternate" type="application/rss+xml" href="https://www.fluidkeys.com/index.xml" title="Fluidkeys">
+    <meta property="og:title" content="Fluidkeys: Simple PGP for engineering teams">
+    <meta property="og:site_name" content="Fluidkeys">
+    <meta property="og:locale" content="en_GB">
+
+
+
+
+    <meta name="twitter:card" content="summary">
+
+
+
+    <meta name="twitter:site" content="@fluidkeys">
+
+
+    <link href="v1_files/css.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="v1_files/site.css">
+
+    <style>
+    .preview-announcement{
+      padding-top:.46875rem;padding-bottom:.46875rem;background:#fff4b3
+    }
+    .preview-announcement--content{
+      text-align:center;
+      color:#232732;
+      font-family:Arial,Helvetica,sans-serif;
+      font-size:.9rem;
+      line-height:1.875rem;
+      margin-top:0;
+      margin-bottom:0;
+      line-height:1.3rem
+    }
+    @media screen and (min-width:40em)
+    {
+      .preview-announcement--content{
+        font-size:1rem;
+        line-height:1.875rem;
+        margin-top:0;
+        margin-bottom:0
+      }
+    }
+    .preview-announcement--content a{
+      color:#232732
+    }
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="preview-announcement">
+      <p class="preview-announcement--content">
+      This is an archive page, kept for posterity. <a href="https://www.fluidkeys.com/">Head back to our homepage</a>
+      </p>
+    </div>
+
+    <header class="header container--fill">
+        <h1 class="header__title">
+            <a href="https://www.fluidkeys.com/" class="header__link">Fluidkeys</a>
+        </h1>
+        <input class="burger-check" id="burger-check" type="checkbox">
+        <label for="burger-check" class="burger"></label>
+        <nav>
+            <ul class="nav">
+                <li class="nav__item"><a href="https://www.fluidkeys.com/blog" class="nav__link">Blog</a></li>
+                <li class="nav__item"><a href="https://www.fluidkeys.com/weeknotes" class="nav__link">Weeknotes</a></li>
+                <li class="nav__item"><a href="https://www.fluidkeys.com/docs" class="nav__link">Docs</a></li>
+                <li class="nav__item"><a href="https://www.fluidkeys.com/about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="https://www.fluidkeys.com/download" class="nav__link nav__link--button">Download<span class="nav__extra_word"> now</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+<header class="landing-hero">
+    <div class="container--max-width-break-3">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="landing-hero__title">Simple PGP for engineering teams</h1>
+
+                <p class="landing-hero__description">
+                    Fluidkeys helps your team protect sensitive information by simplifying
+                    powerful encryption tools.
+                </p>
+
+                <p class="landing-hero__description">
+                    It’s simple to share and store sensitive data, safeguard your
+                    source code and use popular open source tools.
+                </p>
+                <a class="button button--inverted" href="https://www.fluidkeys.com/download">Download now</a>
+            </div>
+            <div class="col-md-6">
+                <img src="v1_files/hero-image.svg" class="landing-hero__illustration">
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="section container--max-width-break-3">
+    <div class="section__intro row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2 class="section__title">Give your team encryption superpowers 🚀</h2>
+        </div>
+    </div>
+    <div class="feature row middle-md">
+        <div class="col-md-6">
+            <img src="v1_files/send-secrets.png" class="feature__illustration">
+        </div>
+        <div class="col-md-6">
+            <div class="feature__card">
+                <h3 class="feature__title">Send secrets from the terminal</h3>
+            <p class="feature__description">
+                    Send passwords, keys, tokens and personal information within your team.
+                    Everything’s protected with open source, end-to-end encryption.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="feature row middle-md">
+        <div class="col-md-6">
+            <img src="v1_files/encrypt-email.png" class="feature__illustration">
+        </div>
+        <div class="col-md-6">
+            <div class="feature__card">
+                <h3 class="feature__title">
+                    Send and receive signed and encrypted emails
+                </h3>
+
+                <p class="feature__description">
+                    Protect against phishing attacks with signed emails and keep sensitive
+                    emails safe with encryption. Fluidkeys automates key exchange and
+                    verification so you’ve always got the right key when you need it.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="feature row middle-md">
+        <div class="col-md-6">
+            <img src="v1_files/share-passwords.png" class="feature__illustration">
+        </div>
+        <div class="col-md-6">
+            <div class="feature__card">
+                <h3 class="feature__title">
+                    Store team passwords in pass, the UNIX password manager
+                </h3>
+
+                <p class="feature__description">
+                    Store shared passwords in an encrypted git repository using the popular open
+                    source password manager. Fluidkeys keeps your <code>.gpg-ids</code> file up
+                    to date so joiners and leavers are added and removed automatically.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="feature row middle-md">
+        <div class="col-md-6">
+            <img src="v1_files/sign-commits.png" class="feature__illustration">
+        </div>
+        <div class="col-md-6">
+            <div class="feature__card">
+                <h3 class="feature__title">
+                    Sign and verify git commits
+                </h3>
+
+                <p class="feature__description">
+                    Sign your git commits and only merge verified code from trusted developers.
+                    Fluidkeys helps you verify commits by ensuring you’ve always got the right
+                    keys for your whole team.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="feature row middle-md">
+        <div class="col-md-6">
+            <img src="v1_files/supercharge-gpg.png" class="feature__illustration">
+        </div>
+        <div class="col-md-6">
+            <div class="feature__card">
+                <h3 class="feature__title">
+                    Use any other GnuPG powered tool
+                </h3>
+
+                <p class="feature__description">
+                    Many tools rely on GnuPG to carry out their encryption. Fluidkeys stores
+                    your team’s keys in GnuPG and ensures they’re correctly trusted, so any
+                    tool that relies on GnuPG works with your team.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row middle-md download-prompt">
+        <div class="col-md-12">
+            <a class="button button--inverted" href="https://www.fluidkeys.com/download">Download now</a>
+        </div>
+    </div>
+</section>
+
+
+<section class="section container--max-width-break-3">
+    <div class="row middle-md">
+        <div class="col-md-10 col-md-offset-1">
+            <h2 class="section__title">Save your team time and&nbsp;frustration</h2>
+
+            <p class="section__description">
+                By listening to engineering teams around the world, we’ve tackled the barriers
+                to using GnuPG and OpenPGP tools in a team.
+            </p>
+        </div>
+    </div>
+    <div class="row middle-md">
+        <div class="col-md-10 col-md-offset-1">
+            <img src="v1_files/confusing-setup-slim.png" class="section__illustration" %="">
+
+            <h3 class="section__subtitle">Simpler onboarding for new team members</h3>
+
+            <p class="section__description">
+                Setting up a PGP key for the first time can be daunting, with difficult questions
+                and unfamiliar concepts.
+            </p>
+
+            <p class="section__description">
+                Fluidkeys creates a new key, encrypted backup and revocation certificate without
+                asking any difficult questions. It creates a strong, memorable password which it
+                stores safely in the system keychain.
+            </p>
+
+            <h3 class="section__subtitle">No need to email keys around the team</h3>
+
+            <p class="section__description">
+                Emailing keys around the team doesn’t scale and using the keyservers can be
+                confusing and unreliable.
+            </p>
+
+            <p class="section__description">
+                Fluidkeys automatically fetches keys from a reliable, private keyserver. New
+                starters are added to everyone’s keyring seamlessly.
+            </p>
+
+            <img src="v1_files/confusing-key-exchange-slim.png" class="section__illustration" %="">
+
+            <h3 class="section__subtitle">Everyone always has everyone else’s latest key</h3>
+
+            <p class="section__description">
+                Joining a team and fetching everyone’s keys is error prone, leading to missing,
+                outdated or incorrect keys. There’s no single source of truth for all the
+                keys in a team.
+            </p>
+
+            <p class="section__description">
+                With Fluidkeys you create a team roster: a list of email addresses linked to
+                keys and cryptographically signed by an administrator. Fluidkeys syncs the
+                roster to every team member, automatically fetching verified keys for the
+                whole team.
+            </p>
+
+            <h3 class="section__subtitle">
+                Better security with signed verification of keys
+            </h3>
+
+            <p class="section__description">
+                The web of trust was a nice idea, but key signing parties aren’t practical. We
+                all know we should verify fingerprints, but in practice many of us skip this
+                step and hope for the best.
+            </p>
+
+            <p class="section__description">
+                With Fluidkeys, the team admin verifies new keys using safety numbers and adds
+                them to the team roster. Everyone else in the team trusts keys verified by the
+                admin. And because the signed roster is verified client-side, it can’t be
+                tampered, even by us.
+            </p>
+
+            <img src="v1_files/confusing-files-slim.png" class="section__illustration" %="">
+
+            <h3 class="section__subtitle">
+                Better security with rotating encryption keys
+            </h3>
+
+            <p class="section__description">
+                We know it’s insecure practice to use the same encryption key for years, but
+                current tooling makes it difficult to automate key rotation.
+            </p>
+
+            <p class="section__description">
+                Fluidkeys uses encryption subkeys which add to the end of your key without
+                changing the rest of the key. With a new key every month you get forward
+                secrecy without having to change your key.
+            </p>
+
+
+
+        </div>
+    </div>
+</section>
+
+<section class="section--release">
+    <div class="container--max-width-break-3 row">
+        <div class="col-md-5">
+            <h2 class="section__subtitle">Current release: 1.1</h2>
+
+            <p class="section__description">
+                Protect sensitive information by simplifying
+                powerful encryption tools.
+            </p>
+
+            <p class="section__description">
+                <a href="" class="button button--inverted">Download now</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<section class="section container--max-width-break-3">
+    <div class="row middle-md">
+        <div class="col-md-10 col-md-offset-1">
+            <h2 class="section__title"><a name="roadmap">Our progress</a></h2>
+            <div class="card card--complete">
+                <ul class="card__list">
+                    <li class="card__list-item card__list-item--checked"><h3 class="card__title">Get started with OpenPGP (v0.1)</h3></li>
+                </ul>
+                <p class="card__description">You can now create a best
+practice PGP key from the command line. Fluidkeys backs it up and pushes
+ it into GnuPG so you can start using it right away.</p>
+            </div>
+
+            <div class="card card--complete">
+            <h3 class="card__title">Level up your legacy keys (v0.2)</h3>
+                <ul class="card__list">
+                    <li class="card__list-item card__list-item--checked">Connect Fluidkeys to your existing key in GnuPG</li>
+                    <li class="card__list-item card__list-item--checked">Fix issues like weak signatures and out of date preferences</li>
+                    <li class="card__list-item card__list-item--checked">Automatically rotate your encryption subkey to limit the impact of key compromise</li>
+                </ul>
+            </div>
+
+            <div class="card card--complete">
+                <h3 class="card__title">Send encrypted secrets (v0.3)</h3>
+                <ul class="card__list">
+                    <li class="card__list-item card__list-item--checked">Send and receive passwords, token and certificates right from the command line</li>
+                    <li class="card__list-item card__list-item--checked">End-to-end encrypt secrets so only the recipient can read them</li>
+                    <li class="card__list-item card__list-item--checked">Automatically fetch public keys from a verified email address</li>
+                </ul>
+            </div>
+
+            <div class="card card--complete">
+                <ul class="card__list">
+                    <li class="card__list-item card__list-item--checked"><h3 class="card__title">Send encrypted files (v0.4)</h3></li>
+                </ul>
+                <p class="card__description">You’ll be able to send private keys, certificates, and other sensitive text files from the terminal.</p>
+            </div>
+
+            <div class="card card--complete">
+                <ul class="card__list">
+                    <li class="card__list-item card__list-item--checked"><h3 class="card__title">Simple PGP for teams (v1.0)</h3></li>
+                </ul>
+                <p class="card__description">Add and remove team members and their keys will be automatically synchronised across the whole team.</p>
+            </div>
+
+            <div class="card card--complete">
+                <ul class="card__list">
+                    <li class="card__list-item card__list-item--checked"><h3 class="card__title">More usable, more reliable (v1.1)</h3></li>
+                </ul>
+                <p class="card__description">
+                Set up a team even more easily and benefit from more reliable background tasks.
+                </p>
+            </div>
+
+            <div class="card">
+                <ul class="card__list">
+                    <li class="card__list-item"><h3 class="card__title">Automate configuring
+                            <code>git-crypt</code> and <code>pass</code>(18th June 2019)</h3></li>
+                </ul>
+                <p class="card__description">You’ll be able to
+automatically configure these popular open source tools to work with
+your team.  When team members are added or keys are updated, everything
+will be kept in sync.</p>
+            </div>
+
+            <div class="card">
+                <ul class="card__list">
+                    <li class="card__list-item"><h3 class="card__title">Publish your keys on the web</h3></li>
+                </ul>
+                <p class="card__description">Allow anyone to find your team’s keys from their email address using Web Key Directory (WKD).</p>
+            </div>
+
+            <div class="card">
+                <h3 class="card__title">Safeguard your source code on Github</h3>
+                <ul class="card__list">
+                    <li class="card__list-item">Sign git commits and
+verify commits from other team members. Fluidkeys will configure git for
+ you, and everyone’s keys will be synchronised with Github
+automatically.</li>
+                    <li class="card__list-item">Verify commits inside Github using status checks. You’ll be able to ensure pull requests are legitimate before merging them. </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <ul class="card__list">
+                    <li class="card__list-item"><h3 class="card__title">Integrate with Mailvelope</h3></li>
+                </ul>
+                <p class="card__description">You’ll be able to send and
+receive encrypted emails from the browser using Mailvelope. Each team
+member will always have the right key for everyone in the team,
+eliminating awkward key exchanges.</p>
+            </div>
+
+            <div class="card">
+                <ul class="card__list">
+                    <li class="card__list-item"><h3 class="card__title">Send large sensitive files</h3></li>
+                </ul>
+                <p class="card__description">You can send files of any
+size to team mates from the command line. Fluidkeys will handle the
+encryption, delivery and verify that the file arrived ok.</p>
+            </div>
+
+            <div class="card">
+                <ul class="card__list">
+                    <li class="card__list-item"><h3 class="card__title">Integrate with Slack</h3></li>
+                </ul>
+                <p class="card__description">You can use the convenience
+ of Slack with the added protection of end to end encryption. You’ll no
+longer have to worry about Slack’s security.</p>
+            </div>
+
+            <div class="card card--major">
+                <ul class="card__list">
+                    <li class="card__list-item"><h3 class="card__title">Use from the desktop</h3></li>
+                </ul>
+                <p class="card__description">You’ll have a graphical interface for people less familiar with the command line.</p>
+            </div>
+
+            <h2 class="section__subtitle">Sign up to hear our release announcements</h2>
+            <form class="form" id="roadmap-signup-form" action="https://fluidkeys.us20.list-manage.com/subscribe/post?u=fd279ba68240c3d0639990f7e&amp;id=eb0e518b12" method="post">
+  <div class="form__element">
+    <label class="form__label form__label" for="email-address">Email address:</label>
+    <input disabled="disabled" class="form__input" id="email-address" type="email" name="EMAIL" required="" placeholder="e.g. brian@kiffix.com" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfBJREFUWAntVk1OwkAUZkoDKza4Utm61iP0AqyIDXahN2BjwiHYGU+gizap4QDuegWN7lyCbMSlCQjU7yO0TOlAi6GwgJc0fT/fzPfmzet0crmD7HsFBAvQbrcrw+Gw5fu+AfOYvgylJ4TwCoVCs1ardYTruqfj8fgV5OUMSVVT93VdP9dAzpVvm5wJHZFbg2LQ2pEYOlZ/oiDvwNcsFoseY4PBwMCrhaeCJyKWZU37KOJcYdi27QdhcuuBIb073BvTNL8ln4NeeR6NRi/wxZKQcGurQs5oNhqLshzVTMBewW/LMU3TTNlO0ieTiStjYhUIyi6DAp0xbEdgTt+LE0aCKQw24U4llsCs4ZRJrYopB6RwqnpA1YQ5NGFZ1YQ41Z5S8IQQdP5laEBRJcD4Vj5DEsW2gE6s6g3d/YP/g+BDnT7GNi2qCjTwGd6riBzHaaCEd3Js01vwCPIbmWBRx1nwAN/1ov+/drgFWIlfKpVukyYihtgkXNp4mABK+1GtVr+SBhJDbBIubVw+Cd/TDgKO2DPiN3YUo6y/nDCNEIsqTKH1en2tcwA9FKEItyDi3aIh8Gl1sRrVnSDzNFDJT1bAy5xpOYGn5fP5JuL95ZjMIn1ya7j5dPGfv0A5eAnpZUY3n5jXcoec5J67D9q+VuAPM47D3XaSeL4AAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+  </div>
+  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fd279ba68240c3d0639990f7e_69b83e3491" tabindex="-1"></div>
+  <div class="form__element">
+    <input class="form__button" type="submit" value="Sign up for release announcements">
+  </div>
+</form>
+
+
+            <div class="subscribe">
+                <p>
+                View our <a href="https://trello.com/b/dB9j4JaG/fluidkeys?menu=filter&amp;filter=label:release">release roadmap on Trello</a>
+                or read our <a href="https://www.fluidkeys.com/weeknotes">weeknotes</a>
+            </p></div>
+        </div>
+    </div>
+</section>
+
+<section class="section--call-out">
+    <div class="container--max-width-break-3">
+        <div class="section__intro row">
+            <div>
+                <h2 class="section__subtitle">
+                    Strengthen your engineering team’s security practices - hear when we’re
+                    ready to release
+                </h2>
+            </div>
+        </div>
+        <div class="row middle-lg">
+            <div class="col-lg-6">
+                <p><a class="button button--inverted" href="https://www.fluidkeys.com/download">Download now</a></p>
+            </div>
+            <div class="col-lg-6">
+                <ul class="benefits-list">
+                    <li class="benefits-list__item">You’ll be safeguarding the team’s source code</li>
+                    <li class="benefits-list__item">You’ll be safely sending team secrets</li>
+                    <li class="benefits-list__item">You’ll get all the power of PGP for your team</li>
+                <ul>
+            </ul></ul></div>
+        </div>
+    </div>
+</section>
+
+<script>
+
+function ready(fn) {
+  if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+
+function setupEventHandlers() {
+  var forms = document.getElementsByTagName('form');
+  for(var i = 0 ; i < forms.length ; ++i) {
+    forms[i].addEventListener('submit', handleFormSubmit);
+  }
+}
+
+function googleAnalyticsIsLoaded() {
+  return typeof ga !== "undefined";
+}
+
+function handleFormSubmit(event) {
+
+  if(googleAnalyticsIsLoaded()) {
+    console.debug("Google analytics is loaded, firing form submit event");
+
+
+
+
+
+
+
+
+
+
+
+    var form = event.target,
+        formSubmitted = false;
+
+
+
+    event.preventDefault();
+
+    function submitForm() {
+      if (!formSubmitted) {
+        formSubmitted = true;
+        console.log("calling form.submit()");
+        form.submit();
+      }
+    }
+
+    setTimeout(submitForm, 1000);
+
+    ga('send', 'event', {
+      eventCategory: 'Sign up form',
+      eventAction: 'form_submit',
+      eventLabel: form.id,
+      hitCallback: function() {
+        console.debug("Got GA event hit callback");
+        submitForm();
+      }
+    });
+  } else {
+    console.debug("No Google Analytics, not preventing form submit");
+  }
+
+}
+ready(setupEventHandlers);
+</script>
+
+
+
+
+
+    <footer class="footer">
+      <div class="container--max-width-break-2">
+        <p>
+        <a href="mailto:hello@fluidkeys.com" class="footer__link">hello@fluidkeys.com</a>
+          <a href="https://www.fluidkeys.com/index.xml" class="footer__link"><img src="v1_files/rss-icon.svg" class="footer__rss-icon">RSS feed</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+  var dnt = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+  if (dnt != "1" && dnt != "yes") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-121440356-1', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+  } else {
+    console.debug("Respecting Do-Not-Track, not loading analytics. See https://www.paulfurley.com/google-analytics-dnt/");
+  }
+</script>
+
+
+</body></html>
