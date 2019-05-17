@@ -10,7 +10,7 @@
         <ul class="doc-list">
           {{ range .Pages }}
           <li class="doc-list__item--file">
-            <a href="{{ .URL }}">{{ .Title }}</a>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
           </li>
           {{ end }}
         </ul>
