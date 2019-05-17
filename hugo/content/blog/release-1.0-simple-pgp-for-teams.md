@@ -48,7 +48,7 @@ or other OpenPGP tools, we've discovered 3 patterns:
     tradeoff between security and productivity.
 *   **Existing tools were designed for individuals**. They don't prescribe workflows for teams.
 
-<img src="/images/new-homepage/confusing-key-exchange-slim.png" class="markdown-illustration" %>
+<img src="/images/2019-03-26-release-1-0/confusing-key-exchange-slim.png" class="markdown-illustration" %>
 
 ## Fluidkeys 1.0 makes PGP simple for teams
 
@@ -72,14 +72,14 @@ With our first teams release, you can:
     sensitive data with frictionless end-to-end encryption.
     <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-            <img src="/images/new-homepage/send-secrets.png" class="markdown__illustration" />
+            <img src="/images/2019-03-26-release-1-0/send-secrets.png" class="markdown__illustration" />
         </div>
     </div>
 *   **configures other tools to work out the box**—so GnuPG, enigmail, GPGMail, pass and other tools
     can see everyone's keys with the correct trust settings
     <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-            <img src="/images/new-homepage/supercharge-gpg.png" class="markdown__illustration" />
+            <img src="/images/2019-03-26-release-1-0/supercharge-gpg.png" class="markdown__illustration" />
         </div>
     </div>
 
