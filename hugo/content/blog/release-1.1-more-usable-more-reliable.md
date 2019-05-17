@@ -2,7 +2,7 @@
 title: "Fluidkeys v1.1: more usable, more reliable"
 description: "Fluidkeys v1.1 improves reliability for mac users by switching from cron to launchd and other fixes. We've smoothed out the workflow of creating and joining a team."
 author: Paul Fawkesley & Ian Drysdale
-open_graph_image: "images/blog/fluidkeys-v1.1.png"
+open_graph_image: "images/blog/release-1-1/fluidkeys-v1.1.png"
 open_graph_type: "article"
 date: 2019-05-08
 ---
