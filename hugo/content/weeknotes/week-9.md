@@ -31,7 +31,7 @@ So this week I've been hard at work collating best practice to work out, what _i
 
 [Riseup's OpenPGP best practices](https://riseup.net/en/security/message-security/openpgp/best-practices) guide came in handy as usual, and mostly I've been encoding their rules into actual code. You can see that working in the screenshot below (the text hasn't been designed yet):
 
-![A table of PGP keys with warnings about missing preferences](/images/2018-04-05-fluidkeys-key-list-with-missing-preferences.png)
+![A table of PGP keys with warnings about missing preferences](/images/weeknotes/week-9/2018-04-05-fluidkeys-key-list-with-missing-preferences.png)
 
 This builds on the ideas in a previous prototype I hacked up earlier in the year which allows you to [test your PGP key](https://www.expirybot.com/test-pgp-key/).
 

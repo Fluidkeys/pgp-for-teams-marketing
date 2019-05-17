@@ -41,7 +41,7 @@ We felt it *might* work to use a chatbot type interface to get people started.
 
 OK, take a deep breath, and take a look at this mockup:
 
-![A cartoon squirrel with a chat bubble](/images/2018-12-17-secret-squirrel.png)
+![A cartoon squirrel with a chat bubble](/images/weeknotes/week-19/2018-12-17-secret-squirrel.png)
 
 [Play with the live chatbot](https://landbot.io/u/H-112432-MJ5YDOCDSN1Y5SGH/index.html)
 
