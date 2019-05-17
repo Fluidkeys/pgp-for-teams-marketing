@@ -11,6 +11,7 @@ organisation.
 ## The short version
 
 * We had our first away day!
+* We're (finally) incorporated 🎉
 * We've decided to focus Fluidkeys on *one* use case.
 * You can still use Fluidkeys with `git`, `pass`, Enigmail etc with *Recipes*
 * We've been finishing `fk team edit`
@@ -25,6 +26,19 @@ It's important to get together in real life (we work in different cities) and he
 time in nature to think a bit differently.
 
 ![Paul and Ian in the peak district](/images/weeknotes/week-41/paul-and-ian-in-the-peaks.jpg)
+
+## We're (finally) incorporated 🎉
+
+It's taken a while, but we're officially a non-proft!
+
+And now we can finally reveal our company name!
+
+[See our listing on Companies House...](https://beta.companieshouse.gov.uk/company/11999992)
+
+For the governance geeks among you, here are our
+[articles of association](https://fluidkeys.github.io/articles-of-association/) which contain our
+social mission.
+
 
 ## Focus, focus, focus
 
