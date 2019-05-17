@@ -41,4 +41,12 @@
       }
     }
 
+    &--small {
+        @extend .button;
+        @include breakpoint('break-1') {
+            padding: ($line-height-base * 0.25) ($line-height-base * 0.5);
+            display: inline-block;
+            margin: 0;
+        }
+    }
   }
