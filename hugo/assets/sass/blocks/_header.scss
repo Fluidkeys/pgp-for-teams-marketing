@@ -1,5 +1,6 @@
 .header {
     background: $color-header--background;
+    position: relative;
     @include breakpoint(break-2) {
         display: flex;
         align-items: stretch;
