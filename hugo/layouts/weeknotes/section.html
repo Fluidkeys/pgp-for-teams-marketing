@@ -8,7 +8,7 @@ to protect your team with strong encryption.{{ end }}
 
         {{ $firstPage := index .Pages 0 }}
         <p class="markdown__date">{{ $firstPage.Date.Format "2 January 2006" }}</p>
-        <h1><a href="{{ $firstPage.URL }}">{{ $firstPage.Title }}</a></h1>
+        <h1><a href="{{ $firstPage.Permalink }}">{{ $firstPage.Title }}</a></h1>
         {{ $firstPage.Content }}
 
         <h2>Sign up to get emailed our weeknotes each week:</h2>
@@ -21,7 +21,7 @@ to protect your team with strong encryption.{{ end }}
           <!-- TODO: paginate from 1 not 0 -->
           {{ range .Pages }}
           <li class="markdown__index-item">
-            <a href="{{ .URL }}">{{ .Title }}</a>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
             {{ .Date.Format "Monday 2 Jan 2006" }}
           </li>
           {{ end }}

@@ -7,7 +7,7 @@
 <section class="container--max-width-break-2">
     <div class="markdown">
         <p class="markdown__date">{{ $latest_post.Date.Format "Monday 2 Jan 2006" }}</p>
-        <h1><a href="{{ $latest_post.URL }}">{{ $latest_post.Title }}</a></h1>
+        <h1><a href="{{ $latest_post.Permalink }}">{{ $latest_post.Title }}</a></h1>
         {{ $latest_post.Content }}
 
         <hr>
@@ -18,7 +18,7 @@
           <!-- TODO: paginate from 1 not 0 -->
           {{ range .Pages }}
           <li class="blog-index">
-            <a href="{{ .URL }}">{{ .Title }}</a>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
             {{ .Date.Format "Monday 2 Jan 2006" }}
           </li>
           {{ end }}
