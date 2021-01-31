@@ -11,25 +11,6 @@
         padding-bottom: #{$line-height-base * 4};
     }
 
-    &--release {
-        background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url(/images/release03-1000x500.jpg) center no-repeat;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        @include breakpoint(break-2) {
-            background:linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) ),url(/images/release03-2000x1000.jpg) center no-repeat;
-        }
-
-        color: $color-section--call-out--color;
-
-        padding-top: #{$line-height-base * 2};
-        padding-bottom: #{$line-height-base * 2};
-
-        margin-top: #{$line-height-base * 2};
-        margin-bottom: #{$line-height-base * 2};
-    }
-
     &__intro {
         padding-bottom: #{1 * $line-height-base};
         @include breakpoint(break-2) {
@@ -78,17 +59,4 @@
             margin: 0 auto;
         }
     }
-
-    &--plugs {
-        background-image: url(/images/plugs-left.svg);
-        background-position: left top;
-        background-repeat: no-repeat;
-
-        @include breakpoint(break-3) {
-            background-image: url(/images/plugs-left.svg), url(/images/plugs-right.svg);
-            background-position: left top, right top;
-            background-repeat: no-repeat, no-repeat;
-        }
-    }
-
 }
