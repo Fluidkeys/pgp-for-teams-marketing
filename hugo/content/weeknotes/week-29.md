@@ -3,7 +3,7 @@ date: 2019-02-22
 title: "Week 29: Create a team"
 author: Paul Fawkesley
 open_graph_type: "article"
-open_graph_image: "images/2019-02-22-fk-team-create-static.png"
+open_graph_image: "images/weeknotes/week-29/2019-02-22-fk-team-create-static.png"
 ---
 **Protecting liberty by simplifying security**
 
@@ -29,7 +29,7 @@ This week we built an MVP version of `fk team create` which lets you start defin
 Ian went to town on making it help you out by looking in gpg for existing keys you might have for
 your team. That makes it a little quicker to get started.
 
-![A terminal animation showing creating a team in Fluidkeys.](/images/2019-02-22-fk-team-create.svg)
+![A terminal animation showing creating a team in Fluidkeys.](/images/weeknotes/week-29/2019-02-22-fk-team-create.svg)
 
 There's some important detail which makes teams harder than it sounds: teams are defined in a
 cryptographically signed file that only *you* can modify.
@@ -54,7 +54,7 @@ launchd) but at the time, a cross platform approach seemed the best compromise.
 The macOS update Mojave introduced a new permissions model for any applications wanting to
 modify a users's crontab.
 
-![A prompt saying Terminal would like to administer your computer.](/images/2018-12-15-mojave-terminal-prompt.png)
+![A prompt saying Terminal would like to administer your computer.](/images/weeknotes/week-29/2018-12-15-mojave-terminal-prompt.png)
 
 It's a pretty brutal dialog, and understandably people aren't in a hurry to grant Fluidkeys access
 to "administer your computer". Unfortunately, if people did click "Don't Allow", Fluidkeys would
@@ -64,7 +64,7 @@ Now, just before that prompt comes up we hint *why* it's happening. And if the u
 we tell them how to add Fluidkeys to their crontab manually:
 
 
-![A screenshot of a terminal with an error message and instructions](/images/2019-02-19-failed-to-schedule-maintenance.png)
+![A screenshot of a terminal with an error message and instructions](/images/weeknotes/week-29/2019-02-19-failed-to-schedule-maintenance.png)
 
 ## We've decided on a non-profit structure!
 

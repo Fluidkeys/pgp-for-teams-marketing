@@ -9,7 +9,7 @@ We've got key rotation working! When you run `fk key rotate` Fluidkeys now goes 
 “Roll VT”
 
 <div class="terminal-wrapper">
-  <img class="my-class" src="/images/fk-0.1.5-rotate-demo.svg" alt="a screen recording of `fk key rotate` in action">
+  <img class="my-class" src="/images/weeknotes/week-8/fk-0.1.5-rotate-demo.svg" alt="a screen recording of `fk key rotate` in action">
 </div>
 
 A couple of weeks back we got this short and helpful bit of feedback:

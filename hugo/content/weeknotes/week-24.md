@@ -25,7 +25,7 @@ Mailvelope recently released a [new version](https://www.mailvelope.com/en/blog/
 
 Since Fluidkeys pushes into GnuPG, in theory that change means that Mailvelope should now *just work* with Fluidkeys, which is pretty exciting.
 
-![Mailvelope compose email window](/images/2019-01-18-mailvelope-fluidkeys-gnupg.png)
+![Mailvelope compose email window](/images/weeknotes/week-24/2019-01-18-mailvelope-fluidkeys-gnupg.png)
 
 We spent some time this week compiling the latest GnuPG for Ubuntu 18.04 (unfortunately Ubuntu ships old versions of GnuPG) and seeing how it feels using Fluidkeys + Mailvelope as an email encryption solution.
 

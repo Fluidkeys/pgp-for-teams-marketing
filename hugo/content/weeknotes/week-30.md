@@ -2,7 +2,7 @@
 title: "Week 30: Request to join a team"
 author: Ian Drysdale
 open_graph_type: "article"
-open_graph_image: "images/2019-03-01-invitation-copy.png"
+open_graph_image: "images/weeknotes/week-30/2019-03-01-invitation-copy.png"
 date: 2019-03-01
 ---
 
