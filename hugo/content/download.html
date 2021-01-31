@@ -11,9 +11,9 @@ title: "Download Fluidkeys"
             </div>
             <h2>Install on Debian / Ubuntu</h2>
             <p>1. Get our signing key:</p>
-            <pre>curl https://www.fluidkeys.com/release.asc | sudo apt-key add -</pre>
+            <pre>curl https://www.fluidkeys.com/release.asc | sudo gpg --dearmor --output /usr/share/keyrings/fluidkeys.gpg</pre>
             <p>2. Add our apt repository:</p>
-            <pre>echo 'deb [arch=amd64] https://download.fluidkeys.com/desktop/apt any main' | sudo tee /etc/apt/sources.list.d/fluidkeys.list</pre>
+            <pre>echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/fluidkeys.gpg] https://download.fluidkeys.com/desktop/apt any main' | sudo tee /etc/apt/sources.list.d/fluidkeys.list</pre>
             <p>3. Install and run:</p>
             <pre>sudo apt update
 sudo apt install fluidkeys
